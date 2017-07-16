@@ -1,0 +1,24 @@
+"FeedsListTitle" = "Flussi";
+"DefaultFeedName" = "Senza titolo";
+"CannotReachHost" = "\"%@\" non è disponibile.";
+"FeedEditorNameFieldPlaceholder" = "Titolo";
+"FeedEditorURLFieldPlaceholder" = "Indirizzo (URL)";
+"FeedGroupSelectorTitle" = "Gruppi";
+"EmptyFeedGroup" = "vuoto";
+"AndMore" = "ecc.";
+"OpenInSafari" = "Apri";
+
+"ViewCloseButtonTitle" = "Chiudi";
+
+// Help
+"HelpVersionLabelString" = "versione %@";
+"HelpSelectingGroup" = "Selezionare Un Gruppo";
+"HelpAssigningToGroup" = "Assegnare Ad Un Altro Gruppo";
+
+// In-App Purchase
+"Purchase_PromptWithPrice" = "Sblocca due altri gruppi per %@.";
+"Purchase_CanNotPurchase" = "Sfortunatamente non puoi acquistare altri gruppi al momento. Verifica la tua connessione internet e il tuo account iTunes.";
+"Purchase_Button_BuyNow" = "Compra ora!";
+"Purchase_Button_Restore" = "Ripristinare il precedente acquisto.";
+"Purchase_Button_Cancel" = "No, grazie.";
+"Purchase_Button_Dismiss" = "Chiudi";

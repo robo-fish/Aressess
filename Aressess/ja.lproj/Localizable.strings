@@ -1,0 +1,25 @@
+"FeedsListTitle" = "フィード";//ニュース
+"DefaultFeedName" = "名前のない";
+"CannotReachHost" = "「%@」に接続できません。";
+"FeedEditorNameFieldPlaceholder" = "名前";
+"FeedEditorURLFieldPlaceholder" = "アドレス (URL)";
+"FeedGroupSelectorTitle" = "グループ";
+"EmptyFeedGroup" = "空っぽ";
+"AndMore" = "等";//など
+"OpenInSafari" = "開く";
+
+
+"ViewCloseButtonTitle" = "閉じる";
+
+// Help
+"HelpVersionLabelString" = "バージョン %@";
+"HelpSelectingGroup" = "グループを選択";
+"HelpAssigningToGroup" = "別のグループへ割り当て";
+
+// In-App Purchase
+"Purchase_PromptWithPrice" = "%@支払うことで、二つの追加のグループのロックを解除します。";
+"Purchase_CanNotPurchase" = "残念ながら、現時点では追加のグループを購入することはできません。インターネット接続とiTunesアカウントを確認してください。";
+"Purchase_Button_BuyNow" = "今すぐ買う！";
+"Purchase_Button_Restore" = "以前の購入を復元します。";
+"Purchase_Button_Cancel" = "今は買いません";
+"Purchase_Button_Dismiss" = "閉じる";

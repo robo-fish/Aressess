@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.6" -->
+<feed xmlns="http://www.w3.org/2005/Atom"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xml:lang="de">
+    <title type="html">Golem.de</title>
+    <subtitle type="html">IT-News fuer Profis</subtitle>
+    <link rel="self" type="application/atom+xml" href="http://rss.golem.de/rss.php?feed=ATOM1.0"/>
+    <link rel="alternate" type="text/html" href="http://www.golem.de/"/>
+    <id>http://www.golem.de/</id>
+    <logo>http://www.golem.de/staticrl/images/golem-rss.png</logo>
+    <icon>http://www.golem.de/favicon.ico</icon>
+    <updated>2014-08-13T01:47:02+02:00</updated>
+    <generator>FeedCreator 1.6</generator>
+    <link rel="hub" href="http://golem.superfeedr.com/" />
+    <entry>
+        <title type="html">Entwickeln für Oculus Rift DK2: &quot;Enthauptet die Katze und hängt sie an den Haken!&quot;</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/entwickeln-fuer-oculus-rift-dk2-enthauptet-die-katze-und-haengt-sie-an-den-haken-1408-108532-rss.html"/>
+        <published>2014-08-12T23:02:02+02:00</published>
+        <updated>2014-08-12T23:02:02+02:00</updated>
+        <id>http://www.golem.de/news/entwickeln-fuer-oculus-rift-dk2-enthauptet-die-katze-und-haengt-sie-an-den-haken-1408-108532-rss.html</id>
+        <author>
+            <name>Marc Sauter</name>
+        </author>
+        <summary type="html"> Wer Spiele für das Oculus Rift erstellt, der muss vieles beachten und noch öfter gilt: &quot;Macht das nicht!&quot; Ein Trick bei der Programmierung ist zudem die kopflose Katze als Animationshilfe. (&lt;a href=&quot;http://www.golem.de/specials/display/&quot;&gt;Display&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/api/&quot;&gt;API&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108532&amp;amp;page=1&amp;amp;ts=1407877320&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">Sony: Day Z erscheint mit neuem Renderer für die PS4</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/sony-day-z-erscheint-mit-neuem-renderer-fuer-die-ps4-1408-108533-rss.html"/>
+        <published>2014-08-12T21:31:03+02:00</published>
+        <updated>2014-08-12T21:31:03+02:00</updated>
+        <id>http://www.golem.de/news/sony-day-z-erscheint-mit-neuem-renderer-fuer-die-ps4-1408-108533-rss.html</id>
+        <author>
+            <name>Peter Steinlechner</name>
+        </author>
+        <summary type="html">Day Z kommt auf die Playstation 4, so Chefentwickler Dean Hall in Köln. Überhaupt standen auf der Pressekonferenz von Sony die Spiele im Mittelpunkt - und neue Funktionen von Firmware 2.0, mit denen sich Games teilen lassen. (&lt;a href=&quot;http://www.golem.de/specials/sony/&quot;&gt;Sony&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/psn/&quot;&gt;PSN&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108533&amp;amp;page=1&amp;amp;ts=1407871860&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">Activision: King's Quest als Indiegame unter Sierra-Label</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/activision-king-s-quest-als-indiegame-unter-sierra-label-1408-108534-rss.html"/>
+        <published>2014-08-12T21:29:04+02:00</published>
+        <updated>2014-08-12T21:29:04+02:00</updated>
+        <id>http://www.golem.de/news/activision-king-s-quest-als-indiegame-unter-sierra-label-1408-108534-rss.html</id>
+        <author>
+            <name>Peter Steinlechner</name>
+        </author>
+        <summary type="html">Die alte Adventure-Schmiede Sierra ersteht neu: Activision will neue Spiele von unabhängigen Entwicklern programmieren lassen. Angekündigt sind ein neues King's Quest und Geometry Wars. (&lt;a href=&quot;http://www.golem.de/specials/adventure/&quot;&gt;Adventure&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/activision/&quot;&gt;Activision&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108534&amp;amp;page=1&amp;amp;ts=1407871740&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">HSTS: Google führt Liste von reinen HTTPS-Seiten</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/hsts-google-fuehrt-liste-von-reinen-https-seiten-1408-108531-rss.html"/>
+        <published>2014-08-12T20:10:01+02:00</published>
+        <updated>2014-08-12T20:10:01+02:00</updated>
+        <id>http://www.golem.de/news/hsts-google-fuehrt-liste-von-reinen-https-seiten-1408-108531-rss.html</id>
+        <author>
+            <name>Hanno Böck</name>
+        </author>
+        <summary type="html">Für seinen Chrome-Browser führt Google eine Liste von Webseiten, die ausschließlich über HTTPS erreichbar sein sollen. Dort kann sich jeder Webseitenbetreiber eintragen, der die HSTS-Erweiterung nutzt. (&lt;a href=&quot;http://www.golem.de/specials/firefox/&quot;&gt;Firefox&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/google/&quot;&gt;Google&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108531&amp;amp;page=1&amp;amp;ts=1407867000&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">IMHO: USB Typ C lieber heute als morgen</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/imho-usb-typ-c-lieber-heute-als-morgen-1408-108527-rss.html"/>
+        <published>2014-08-12T18:15:07+02:00</published>
+        <updated>2014-08-12T18:15:07+02:00</updated>
+        <id>http://www.golem.de/news/imho-usb-typ-c-lieber-heute-als-morgen-1408-108527-rss.html</id>
+        <author>
+            <name>Nico Ernst</name>
+        </author>
+        <summary type="html">Wieder ein neuer USB-Stecker? Von wegen. Es gibt endlich den einen Stecker, der alle anderen ersetzen kann. Aber nur wenn die Anwender fast zwei jahrzehntealte Gewohnheiten hinter sich lassen, kann sich Typ C zum Nutzen aller schnell durchsetzen. (&lt;a href=&quot;http://www.golem.de/specials/idf/&quot;&gt;IDF&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/usb-3.0/&quot;&gt;USB 3.0&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108527&amp;amp;page=1&amp;amp;ts=1407860100&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">Kinderpornografie: Deutsche Behörden entscheiden im Einzelfall über US-Hinweise</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/kinderpornografie-deutsche-behoerden-entscheiden-im-einzelfall-ueber-us-hinweise-1408-108529-rss.html"/>
+        <published>2014-08-12T18:10:09+02:00</published>
+        <updated>2014-08-12T18:10:09+02:00</updated>
+        <id>http://www.golem.de/news/kinderpornografie-deutsche-behoerden-entscheiden-im-einzelfall-ueber-us-hinweise-1408-108529-rss.html</id>
+        <author>
+            <name>Friedhelm Greis</name>
+        </author>
+        <summary type="html">Bislang haben US-Provider offenbar noch keine Hinweise zu kinderpornografischem Material an deutsche Behörden geliefert. Eine Verwertung wäre nicht ausgeschlossen, obwohl das Scannen von E-Mails auf schwere Bedenken von Datenschützern stößt. (&lt;a href=&quot;http://www.golem.de/specials/google/&quot;&gt;Google&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/microsoft/&quot;&gt;Microsoft&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108529&amp;amp;page=1&amp;amp;ts=1407859800&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">Chartcontainer: Bei Filesharing-Anklage ist einzelner Song nachzuweisen</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/chartcontainer-bei-filesharing-anklage-ist-einzelner-song-nachzuweisen-1408-108530-rss.html"/>
+        <published>2014-08-12T18:02:00+02:00</published>
+        <updated>2014-08-12T18:02:00+02:00</updated>
+        <id>http://www.golem.de/news/chartcontainer-bei-filesharing-anklage-ist-einzelner-song-nachzuweisen-1408-108530-rss.html</id>
+        <author>
+            <name>Achim Sawall</name>
+        </author>
+        <summary type="html">Wer einen Top-100-Chart-Container heruntergeladen haben soll, kann nicht auf Basis eines einzelnen Songs abgemahnt werden. Der ermittelte Hash-Wert sage nichts darüber aus, ob tatsächlich alle 100 Songs hochgeladen worden seien, so ein Urteil. (&lt;a href=&quot;http://www.golem.de/specials/tauschboerse/&quot;&gt;Tauschbörse&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/internet/&quot;&gt;Internet&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108530&amp;amp;page=1&amp;amp;ts=1407859320&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">Goat Simulator: Ziege erobert Welt</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/goat-simulator-ziege-erobert-welt-1408-108528-rss.html"/>
+        <published>2014-08-12T17:53:08+02:00</published>
+        <updated>2014-08-12T17:53:08+02:00</updated>
+        <id>http://www.golem.de/news/goat-simulator-ziege-erobert-welt-1408-108528-rss.html</id>
+        <author>
+            <name>Peter Steinlechner</name>
+        </author>
+        <summary type="html">Mehr als sieben Millionen US-Dollar Umsatz hat der Goat Simulator dem Entwicklerstudio Coffee Stain mittlerweile eingebracht, demnächst sollen Ableger für mobile Plattformen folgen. Die Macher finden, dass kreatives Chaos tierisch wichtig ist. (&lt;a href=&quot;http://www.golem.de/specials/steam/&quot;&gt;Steam&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/games/&quot;&gt;Games&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108528&amp;amp;page=1&amp;amp;ts=1407858780&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">Gericht: Dashcams verstoßen in Deutschland gegen den Datenschutz</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/gericht-dashcams-verstossen-in-deutschland-gegen-den-datenschutz-1408-108526-rss.html"/>
+        <published>2014-08-12T17:05:06+02:00</published>
+        <updated>2014-08-12T17:05:06+02:00</updated>
+        <id>http://www.golem.de/news/gericht-dashcams-verstossen-in-deutschland-gegen-den-datenschutz-1408-108526-rss.html</id>
+        <author>
+            <name>Michael Linden</name>
+        </author>
+        <summary type="html">Dashcams sind für bestimmte Einsatzzwecke in Deutschland unzulässig, urteilte ein Gericht. Die Aufnahmen dürfen nicht mit der Absicht gemacht werden, sie Dritten - auch nicht der Polizei - zu übermitteln oder sie etwa im Internet zu veröffentlichen. (&lt;a href=&quot;http://www.golem.de/specials/datenschutz/&quot;&gt;Datenschutz&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/foto/&quot;&gt;Foto&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108526&amp;amp;page=1&amp;amp;ts=1407855900&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">AVM: Fritzbox bringt neues OS mit Auto-Update-Funktion</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/avm-fritzbox-liefert-neues-os-mit-auto-update-aus-1408-108525-rss.html"/>
+        <published>2014-08-12T16:36:05+02:00</published>
+        <updated>2014-08-12T16:36:05+02:00</updated>
+        <id>http://www.golem.de/news/avm-fritzbox-liefert-neues-os-mit-auto-update-aus-1408-108525-rss.html</id>
+        <author>
+            <name>Achim Sawall</name>
+        </author>
+        <summary type="html">Die neue Firmware FritzOS 6.20 ist für die Fritzbox 7490 erhältlich. Ein Upgrade für weitere Modelle solle in wenigen Wochen folgen, verspricht AVM. (&lt;a href=&quot;http://www.golem.de/specials/dsl/&quot;&gt;DSL&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/wlan/&quot;&gt;WLAN&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108525&amp;amp;page=1&amp;amp;ts=1407854160&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">USB Typ C: Der neue USB-Stecker ist fertig und geht in Produktion</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/usb-typ-c-der-neue-usb-stecker-ist-fertig-und-geht-in-produktion-1408-108524-rss.html"/>
+        <published>2014-08-12T16:25:04+02:00</published>
+        <updated>2014-08-12T16:25:04+02:00</updated>
+        <id>http://www.golem.de/news/usb-typ-c-der-neue-usb-stecker-ist-fertig-und-geht-in-produktion-1408-108524-rss.html</id>
+        <author>
+            <name>Nico Ernst</name>
+        </author>
+        <summary type="html">Ein Stecker, um alle anderen zu ersetzen: Planmäßig hat das Gremium USB-IF den neuen Typ C spezifiziert. Ab sofort können Mitglieder des Konsortiums Geräte, Stecker, Kabel und Buchsen herstellen. Noch im Jahr 2014 ist mit ersten Produkten zu rechnen. (&lt;a href=&quot;http://www.golem.de/specials/usb-3.0/&quot;&gt;USB 3.0&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/mobil/&quot;&gt;Mobil&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108524&amp;amp;page=1&amp;amp;ts=1407853500&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">Microsoft: Tomb Raider wird Xbox-exklusiv</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/microsoft-tomb-raider-wird-xbox-exklusiv-1408-108523-rss.html"/>
+        <published>2014-08-12T16:25:03+02:00</published>
+        <updated>2014-08-12T16:25:03+02:00</updated>
+        <id>http://www.golem.de/news/microsoft-tomb-raider-wird-xbox-exklusiv-1408-108523-rss.html</id>
+        <author>
+            <name>Peter Steinlechner</name>
+        </author>
+        <summary type="html">Uncharted erscheint nur für die Playstation, Lara Croft im nächsten Tomb Raider kämpft nur auf der Xbox: Das hat Microsoft während einer Pressekonferenz erklärt - und eine Reihe weiterer Neuheiten verkündet. (&lt;a href=&quot;http://www.golem.de/specials/microsoft/&quot;&gt;Microsoft&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/call-of-duty/&quot;&gt;Call of Duty&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108523&amp;amp;page=1&amp;amp;ts=1407853500&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">Superschutz: Wikimedia-Stiftung zwingt deutschen Nutzern Mediaviewer auf</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/superschutz-wikimedia-stiftung-zwingt-deutschen-nutzern-mediaviewer-auf-1408-108522-rss.html"/>
+        <published>2014-08-12T15:56:02+02:00</published>
+        <updated>2014-08-12T15:56:02+02:00</updated>
+        <id>http://www.golem.de/news/superschutz-wikimedia-stiftung-zwingt-deutschen-nutzern-mediaviewer-auf-1408-108522-rss.html</id>
+        <author>
+            <name>Friedhelm Greis</name>
+        </author>
+        <summary type="html">Im Streit um die Nutzung eines neuen Bildbetrachters hat sich die amerikanische Wikimedia Foundation über den Willen der deutschen Community hinweggesetzt. Eine neue Funktion kann störrische Administratoren weltweit übergehen. (&lt;a href=&quot;http://www.golem.de/specials/wikipedia/&quot;&gt;Wikipedia&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/internet/&quot;&gt;Internet&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108522&amp;amp;page=1&amp;amp;ts=1407851760&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">Polaroid Cube: Actionwürfel mit 35 mm Kantenlänge</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/polaroid-cube-actionwuerfel-mit-35-mm-kantenlaenge-1408-108521-rss.html"/>
+        <published>2014-08-12T15:04:01+02:00</published>
+        <updated>2014-08-12T15:04:01+02:00</updated>
+        <id>http://www.golem.de/news/polaroid-cube-actionwuerfel-mit-35-mm-kantenlaenge-1408-108521-rss.html</id>
+        <author>
+            <name>Michael Linden</name>
+        </author>
+        <summary type="html">Polaroid will mit GoPro und anderen Anbietern konkurrieren und hat eine Actionkamera vorgestellt, die besonders klein und kompakt ist. So soll sich der Cube überall befestigen lassen. (&lt;a href=&quot;http://www.golem.de/specials/foto/&quot;&gt;Foto&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/gopro-hero-3/&quot;&gt;Gopro Hero 3&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108521&amp;amp;page=1&amp;amp;ts=1407848640&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">Risen 3 im Test: Altbacken, aber richtig schön rotzig</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/risen-3-im-test-altbacken-aber-richtig-schoen-rotzig-1408-108477-rss.html"/>
+        <published>2014-08-12T15:00:07+02:00</published>
+        <updated>2014-08-12T15:00:07+02:00</updated>
+        <id>http://www.golem.de/news/risen-3-im-test-altbacken-aber-richtig-schoen-rotzig-1408-108477-rss.html</id>
+        <author>
+            <name>Michael Wieczorek</name>
+        </author>
+        <summary type="html">Mit Risen 3 wollen die deutschen Entwickler von Piranha Bytes &quot;zurück zu ihren Wurzeln&quot;. Unser Test erklärt, wie gut das den Rollenspiel-Nerds (Gothic, Risen) gelungen ist. (&lt;a href=&quot;http://www.golem.de/specials/spieletest/&quot;&gt;Spieletest&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/rollenspiel/&quot;&gt;Rollenspiel&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108477&amp;amp;page=1&amp;amp;ts=1407848400&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">Unreal Engine 4: Apple-Metal-API hat nur 1,6 Prozent CPU-Overhead</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/unreal-engine-4-apple-metal-api-hat-nur-1-6-prozent-cpu-overhead-1408-108520-rss.html"/>
+        <published>2014-08-12T14:52:00+02:00</published>
+        <updated>2014-08-12T14:52:00+02:00</updated>
+        <id>http://www.golem.de/news/unreal-engine-4-apple-metal-api-hat-nur-1-6-prozent-cpu-overhead-1408-108520-rss.html</id>
+        <author>
+            <name>Marc Sauter</name>
+        </author>
+        <summary type="html"> Weniger als 2 statt 30 Prozent Overhead: Was Mantle für PCs ist, ist Apples Metal für iOS-Geräte. Hinzu kommen sehr schnelle Grafikeinheiten wie die PowerVR- 6XT-Reihe. (&lt;a href=&quot;http://www.golem.de/specials/smartphone/&quot;&gt;Smartphone&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/apple/&quot;&gt;Apple&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108520&amp;amp;page=1&amp;amp;ts=1407847920&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">Wooga: Die Kunst, ein Spiel zu killen</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/wooga-die-kunst-ein-spiel-zu-killen-1408-108425-rss.html"/>
+        <published>2014-08-12T14:00:05+02:00</published>
+        <updated>2014-08-12T14:00:05+02:00</updated>
+        <id>http://www.golem.de/news/wooga-die-kunst-ein-spiel-zu-killen-1408-108425-rss.html</id>
+        <author>
+            <name>Peter Steinlechner</name>
+        </author>
+        <summary type="html">Manche Computerspiele werden zu Millionenerfolgen, manche nicht. Woran Entwickler merken, dass ihr Projekt keine Marktchancen hat, und was sie daraus lernen können, erklärt Adam Telfer von Wooga im Gespräch mit Golem.de. (&lt;a href=&quot;http://www.golem.de/specials/interview/&quot;&gt;Interview&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/games/&quot;&gt;Games&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108425&amp;amp;page=1&amp;amp;ts=1407844800&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">Apple: Startschuss für Produktion neuer iPads</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/apple-startschuss-fuer-produktion-neuer-ipads-1408-108518-rss.html"/>
+        <published>2014-08-12T13:44:08+02:00</published>
+        <updated>2014-08-12T13:44:08+02:00</updated>
+        <id>http://www.golem.de/news/apple-startschuss-fuer-produktion-neuer-ipads-1408-108518-rss.html</id>
+        <author>
+            <name>Michael Linden</name>
+        </author>
+        <summary type="html">Apple soll seinen Zulieferern das Signal gegeben haben, die iPads der nächsten Generation zu fertigen. Nach einem Bericht sollen nicht nur ein neuer Prozessor, sondern auch ein Fingerabdrucksensor integriert sein. Zuletzt soll die neue Bildschirmbeschichtung Probleme verursacht haben. (&lt;a href=&quot;http://www.golem.de/specials/apple/&quot;&gt;Apple&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/tsmc/&quot;&gt;TSMC&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108518&amp;amp;page=1&amp;amp;ts=1407843840&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">Spiele-Altersfreigaben: Andere Länder, anderer Jugendschutz</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/spiele-altersfreigaben-andere-laender-anderer-jugendschutz-1408-108499-rss.html"/>
+        <published>2014-08-12T13:37:09+02:00</published>
+        <updated>2014-08-12T13:37:09+02:00</updated>
+        <id>http://www.golem.de/news/spiele-altersfreigaben-andere-laender-anderer-jugendschutz-1408-108499-rss.html</id>
+        <author>
+            <name>Marc Sauter</name>
+        </author>
+        <summary type="html"> Gleichgeschlechtliche Beziehungen sind in Russland unerwünscht, und im Iran sind einige Titel einzig für verheirate Erwachsene über 25 Jahren spielbar: Was in Deutschland die Nazi-Problematik ist, sind anderswo sexuelle Gesinnung, Drogen oder schlicht Gewalt. (&lt;a href=&quot;http://www.golem.de/specials/jugendschutz/&quot;&gt;Jugendschutz&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/jmstv/&quot;&gt;JMStV&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108499&amp;amp;page=1&amp;amp;ts=1407843420&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">Motorola Moto G2: Kommt Moto-G-Nachfolger nächsten Monat?</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/motorola-moto-g2-kommt-moto-g-nachfolger-naechsten-monat-1408-108519-rss.html"/>
+        <published>2014-08-12T13:15:09+02:00</published>
+        <updated>2014-08-12T13:15:09+02:00</updated>
+        <id>http://www.golem.de/news/motorola-moto-g2-kommt-moto-g-nachfolger-naechsten-monat-1408-108519-rss.html</id>
+        <author>
+            <name>Ingo Pakalski</name>
+        </author>
+        <summary type="html">In rund vier Wochen will Motorola bereits mit dem Verkauf des Nachfolgemodells des erfolgreichen Moto G beginnen, wie es in einem aktuellen Bericht heißt. Das Moto G2 soll dann 250 Euro kosten - ist also weit entfernt von dem günstigen Preis des Vorgängermodells. (&lt;a href=&quot;http://www.golem.de/specials/smartphone/&quot;&gt;Smartphone&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/android/&quot;&gt;Android&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108519&amp;amp;page=1&amp;amp;ts=1407842100&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">Game-Design: Angststörungen gibt es auch in Virtual Reality</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/game-design-angststoerungen-gibt-es-auch-in-virtual-reality-1408-108516-rss.html"/>
+        <published>2014-08-12T13:08:06+02:00</published>
+        <updated>2014-08-12T13:08:06+02:00</updated>
+        <id>http://www.golem.de/news/game-design-angststoerungen-gibt-es-auch-in-virtual-reality-1408-108516-rss.html</id>
+        <author>
+            <name>Sebastian Wochnik</name>
+        </author>
+        <summary type="html"> Höhenangst, Spinnen- und Klaustrophobie gibt es auch in virtuellen Welten. Wenn ein Spieler etwas in der realen Welt nicht tun möchte oder vor etwas Angst hat, sei das im Spiel nicht anders, erklärt Jed Ashword, Spiele-Designer bei Sony, anhand des Project Morpheus. (&lt;a href=&quot;http://www.golem.de/specials/display/&quot;&gt;Display&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/sony/&quot;&gt;Sony&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108516&amp;amp;page=1&amp;amp;ts=1407841680&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">Informationsfreiheit: Regierung darf Anfragen nicht &quot;abschreckend&quot; verteuern</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/informationsfreiheit-regierung-darf-anfragen-nicht-abschreckend-verteuern-1408-108517-rss.html"/>
+        <published>2014-08-12T12:54:07+02:00</published>
+        <updated>2014-08-12T12:54:07+02:00</updated>
+        <id>http://www.golem.de/news/informationsfreiheit-regierung-darf-anfragen-nicht-abschreckend-verteuern-1408-108517-rss.html</id>
+        <author>
+            <name>Friedhelm Greis</name>
+        </author>
+        <summary type="html">Behörden dürfen für Auskünfte nach dem Informationsfreiheitsgesetz Gebühren verlangen. Diese dürfen jedoch nicht so berechnet werden, dass die Kosten die Antragsteller abschrecken. (&lt;a href=&quot;http://www.golem.de/specials/internet/&quot;&gt;Internet&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/politik-recht/&quot;&gt;Politik/Recht&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108517&amp;amp;page=1&amp;amp;ts=1407840840&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">Datenpanne: Protonmail löscht versehentlich Kundenmails</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/datenpanne-protonmail-loescht-versehentlich-kundenmails-1408-108515-rss.html"/>
+        <published>2014-08-12T12:40:05+02:00</published>
+        <updated>2014-08-12T12:40:05+02:00</updated>
+        <id>http://www.golem.de/news/datenpanne-protonmail-loescht-versehentlich-kundenmails-1408-108515-rss.html</id>
+        <author>
+            <name>Jörg Thoma</name>
+        </author>
+        <summary type="html">Dem Schweizer E-Mail-Anbieter Protonmail ist eine erneute Panne unterlaufen. Ein Mitarbeiter habe aus Versehen mehrere E-Mails gelöscht. Protonmail entschuldigt sich für die &quot;schrecklichen Fehler&quot;. (&lt;a href=&quot;http://www.golem.de/specials/serverapps/&quot;&gt;Server-Applikationen&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/e-mail/&quot;&gt;E-Mail&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108515&amp;amp;page=1&amp;amp;ts=1407840000&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">Raspberry B+ im Test: Sparsamer Nachfolger für mehr Bastelspaß</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/raspberry-b-im-test-sparsamer-nachfolger-fuer-mehr-bastelspass-1408-108504-rss.html"/>
+        <published>2014-08-12T12:01:04+02:00</published>
+        <updated>2014-08-12T12:01:04+02:00</updated>
+        <id>http://www.golem.de/news/raspberry-b-im-test-sparsamer-nachfolger-fuer-mehr-bastelspass-1408-108504-rss.html</id>
+        <author>
+            <name>Jörg Thoma</name>
+        </author>
+        <summary type="html">Das Raspberry Pi B+ hat den gleichen SoC wie seine Vorgänger. Wir waren aber auf die Änderungen gespannt und haben uns die neue Version der Entwicklerplatine genauer angesehen - und wurden überrascht. (&lt;a href=&quot;http://www.golem.de/specials/h.264/&quot;&gt;H.264&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/linux/&quot;&gt;Linux&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108504&amp;amp;page=1&amp;amp;ts=1407837660&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">Brieselang: Betriebsrat bei Zalando gewählt</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/brieselang-betriebsrat-bei-zalando-gewaehlt-1408-108512-rss.html"/>
+        <published>2014-08-12T12:00:02+02:00</published>
+        <updated>2014-08-12T12:00:02+02:00</updated>
+        <id>http://www.golem.de/news/brieselang-betriebsrat-bei-zalando-gewaehlt-1408-108512-rss.html</id>
+        <author>
+            <name>Achim Sawall</name>
+        </author>
+        <summary type="html">In Brieselang bei Berlin haben die Zalando-Beschäftigten einen Betriebsrat gewählt. Ganz oben auf der Aufgabenliste steht, sich dagegen zu wehren, dass das Internetunternehmen fast alle Lagerarbeiter nur befristet einstellt. (&lt;a href=&quot;http://www.golem.de/specials/onlineshop/&quot;&gt;Onlineshop&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/boerse/&quot;&gt;Börse&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108512&amp;amp;page=1&amp;amp;ts=1407837600&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">Opteron A1100: AMD will Custom-SoCs für ARM-Server entwickeln</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/opteron-a1100-amd-will-custom-socs-fuer-arm-server-entwickeln-1408-108513-rss.html"/>
+        <published>2014-08-12T11:55:03+02:00</published>
+        <updated>2014-08-12T11:55:03+02:00</updated>
+        <id>http://www.golem.de/news/opteron-a1100-amd-will-custom-socs-fuer-arm-server-entwickeln-1408-108513-rss.html</id>
+        <author>
+            <name>Nico Ernst</name>
+        </author>
+        <summary type="html">Nach dem ersten ARM-Chip von AMD denkt das Unternehmen über kundenspezifische Lösungen nach. Wie schon bei den SoCs für Xbox One und PS4 sollen die Gerätehersteller bestimmen können, welche Leistung und welche Schnittstellen sie benötigen. (&lt;a href=&quot;http://www.golem.de/specials/cpu/&quot;&gt;Prozessor&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/amd/&quot;&gt;AMD&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108513&amp;amp;page=1&amp;amp;ts=1407837300&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">Chromebook 13: Acer stellt Chromebook mit Tegra-K1-Prozessor vor</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/chromebook-13-acer-stellt-chromebook-mit-tegra-k1-prozessor-vor-1408-108511-rss.html"/>
+        <published>2014-08-12T11:53:01+02:00</published>
+        <updated>2014-08-12T11:53:01+02:00</updated>
+        <id>http://www.golem.de/news/chromebook-13-acer-stellt-chromebook-mit-tegra-k1-prozessor-vor-1408-108511-rss.html</id>
+        <author>
+            <name>Tobias Költzsch</name>
+        </author>
+        <summary type="html">Mit dem Chromebook 13 hat Acer einen auf Googles Chrome OS basierenden Laptop vorgestellt, der mit mattem Full-HD-Display, einem schnellen Prozessor und langer Akkulaufzeit kommt. Auch ein günstigeres Modell mit 720p-Bildschirm wird es geben. (&lt;a href=&quot;http://www.golem.de/specials/google/&quot;&gt;Google&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/usb-3.0/&quot;&gt;USB 3.0&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108511&amp;amp;page=1&amp;amp;ts=1407837180&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">Amazon: Versandkostenfreie Lieferung künftig erst ab 29 Euro</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/amazon-versandkostenfreie-lieferung-kuenftig-erst-ab-29-euro-1408-108510-rss.html"/>
+        <published>2014-08-12T11:45:00+02:00</published>
+        <updated>2014-08-12T11:45:00+02:00</updated>
+        <id>http://www.golem.de/news/amazon-versandkostenfreie-lieferung-kuenftig-erst-ab-29-euro-1408-108510-rss.html</id>
+        <author>
+            <name>Ingo Pakalski</name>
+        </author>
+        <summary type="html">Bei Amazon-Bestellungen fallen künftig bis zu einer Summe von 29 Euro Versandkosten an. Bislang lag diese Grenze bei 20 Euro, ab der Waren versandkostenfrei geliefert wurden. (&lt;a href=&quot;http://www.golem.de/specials/amazon/&quot;&gt;Amazon&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/kindle/&quot;&gt;Kindle&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108510&amp;amp;page=1&amp;amp;ts=1407836700&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">Project Denver: Nvidias K1 mit 64 Bit optimiert ARM-Programme selbst</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/project-denver-nvidias-k1-mit-64-bit-optimiert-arm-programme-selbst-1408-108509-rss.html"/>
+        <published>2014-08-12T11:41:09+02:00</published>
+        <updated>2014-08-12T11:41:09+02:00</updated>
+        <id>http://www.golem.de/news/project-denver-nvidias-k1-mit-64-bit-optimiert-arm-programme-selbst-1408-108509-rss.html</id>
+        <author>
+            <name>Nico Ernst</name>
+        </author>
+        <summary type="html">Noch immer ist er nicht verfügbar - aber immerhin hat Nvidia nun erklärt, wie sein erster 64-Bit-Chip besonders schnell rechnen soll. In einem eigenen Speicherbereich soll er häufig benötigten Code in native Instruktionen des ARM-Cores umwandeln und neu sortieren. (&lt;a href=&quot;http://www.golem.de/specials/cpu/&quot;&gt;Prozessor&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/nvidia/&quot;&gt;Nvidia&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108509&amp;amp;page=1&amp;amp;ts=1407836460&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">Faster: Bau von Googles Seekabel beginnt</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/faster-bau-von-googles-seekabel-beginnt-1408-108507-rss.html"/>
+        <published>2014-08-12T10:50:07+02:00</published>
+        <updated>2014-08-12T10:50:07+02:00</updated>
+        <id>http://www.golem.de/news/faster-bau-von-googles-seekabel-beginnt-1408-108507-rss.html</id>
+        <author>
+            <name>Achim Sawall</name>
+        </author>
+        <summary type="html">Google baut ein nichtöffentliches Seekabel von den USA nach Asien. Das Projekt läuft bereits an und wird 300 Millionen US-Dollar kosten. (&lt;a href=&quot;http://www.golem.de/specials/google/&quot;&gt;Google&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/netzneutralitaet/&quot;&gt;Netzneutralität&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108507&amp;amp;page=1&amp;amp;ts=1407833400&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">Paranoid Android: Zweite Betaversion von PA 4.5 veröffentlicht</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/paranoid-android-zweite-betaversion-von-pa-4-5-veroeffentlicht-1408-108506-rss.html"/>
+        <published>2014-08-12T10:43:06+02:00</published>
+        <updated>2014-08-12T10:43:06+02:00</updated>
+        <id>http://www.golem.de/news/paranoid-android-zweite-betaversion-von-pa-4-5-veroeffentlicht-1408-108506-rss.html</id>
+        <author>
+            <name>Tobias Költzsch</name>
+        </author>
+        <summary type="html">Das Programmierteam von Paranoid Android hat eine zweite Version seiner Android-Distribution PA 4.5 präsentiert. Die Änderungen sind hauptsächlich kosmetischer Natur, das ROM hat immer noch Betastatus. (&lt;a href=&quot;http://www.golem.de/specials/desktop-applikationen/&quot;&gt;Applikationen&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/androidrom/&quot;&gt;Android-ROM&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108506&amp;amp;page=1&amp;amp;ts=1407832980&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">Cyanogenmod CM11s: Oneplus verteilt Android 4.4.4 für das One</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/cyanogenmod-cm11s-oneplus-verteilt-android-4-4-4-fuer-das-one-1408-108505-rss.html"/>
+        <published>2014-08-12T09:02:05+02:00</published>
+        <updated>2014-08-12T09:02:05+02:00</updated>
+        <id>http://www.golem.de/news/cyanogenmod-cm11s-oneplus-verteilt-android-4-4-4-fuer-das-one-1408-108505-rss.html</id>
+        <author>
+            <name>Ingo Pakalski</name>
+        </author>
+        <summary type="html">Oneplus hat mit der Verteilung des Updates auf Android 4.4.4 für das One-Smartphone begonnen. Neben einigen Fehlerkorrekturen gibt es auch eine neue Funktion für die Kamera-App. (&lt;a href=&quot;http://www.golem.de/specials/smartphone/&quot;&gt;Smartphone&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/android/&quot;&gt;Android&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108505&amp;amp;page=1&amp;amp;ts=1407826920&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">Android: Motorradhelm mit Micro-Display und Kamera</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/android-motorradhelm-mit-micro-display-und-kamera-1408-108503-rss.html"/>
+        <published>2014-08-12T07:53:03+02:00</published>
+        <updated>2014-08-12T07:53:03+02:00</updated>
+        <id>http://www.golem.de/news/android-motorradhelm-mit-micro-display-und-kamera-1408-108503-rss.html</id>
+        <author>
+            <name>Andreas Donath</name>
+        </author>
+        <summary type="html">Der Motorradhelm Skully AR-1 kann ins Gesichtfeld des Fahrers das Bild einer eingebauten Kamera einblenden. Der auf Android basierende Helm wird in Verbindung mit dem Smartphone auch zum Navi. So soll Motorradfahren sicherer werden. (&lt;a href=&quot;http://www.golem.de/specials/display/&quot;&gt;Display&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/android/&quot;&gt;Android&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108503&amp;amp;page=1&amp;amp;ts=1407822780&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">Vorbestellungen unterbunden: Amazon geht jetzt gegen Disney vor</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/vorbestellungen-unterbunden-amazon-geht-jetzt-gegen-disney-vor-1408-108502-rss.html"/>
+        <published>2014-08-12T07:38:02+02:00</published>
+        <updated>2014-08-12T07:38:02+02:00</updated>
+        <id>http://www.golem.de/news/vorbestellungen-unterbunden-amazon-geht-jetzt-gegen-disney-vor-1408-108502-rss.html</id>
+        <author>
+            <name>Andreas Donath</name>
+        </author>
+        <summary type="html">Amazon will von Disney günstiger beliefert werden. Dazu setzt der Versandhändler den Unterhaltungskonzern unter Druck. Neue Titel auf DVD und Blu-ray können bei Amazon derzeit nicht vorbestellt werden. (&lt;a href=&quot;http://www.golem.de/specials/amazon/&quot;&gt;Amazon&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/disney/&quot;&gt;Disney&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108502&amp;amp;page=1&amp;amp;ts=1407821880&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">Elgato: Spiele von Xbox One und PS4 aufnehmen und streamen</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/elgato-spiele-von-xbox-one-und-ps4-aufnehmen-und-streamen-1408-108501-rss.html"/>
+        <published>2014-08-12T07:18:01+02:00</published>
+        <updated>2014-08-12T07:18:01+02:00</updated>
+        <id>http://www.golem.de/news/elgato-spiele-von-xbox-one-und-ps4-aufnehmen-und-streamen-1408-108501-rss.html</id>
+        <author>
+            <name>Andreas Donath</name>
+        </author>
+        <summary type="html">Elgato hat mit dem Game Capture HD60 ein Gerät vorgestellt, mit dem das Spielgeschehen von Xbox One und PS4 aufgenommen werden kann. Das gelingt bis zur Full-HD-Auflösung. (&lt;a href=&quot;http://www.golem.de/specials/display/&quot;&gt;Display&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/h.264/&quot;&gt;H.264&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108501&amp;amp;page=1&amp;amp;ts=1407820680&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">Gerüchte: Erhält Windows 9 den Sprachassistenten Cortana?</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/geruechte-erhaelt-windows-9-den-sprachassistenten-cortana-1408-108500-rss.html"/>
+        <published>2014-08-12T07:13:00+02:00</published>
+        <updated>2014-08-12T07:13:00+02:00</updated>
+        <id>http://www.golem.de/news/geruechte-erhaelt-windows-9-den-sprachassistenten-cortana-1408-108500-rss.html</id>
+        <author>
+            <name>Andreas Donath</name>
+        </author>
+        <summary type="html">Microsoft könnte in seinem neuen Betriebssystem Windows 9 den Sprachassistenten Cortana einbauen, legt ein Bericht nahe. Apple versucht derzeit, Siri für OS X zu patentieren. (&lt;a href=&quot;http://www.golem.de/specials/desktop-applikationen/&quot;&gt;Applikationen&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/patent/&quot;&gt;Patent&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108500&amp;amp;page=1&amp;amp;ts=1407820380&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">Havok-Bibliothek: &quot;Im Kontext bereichert Physik die Grafik sehr&quot;</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/havok-bibliothek-im-kontext-bereichert-physik-die-grafik-sehr-1408-108498-rss.html"/>
+        <published>2014-08-11T23:36:08+02:00</published>
+        <updated>2014-08-11T23:36:08+02:00</updated>
+        <id>http://www.golem.de/news/havok-bibliothek-im-kontext-bereichert-physik-die-grafik-sehr-1408-108498-rss.html</id>
+        <author>
+            <name>Marc Sauter</name>
+        </author>
+        <summary type="html"> Die Havok-Physik gibt es seit über einer Dekade, in Zukunft liegt der Fokus auf einer Verschmelzung von Gameplay mit Effekten - wallende Kleider und dynamischer Rauch sind erst der Anfang. (&lt;a href=&quot;http://www.golem.de/specials/intel/&quot;&gt;Intel&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/havok/&quot;&gt;Havok&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108498&amp;amp;page=1&amp;amp;ts=1407792960&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">Call of Duty angespielt: Multiplayer-Extremsport im Exoskelett</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/call-of-duty-angespielt-multiplayer-extremsport-im-exoskelett-1408-108497-rss.html"/>
+        <published>2014-08-11T20:00:07+02:00</published>
+        <updated>2014-08-11T20:00:07+02:00</updated>
+        <id>http://www.golem.de/news/call-of-duty-angespielt-multiplayer-extremsport-im-exoskelett-1408-108497-rss.html</id>
+        <author>
+            <name>Peter Steinlechner</name>
+        </author>
+        <summary type="html">Die Gründer und Chefs von Sledgehammer Games haben den Multiplayermodus von Advanced Warfare vorgestellt. Golem.de konnte auf vier Maps ausprobieren, was die ungewohnt vielen Neuerungen bringen. (&lt;a href=&quot;http://www.golem.de/specials/call-of-duty/&quot;&gt;Call of Duty&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/activision/&quot;&gt;Activision&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108497&amp;amp;page=1&amp;amp;ts=1407780000&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">Intel Broadwell: Lange FinFETs und tiefer gelegte Spulen für flache Tablets</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/intel-broadwell-lange-finfets-und-tiefer-gelegte-spulen-fuer-flache-tablets-1408-108494-rss.html"/>
+        <published>2014-08-11T19:36:04+02:00</published>
+        <updated>2014-08-11T19:36:04+02:00</updated>
+        <id>http://www.golem.de/news/intel-broadwell-lange-finfets-und-tiefer-gelegte-spulen-fuer-flache-tablets-1408-108494-rss.html</id>
+        <author>
+            <name>Nico Ernst</name>
+        </author>
+        <summary type="html">Die demnächst zuerst in Tablets verfügbaren Intel-CPUs mit der neuen Broadwell-Architektur weisen im Bau der Chips einige Besonderheiten auf. So sind unter anderem die Spulen des Spannungsreglers in ein Kästchen auf der Unterseite gewandert, was ein Loch im Mainboard nötig macht. Zudem sind die Transistoren im Die neu konstruiert. (&lt;a href=&quot;http://www.golem.de/specials/cpu/&quot;&gt;Prozessor&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/intel/&quot;&gt;Intel&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108494&amp;amp;page=1&amp;amp;ts=1407778560&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+    <entry>
+        <title type="html">Osteuropa: Amazon kann bei &quot;Verlagerung Lieferversprechen nicht halten&quot;</title>
+        <link rel="alternate" type="text/html" href="http://www.golem.de/news/osteuropa-amazon-kann-bei-verlagerung-lieferversprechen-nicht-halten-1408-108496-rss.html"/>
+        <published>2014-08-11T18:36:06+02:00</published>
+        <updated>2014-08-11T18:36:06+02:00</updated>
+        <id>http://www.golem.de/news/osteuropa-amazon-kann-bei-verlagerung-lieferversprechen-nicht-halten-1408-108496-rss.html</id>
+        <author>
+            <name>Achim Sawall</name>
+        </author>
+        <summary type="html">Die Streikbewegung bei Amazon erwartet, dass der Onlinehändler seine Prime-Bestellungen nicht an Standorte in Polen und die Tschechische Republik auslagern kann. &quot;Wir sehen das entspannt&quot;, hieß es. (&lt;a href=&quot;http://www.golem.de/specials/amazon/&quot;&gt;Amazon&lt;/a&gt;, &lt;a href=&quot;http://www.golem.de/specials/verdi/&quot;&gt;Verdi&lt;/a&gt;) &lt;img src=&quot;http://cpx.golem.de/cpx.php?class=17&amp;amp;aid=108496&amp;amp;page=1&amp;amp;ts=1407774960&quot; alt=&quot;&quot; width=&quot;1&quot; height=&quot;1&quot; /&gt;</summary>
+    </entry>
+</feed>

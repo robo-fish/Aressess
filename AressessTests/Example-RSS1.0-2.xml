@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="../../../../../css/rss/feedRss1.xsl" media="screen" type="text/xsl"?>
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://purl.org/rss/1.0/" xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:syn="http://purl.org/rss/1.0/modules/syndication/">  
+  <channel rdf:about="http://www3.asahi.com/"> 
+    <title>スポーツ - 朝日新聞デジタル</title>  
+    <link>http://www.asahi.com/</link>  
+    <description>朝日新聞のニュースサイト、朝日新聞デジタルのスポーツニュースのページです。</description>  
+    <dc:language>ja</dc:language>  
+    <dc:rights>Copyright 2014 Asahi Shimbun. All rights reserved. No reproduction or republication without written permission.</dc:rights>  
+    <dc:date>2014-08-12T00:06:01+09:00</dc:date>  
+    <dc:publisher>朝日新聞社</dc:publisher>  
+    <dc:creator>朝日新聞社</dc:creator>  
+    <syn:updatePeriod>hourly</syn:updatePeriod>  
+    <syn:updateFrequency>1</syn:updateFrequency>  
+    <syn:updateBase>2014-08-12T00:06:01+09:00</syn:updateBase>  
+    <items> 
+      <rdf:Seq> 
+        <rdf:li rdf:resource="http://www.asahi.com/articles/ASG8C1RCNG8CUTQP003.html?ref=rss"/>  
+        <rdf:li rdf:resource="http://www.asahi.com/articles/ASG8C5W9RG8CTIPE022.html?ref=rss"/>  
+        <rdf:li rdf:resource="http://www.asahi.com/articles/ASG8C4GBLG8CPTIL018.html?ref=rss"/>  
+        <rdf:li rdf:resource="http://www.asahi.com/articles/ASG8C6J67G8CUTQP024.html?ref=rss"/>  
+        <rdf:li rdf:resource="http://www.asahi.com/articles/ASG8C75X7G8CUHBI02R.html?ref=rss"/>  
+        <rdf:li rdf:resource="http://www.asahi.com/articles/ASG8C520WG8CUTQP00Z.html?ref=rss"/>  
+        <rdf:li rdf:resource="http://www.asahi.com/articles/ASG8C4G6CG8CUTQP00Q.html?ref=rss"/>  
+        <rdf:li rdf:resource="http://www.asahi.com/articles/ASG8C5WYDG8CUTQP01W.html?ref=rss"/>  
+        <rdf:li rdf:resource="http://www.asahi.com/articles/ASG8C6J66G8CUTQP023.html?ref=rss"/>  
+        <rdf:li rdf:resource="http://www.asahi.com/articles/ASG8C62NLG8CPTQP01J.html?ref=rss"/>  
+        <rdf:li rdf:resource="http://www.asahi.com/articles/ASG8C5D70G8CUTQP01F.html?ref=rss"/>  
+        <rdf:li rdf:resource="http://www.asahi.com/articles/ASG8C5R21G8CUTQP01Q.html?ref=rss"/>  
+        <rdf:li rdf:resource="http://www.asahi.com/articles/ASG8C5R21G8CUTQP01R.html?ref=rss"/>  
+        <rdf:li rdf:resource="http://www.asahi.com/articles/ASG8C35Z3G8CUTQP00G.html?ref=rss"/>  
+        <rdf:li rdf:resource="http://www.asahi.com/articles/ASG8C35Z2G8CUTQP00F.html?ref=rss"/>  
+        <rdf:li rdf:resource="http://www.asahi.com/articles/ASG8C61R0G8CUTQP00N.html?ref=rss"/>  
+        <rdf:li rdf:resource="http://www.asahi.com/articles/ASG8C5QYHG8CUTQP01K.html?ref=rss"/>  
+        <rdf:li rdf:resource="http://www.asahi.com/articles/ASG8C52NMG8COIPE01Q.html?ref=rss"/>  
+        <rdf:li rdf:resource="http://www.asahi.com/articles/ASG8C52NPG8COIPE01T.html?ref=rss"/>  
+        <rdf:li rdf:resource="http://www.asahi.com/articles/ASG8C2C9NG8CPTQP00P.html?ref=rss"/> 
+      </rdf:Seq> 
+    </items>  
+    <atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="http://rss.asahi.com/rss/asahi/sports.rdf" type="application/rss+xml"/>
+  </channel>  
+  <item rdf:about="http://www.asahi.com/articles/ASG8C1RCNG8CUTQP003.html?ref=rss"> 
+    <title>松山英樹、今季メジャーは苦戦　来季の上位進出誓う</title>  
+    <link>http://www.asahi.com/articles/ASG8C1RCNG8CUTQP003.html?ref=rss</link>  
+    <description><![CDATA[<p></p>]]></description>  
+    <dc:subject>スポーツ</dc:subject>  
+    <dc:date>2014-08-12T00:06:01+09:00</dc:date> 
+  </item>  
+  <item rdf:about="http://www.asahi.com/articles/ASG8C5W9RG8CTIPE022.html?ref=rss"> 
+    <title>監督解任の鳥栖、精彩欠く　「奥底にある不安が影響」</title>  
+    <link>http://www.asahi.com/articles/ASG8C5W9RG8CTIPE022.html?ref=rss</link>  
+    <description><![CDATA[<p></p>]]></description>  
+    <dc:subject>スポーツ</dc:subject>  
+    <dc:date>2014-08-11T23:37:38+09:00</dc:date> 
+  </item>  
+  <item rdf:about="http://www.asahi.com/articles/ASG8C4GBLG8CPTIL018.html?ref=rss"> 
+    <title>龍谷大平安「まるで別の球場」　春夏連覇と開幕戦の重圧</title>  
+    <link>http://www.asahi.com/articles/ASG8C4GBLG8CPTIL018.html?ref=rss</link>  
+    <description><![CDATA[<p></p>]]></description>  
+    <dc:subject>スポーツ</dc:subject>  
+    <dc:date>2014-08-11T23:01:07+09:00</dc:date> 
+  </item>  
+  <item rdf:about="http://www.asahi.com/articles/ASG8C6J67G8CUTQP024.html?ref=rss"> 
+    <title>「将来性のある選手を呼ぶ」　アギーレ監督一問一答</title>  
+    <link>http://www.asahi.com/articles/ASG8C6J67G8CUTQP024.html?ref=rss</link>  
+    <description><![CDATA[<p></p>]]></description>  
+    <dc:subject>スポーツ</dc:subject>  
+    <dc:date>2014-08-11T22:29:20+09:00</dc:date> 
+  </item>  
+  <item rdf:about="http://www.asahi.com/articles/ASG8C75X7G8CUHBI02R.html?ref=rss"> 
+    <title>クローゼがドイツ代表引退　「Ｗ杯優勝で夢がかなった」</title>  
+    <link>http://www.asahi.com/articles/ASG8C75X7G8CUHBI02R.html?ref=rss</link>  
+    <description><![CDATA[<p></p>]]></description>  
+    <dc:subject>スポーツ</dc:subject>  
+    <dc:date>2014-08-11T22:28:02+09:00</dc:date> 
+  </item>  
+  <item rdf:about="http://www.asahi.com/articles/ASG8C520WG8CUTQP00Z.html?ref=rss"> 
+    <title>宗岡全柔連会長、代表選手を激励　「日本柔道の精神を」</title>  
+    <link>http://www.asahi.com/articles/ASG8C520WG8CUTQP00Z.html?ref=rss</link>  
+    <description><![CDATA[<p></p>]]></description>  
+    <dc:subject>スポーツ</dc:subject>  
+    <dc:date>2014-08-11T21:46:45+09:00</dc:date> 
+  </item>  
+  <item rdf:about="http://www.asahi.com/articles/ASG8C4G6CG8CUTQP00Q.html?ref=rss"> 
+    <title>セの提案をパが受け入れ　プロ野球交流戦６試合削減</title>  
+    <link>http://www.asahi.com/articles/ASG8C4G6CG8CUTQP00Q.html?ref=rss</link>  
+    <description><![CDATA[<p></p>]]></description>  
+    <dc:subject>スポーツ</dc:subject>  
+    <dc:date>2014-08-11T21:37:29+09:00</dc:date> 
+  </item>  
+  <item rdf:about="http://www.asahi.com/articles/ASG8C5WYDG8CUTQP01W.html?ref=rss"> 
+    <title>監督交代の鳥栖は黒星〈Ｊ１第１９節〉</title>  
+    <link>http://www.asahi.com/articles/ASG8C5WYDG8CUTQP01W.html?ref=rss</link>  
+    <description><![CDATA[<p></p>]]></description>  
+    <dc:subject>スポーツ</dc:subject>  
+    <dc:date>2014-08-11T21:35:50+09:00</dc:date> 
+  </item>  
+  <item rdf:about="http://www.asahi.com/articles/ASG8C6J66G8CUTQP023.html?ref=rss"> 
+    <title>「１１人全員が守備も攻撃も」　アギーレ新監督が抱負</title>  
+    <link>http://www.asahi.com/articles/ASG8C6J66G8CUTQP023.html?ref=rss</link>  
+    <description><![CDATA[<p></p>]]></description>  
+    <dc:subject>スポーツ</dc:subject>  
+    <dc:date>2014-08-11T20:45:24+09:00</dc:date> 
+  </item>  
+  <item rdf:about="http://www.asahi.com/articles/ASG8C62NLG8CPTQP01J.html?ref=rss"> 
+    <title>セ大阪、元ドイツ代表ＦＷカカウを獲得</title>  
+    <link>http://www.asahi.com/articles/ASG8C62NLG8CPTQP01J.html?ref=rss</link>  
+    <description><![CDATA[<p></p>]]></description>  
+    <dc:subject>スポーツ</dc:subject>  
+    <dc:date>2014-08-11T20:12:30+09:00</dc:date> 
+  </item>  
+  <item rdf:about="http://www.asahi.com/articles/ASG8C5D70G8CUTQP01F.html?ref=rss"> 
+    <title>Ｊ１柏の韓国栄、カタールＳＣに完全移籍</title>  
+    <link>http://www.asahi.com/articles/ASG8C5D70G8CUTQP01F.html?ref=rss</link>  
+    <description><![CDATA[<p></p>]]></description>  
+    <dc:subject>スポーツ</dc:subject>  
+    <dc:date>2014-08-11T19:51:17+09:00</dc:date> 
+  </item>  
+  <item rdf:about="http://www.asahi.com/articles/ASG8C5R21G8CUTQP01Q.html?ref=rss"> 
+    <title>日大鶴ケ丘・秋山「できすぎ」、悔しさ上回る　高校野球</title>  
+    <link>http://www.asahi.com/articles/ASG8C5R21G8CUTQP01Q.html?ref=rss</link>  
+    <description><![CDATA[<p></p>]]></description>  
+    <dc:subject>スポーツ</dc:subject>  
+    <dc:date>2014-08-11T19:47:05+09:00</dc:date> 
+  </item>  
+  <item rdf:about="http://www.asahi.com/articles/ASG8C5R21G8CUTQP01R.html?ref=rss"> 
+    <title>富山商・森田、自在の投球で完封　高校野球</title>  
+    <link>http://www.asahi.com/articles/ASG8C5R21G8CUTQP01R.html?ref=rss</link>  
+    <description><![CDATA[<p></p>]]></description>  
+    <dc:subject>スポーツ</dc:subject>  
+    <dc:date>2014-08-11T19:39:48+09:00</dc:date> 
+  </item>  
+  <item rdf:about="http://www.asahi.com/articles/ASG8C35Z3G8CUTQP00G.html?ref=rss"> 
+    <title>金蘭会、粘りの守備で頂点　高校総体バレー女子</title>  
+    <link>http://www.asahi.com/articles/ASG8C35Z3G8CUTQP00G.html?ref=rss</link>  
+    <description><![CDATA[<p></p>]]></description>  
+    <dc:subject>スポーツ</dc:subject>  
+    <dc:date>2014-08-11T19:16:22+09:00</dc:date> 
+  </item>  
+  <item rdf:about="http://www.asahi.com/articles/ASG8C35Z2G8CUTQP00F.html?ref=rss"> 
+    <title>バレー女子、金蘭会が初優勝　高校総体</title>  
+    <link>http://www.asahi.com/articles/ASG8C35Z2G8CUTQP00F.html?ref=rss</link>  
+    <description><![CDATA[<p></p>]]></description>  
+    <dc:subject>スポーツ</dc:subject>  
+    <dc:date>2014-08-11T18:59:47+09:00</dc:date> 
+  </item>  
+  <item rdf:about="http://rss.rssad.jp/rss/ad/hHlltxhZw6r2/yjYYWPZInVfA?type=2&amp;ent=cb9d3951fca81c4e757b3aa9eaf811c2">
+    <title><![CDATA[PR: 7つの習慣×変革の原則　リーダー達に学ぶ実践セミナー]]></title>
+    <link>http://rss.rssad.jp/rss/ad/hHlltxhZw6r2/yjYYWPZInVfA?type=2&amp;ent=cb9d3951fca81c4e757b3aa9eaf811c2</link>
+    <description><![CDATA[<table cellspacing="0" cellpadding="0"><tbody><tr><td align="left" valign="center"><a href="http://rss.rssad.jp/rss/ad/hHlltxhZw6r2/yjYYWPZInVfA?type=2" target="_blank"><img alt="" style="border: 0;" border="0" src="http://bnr.rssad.jp/rss/img/hHlltxhZw6r2/yjYYWPZInVfA?type=3&ent=cb9d3951fca81c4e757b3aa9eaf811c2"/></a></td></tr><tr><td align="left" valign="top" > 8月23日（土）開催　一流の人は知っている！売れ続ける会社に変える10の原則とは </td></tr></tbody></table><div style="font-size:10px;"><span style="padding-top:5px;"><br style="display:none"/><a href="http://www.rssad.jp/trendmatch/trendmatch.html">Ads by Trend Match</a></span><br/></div>]]></description>
+    <dc:date>2014-08-11T18:59:47+09:00</dc:date>
+  </item>
+  <item rdf:about="http://www.asahi.com/articles/ASG8C61R0G8CUTQP00N.html?ref=rss"> 
+    <title>世代交代、マキロイ時代の予感　メジャー大会２連勝</title>  
+    <link>http://www.asahi.com/articles/ASG8C61R0G8CUTQP00N.html?ref=rss</link>  
+    <description><![CDATA[<p></p>]]></description>  
+    <dc:subject>スポーツ</dc:subject>  
+    <dc:date>2014-08-11T18:26:43+09:00</dc:date> 
+  </item>  
+  <item rdf:about="http://www.asahi.com/articles/ASG8C5QYHG8CUTQP01K.html?ref=rss"> 
+    <title>富山商が完封勝ち　少ない好機逃さず　高校野球第１日</title>  
+    <link>http://www.asahi.com/articles/ASG8C5QYHG8CUTQP01K.html?ref=rss</link>  
+    <description><![CDATA[<p></p>]]></description>  
+    <dc:subject>スポーツ</dc:subject>  
+    <dc:date>2014-08-11T18:09:01+09:00</dc:date> 
+  </item>  
+  <item rdf:about="http://www.asahi.com/articles/ASG8C52NMG8COIPE01Q.html?ref=rss"> 
+    <title>敦賀気比の１番、４打点３得点「勢いつけた」　高校野球</title>  
+    <link>http://www.asahi.com/articles/ASG8C52NMG8COIPE01Q.html?ref=rss</link>  
+    <description><![CDATA[<p></p>]]></description>  
+    <dc:subject>スポーツ</dc:subject>  
+    <dc:date>2014-08-11T18:05:47+09:00</dc:date> 
+  </item>  
+  <item rdf:about="http://rss.rssad.jp/rss/ad/hHlltxhZw6r2/.3XKmzDHpaEA?type=2&amp;ent=124cefed5b6b3e9e87cc78a5ccc11085">
+    <title><![CDATA[PR: 7つの習慣×変革の原則　リーダー達に学ぶ実践セミナー]]></title>
+    <link>http://rss.rssad.jp/rss/ad/hHlltxhZw6r2/.3XKmzDHpaEA?type=2&amp;ent=124cefed5b6b3e9e87cc78a5ccc11085</link>
+    <description><![CDATA[<table cellspacing="0" cellpadding="0"><tbody><tr><td align="left" valign="center"><a href="http://rss.rssad.jp/rss/ad/hHlltxhZw6r2/.3XKmzDHpaEA?type=2" target="_blank"><img alt="" style="border: 0;" border="0" src="http://bnr.rssad.jp/rss/img/hHlltxhZw6r2/.3XKmzDHpaEA?type=3&ent=124cefed5b6b3e9e87cc78a5ccc11085"/></a></td></tr><tr><td align="left" valign="top" > 8月23日（土）開催　一流の人は知っている！売れ続ける会社に変える10の原則とは </td></tr></tbody></table><div style="font-size:10px;"><span style="padding-top:5px;"><br style="display:none"/><a href="http://www.rssad.jp/trendmatch/trendmatch.html">Ads by Trend Match</a></span><br/></div>]]></description>
+    <dc:date>2014-08-11T18:05:47+09:00</dc:date>
+  </item>
+  <item rdf:about="http://www.asahi.com/articles/ASG8C52NPG8COIPE01T.html?ref=rss"> 
+    <title>坂出商エース脱帽「香川とは違った」　高校野球</title>  
+    <link>http://www.asahi.com/articles/ASG8C52NPG8COIPE01T.html?ref=rss</link>  
+    <description><![CDATA[<p></p>]]></description>  
+    <dc:subject>スポーツ</dc:subject>  
+    <dc:date>2014-08-11T18:04:23+09:00</dc:date> 
+  </item>  
+  <item rdf:about="http://www.asahi.com/articles/ASG8C2C9NG8CPTQP00P.html?ref=rss"> 
+    <title>敦賀気比が圧倒、２本塁打含む毎回安打　高校野球第１日</title>  
+    <link>http://www.asahi.com/articles/ASG8C2C9NG8CPTQP00P.html?ref=rss</link>  
+    <description><![CDATA[<p></p>]]></description>  
+    <dc:subject>スポーツ</dc:subject>  
+    <dc:date>2014-08-11T17:56:13+09:00</dc:date> 
+  </item> 
+</rdf:RDF>

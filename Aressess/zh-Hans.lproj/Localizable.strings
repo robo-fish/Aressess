@@ -1,0 +1,24 @@
+"FeedsListTitle" = "RSS订阅";
+"DefaultFeedName" = "无题";
+"CannotReachHost" = "无法找到“%@\”";
+"FeedEditorNameFieldPlaceholder" = "名";
+"FeedEditorURLFieldPlaceholder" = "网址(URL)";
+"FeedGroupSelectorTitle" = "组";
+"EmptyFeedGroup" = "空白";
+"AndMore" = "等等";
+"OpenInSafari" = "打开";
+
+"ViewCloseButtonTitle" = "关闭";
+
+// Help
+"HelpVersionLabelString" = "版本 %@";
+"HelpSelectingGroup" = "选择一个组";
+"HelpAssigningToGroup" = "转移到另外一个组";
+
+// In-App Purchase
+"Purchase_PromptWithPrice" = "用%@解锁两个额外的组";
+"Purchase_CanNotPurchase" = "很遗憾您现在不能购买额外的组。请检查您的网络连接和iTunes账号。";
+"Purchase_Button_BuyNow" = "现在购买！";
+"Purchase_Button_Restore" = "恢复以前的购买";
+"Purchase_Button_Cancel" = "不，谢谢";
+"Purchase_Button_Dismiss" = "关闭";

@@ -1,0 +1,24 @@
+"FeedsListTitle" = "Flux RSS";
+"DefaultFeedName" = "Sans nom";
+"CannotReachHost" = "\"%@\" ne peut pas être atteint.";
+"FeedEditorNameFieldPlaceholder" = "Nom";
+"FeedEditorURLFieldPlaceholder" = "Adresse (URL)";
+"FeedGroupSelectorTitle" = "Groupes";
+"EmptyFeedGroup" = "vide";
+"AndMore" = "etc.";
+"OpenInSafari" = "Ouvrir";
+
+"ViewCloseButtonTitle" = "Fermer";
+
+// Help
+"HelpVersionLabelString" = "version %@";
+"HelpSelectingGroup" = "Sélectionner Un Groupe";
+"HelpAssigningToGroup" = "Assigner À Un Autre Groupe";
+
+// In-App Purchase
+"Purchase_PromptWithPrice" = "Débloquer deux groupes supplémentaires pour %@.";
+"Purchase_CanNotPurchase" = "Malheureusement, vous ne pouvez pas acheter groupes supplémentaires pour le moment. Vérifiez votre connexion Internet et votre compte iTunes.";
+"Purchase_Button_BuyNow" = "Acheter maintenant!!";
+"Purchase_Button_Restore" = "Restaurer l'achat précédent.";
+"Purchase_Button_Cancel" = "Non, merci.";
+"Purchase_Button_Dismiss" = "Fermer";

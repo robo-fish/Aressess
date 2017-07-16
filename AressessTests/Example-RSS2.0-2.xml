@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+  xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+  xmlns:qz="http://qz.com/"
+  xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:media="http://search.yahoo.com/mrss/"
+  >
+
+  <channel>
+    <title>Quartz</title>
+    <atom:link href="http://qz.com/feed/" rel="self" type="application/rss+xml" />
+    <link>http://qz.com</link>
+    <description>Quartz is a digitally native news outlet for the new global economy.</description>
+    <lastBuildDate>Tue, 29 Jul 2014 05:31:25 +0000</lastBuildDate>
+    <language>en</language>
+    <sy:updatePeriod>hourly</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
+    <generator>http://wordpress.com/</generator>
+    <cloud domain='qz.com' port='80' path='/?rsscloud=notify' registerProcedure='' protocol='http-post' />
+    <image>
+      <url>http://1.gravatar.com/blavatar/7fd9e2ee486de5ce0c713891ec823ea6?s=96&#038;d=http%3A%2F%2Fs2.wp.com%2Fi%2Fbuttonw-com.png</url>
+      <title>Quartz</title>
+      <link>http://qz.com</link>
+    </image>
+    <atom:link rel="search" type="application/opensearchdescription+xml" href="http://qz.com/osd.xml" title="Quartz" />
+    <atom:link rel='hub' href='http://qz.com/?pushpress=hub'/>
+      <item>
+      <title>There&#8217;s no longer any doubt that Microsoft is in China&#8217;s crosshairs</title>
+      <link>http://qz.com/241699/theres-no-longer-any-doubt-that-microsoft-is-in-chinas-crosshairs/</link>
+      <comments>http://qz.com/241699/theres-no-longer-any-doubt-that-microsoft-is-in-chinas-crosshairs/#comments</comments>
+      <pubDate>Tue, 29 Jul 2014 05:26:51 +0000</pubDate>
+      <dc:creator><![CDATA[Lily Kuo]]></dc:creator>
+      <category><![CDATA[China's Transition]]></category>
+    <category><![CDATA[anti-trust probe China]]></category>
+    <category><![CDATA[Microsoft]]></category>
+    <category><![CDATA[Qualcomm]]></category>
+    <category><![CDATA[Xbox]]></category>
+
+    <guid isPermaLink="false">http://qz.com/?p=241699</guid>
+    <description><![CDATA[Chinese officials paid Microsoft in China a surprise visit yesterday, a move that&#8217;s likely a precursor to an anti-trust investigation. Microsoft confirmed that officials came to its offices in Beijing, Shanghai, Guangzhou, and Chengdu, but neither the company nor the government have explained the reason for the visits. The authorities visiting Microsoft were from the the government&#8217;s industry and commerce division, which [&#8230;]<img alt="" border="0" src="http://pixel.wp.com/b.gif?host=qz.com&#038;blog=39587363&#038;post=241699&#038;subd=qzprod&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+				<content:encoded><![CDATA[<img width="640" height="360" src="http://img.qz.com/2014/07/windows-8-china-web.jpg?w=640" class="attachment-medium_10 wp-post-image" alt="Even promotion girls can&#039;t bring the Chinese government around to Windows 8." /><p class="p1">Chinese officials paid Microsoft in China a surprise visit yesterday, a move that&#8217;s likely a <a href="http://www.reuters.com/article/2014/07/28/us-microsoft-china-idUSKBN0FX0TY20140728">precursor to an anti-trust investigation</a>. Microsoft confirmed that officials came to its offices in Beijing, Shanghai, Guangzhou, and Chengdu, but neither the company nor the government have explained the reason for the visits.</p>
+          <p class="p1">The authorities visiting Microsoft were from the the government&#8217;s industry and commerce division, which is also targeting chipmaker Qualcomm in an anti-trust probe that could result in penalties of <a href="http://www.ft.com/intl/cms/s/0/b9d09792-132a-11e4-925a-00144feabdc0.html#axzz38e1zMAkf">more than $1 billion</a> (paywall).</p>
+          <p class="p1">Qualcomm is in the midst of hard-edged negotiations with Chinese manufacturers upgrading to 4G technology, and <a href="http://qz.com/178422/why-it-is-a-no-brainer-for-china-to-play-hardball-with-qualcomm/">as Quartz has reported</a>, an anti-trust probe serves China&#8217;s short-term and long-term technology needs. Microsoft, as it has discovered in the last few months, is in a similar situation: Regulatory pressure could result in lower costs for Chinese users, and also encourage Beijing&#8217;s efforts to break foreign firms&#8217; strangle-hold over crucial technology infrastructure.</p>
+          <p class="p1">China has been working on domestic operating systems for years with little luck. The country&#8217;s state-affiliated Chinese Academy of Sciences unveiled a <a href="http://www.globaltimes.cn/content/837978.shtml#.UtkA-fbPHdA">homegrown mobile operating system</a> called COS (for China Operating System) in January, but it was panned by internet users who took to saying COS stood for &#8220;<a href="http://qz.com/168120/the-communist-partys-answer-to-ios-and-android-gets-jeered-in-china/">Copy other System</a>.&#8221; The state-owned domestic desktop operating system, Red Flag Linux, a Windows look-alike, <a href="http://www.techinasia.com/maker-chinas-domestic-desktop-os-dark-leaves-employees-pay/">closed down</a> abruptly in February.</p>
+          <p class="p1">Microsoft, whose operating systems are widely used in China, is an easy target. The Chinese government barred government employees <a href="http://qz.com/211835/dissing-windows-leaves-china-without-many-good-os-options/">from using Microsoft&#8217;s Windows 8</a> operating system in May, and has reportedly pressured state-owned enterprises to follow suit. The older, more vulnerable Windows XP was used on <a href="http://www.reuters.com/article/2014/05/20/us-microsoft-china-idUSBREA4J07Q20140520">half of all desktop computers</a> in China, before Microsoft stopped supporting it in April.</p>
+          <p class="p1">Microsoft has struggled to make money from selling its software in China. In 2011, Steve Ballmer said that because of rampant software piracy, the company earned less in China <a href="http://online.wsj.com/news/articles/SB10001424052702303654804576347190248544826">than the Netherlands</a>, even though it sells as many computers in China as in the United States.</p>
+          <p class="p1">That&#8217;s likely one reason why the company is focusing on China&#8217;s newly opening gaming console market. Microsoft began taking orders for <a href="http://www.bloomberg.com/news/2014-07-28/microsoft-taps-tencent-and-jd-com-for-xbox-sales-in-china.html">the Xbox</a> through a partnership with JD.com, an e-commerce retailer that is partially owned by internet giant Tencent.</p><img alt="" border="0" src="http://pixel.wp.com/b.gif?host=qz.com&#038;blog=39587363&#038;post=241699&#038;subd=qzprod&#038;ref=&#038;feed=1" width="1" height="1" />]]></content:encoded>
+        <wfw:commentRss>http://qz.com/241699/theres-no-longer-any-doubt-that-microsoft-is-in-chinas-crosshairs/feed/</wfw:commentRss>
+        <slash:comments>0</slash:comments>
+        <qz:related><relatedarticle>	<title>China is using its immense commercial fishing fleet as a surrogate navy</title>	<url>http://qz.com/241201/china-is-using-its-immense-commercial-fishing-fleet-as-a-surrogate-navy/</url>	<uid>241201</uid></relatedarticle><relatedarticle>	<title>The military isn&#8217;t giving up China&#8217;s airspace, no matter how many flight delays it causes</title>	<url>http://qz.com/239771/the-military-isnt-relinquishing-control-over-chinas-airspace-no-matter-how-many-flight-delays-it-causes/</url>	<uid>239771</uid></relatedarticle><relatedarticle>	<title>Phony Twitter accounts whitewashing China&#8217;s treatment of Tibet have been suspended</title>	<url>http://qz.com/238316/phony-twitter-accounts-whitewashing-chinas-treatment-of-tibet-have-been-suspended/</url>	<uid>238316</uid></relatedarticle></qz:related>
+        <media:thumbnail url="http://img.qz.com/2014/07/windows-8-china-web.jpg?w=640" />
+        <media:content url="http://img.qz.com/2014/07/windows-8-china-web.jpg?w=640" medium="image">
+          <media:title type="html">windows 8 china web</media:title>
+        </media:content>
+  </item>
+		<item>
+      <title>Twitter&#8217;s pivotal quarterly results are all about user growth</title>
+      <link>http://qz.com/241698/twitters-pivotal-quarterly-results-are-all-about-user-growth/</link>
+      <comments>http://qz.com/241698/twitters-pivotal-quarterly-results-are-all-about-user-growth/#comments</comments>
+      <pubDate>Tue, 29 Jul 2014 05:25:51 +0000</pubDate>
+      <dc:creator><![CDATA[Dan Frommer]]></dc:creator>
+      <category><![CDATA[Uncategorized]]></category>
+      <category><![CDATA[2014 World Cup]]></category>
+      <category><![CDATA[advertising]]></category>
+      <category><![CDATA[anthony noto]]></category>
+      <category><![CDATA[dick costolo]]></category>
+      <category><![CDATA[Earnings]]></category>
+      <category><![CDATA[Earnings preview]]></category>
+      <category><![CDATA[mobile advertising]]></category>
+      <category><![CDATA[twitter]]></category>
+      <category><![CDATA[World Cup]]></category>
+      <category><![CDATA[World Cup 2014]]></category>
+
+      <guid isPermaLink="false">http://qz.com/?p=241698</guid>
+      <description><![CDATA[Twitter has proven many doubters wrong in its tumultuous history, but recent concerns about its growth and market size potential could get louder this afternoon (US time) when the social media firm reports its second-quarter results. Twitter, whose stock started trading publicly last November, is at a pivotal point: It has just gone through its first big management shake-up as a [&#8230;]<img alt="" border="0" src="http://pixel.wp.com/b.gif?host=qz.com&#038;blog=39587363&#038;post=241698&#038;subd=qzprod&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+      <content:encoded><![CDATA[<img width="640" height="360" src="http://img.qz.com/2014/07/dick-costolo-black-background.jpg?w=640" class="attachment-medium_10 wp-post-image" alt="Twitter CEO Dick Costolo" /><p>Twitter has proven <a href="http://www.splatf.com/2011/09/twitter-100-million/">many doubters wrong</a> in its tumultuous history, but recent concerns about its growth and market size potential could get louder this afternoon (US time) when the social media firm reports its second-quarter results.</p>
+        <p>Twitter, whose stock started trading publicly last November, is at a pivotal point: It has just gone through its first big management shake-up as a public company, with its chief operating officer leaving the company and a new finance chief, <a href="http://qz.com/228946/twitters-third-cfo-in-two-years-could-take-it-in-a-new-direction/">highly regarded ex-banker Anthony Noto</a>, coming on board.</p>
+        <p>Twitter has also shut down skeptics who never thought it would amount to a real business by generating hundreds of millions of dollars in advertising revenue, much of it coming from mobile devices, where other media companies have struggled. It is even growing its mobile advertising capabilities <a href="http://qz.com/229023/twitters-next-trick-is-to-prove-it-can-actually-become-a-stable-grown-up-company/">beyond Twitter itself</a>. Wall Street&#8217;s consensus is that Twitter will report second-quarter <strong>sales of about $283 million—double the same period last year</strong>.</p>
+        <p>But Twitter has lagged in one key metric—adding active users. Twitter (the product) seems simple yet powerful enough that it should be useful to everyone with a mobile phone. Yet it remains a <a href="http://qz.com/239573/facebook-is-making-massive-amounts-of-money-on-sky-rocketing-mobile-usage/">fraction of Facebook&#8217;s size</a>, with slowing active user growth. And that&#8217;s what investors will pay the most attention to today, and what could send Twitter shares up or down. (Twitter was reportedly considering <a href="http://qz.com/237018/how-many-ways-of-measuring-itself-is-twitter-going-to-invent/">releasing new and different measurements</a> of its size for today&#8217;s report, but <a href="http://recode.net/2014/07/28/twitter-wont-unveil-new-growth-metrics-for-q2-earnings/">Recode&#8217;s Peter Kafka reports</a> that it will not.)</p>
+        <p>Specifically, analysts are looking for Twitter to report second-quarter <strong>monthly active users (MAUs) somewhere around 265 million</strong>, representing year-on-year growth in the low-20% range. That&#8217;s a significant deceleration from this time last year, when Twitter was still growing its user base by roughly 40%.</p>
+        <p>Then there&#8217;s the issue of the World Cup, which <a href="http://www.businessinsider.com/twitter-monthly-active-users-in-q2-2014-7">likely played a key role in Twitter&#8217;s usage</a> and growth last quarter. Skeptics may say that the world&#8217;s largest sporting event only happens once every four years, so it doesn&#8217;t really count if that&#8217;s what propelled Twitter. The counterargument: One of Twitter&#8217;s best uses is for following large, global events, so <em>of course</em> it&#8217;s going to lean on the World Cup for growth—isn&#8217;t that the point?</p>
+        <p>With that in mind, any remarkable show of momentum—either strength or weakness—during today&#8217;s report could set the tone for Twitter&#8217;s investor story for a while.</p>
+        <p>If its numbers are outstanding—say, more than 275 million monthly active users—Twitter will look good, and the stock could soar. If they&#8217;re disappointing on top of all the other changes going on, the uncertainty could drive a sell-off in Twitter shares. And Twitter&#8217;s streak here so far isn&#8217;t good: Shares opened down 12% and 23% the mornings after its two prior earnings calls.</p>
+        <h3>Read this next: <a href="http://qz.com/229023/twitters-next-trick-is-to-prove-it-can-actually-become-a-stable-grown-up-company/">Twitter’s next trick is to prove it can actually become a stable, grown-up company</a></h3><img alt="" border="0" src="http://pixel.wp.com/b.gif?host=qz.com&#038;blog=39587363&#038;post=241698&#038;subd=qzprod&#038;ref=&#038;feed=1" width="1" height="1" />]]></content:encoded>
+      <wfw:commentRss>http://qz.com/241698/twitters-pivotal-quarterly-results-are-all-about-user-growth/feed/</wfw:commentRss>
+      <slash:comments>0</slash:comments>
+      <qz:related><relatedarticle>	<title>Meet all the real winners of the 2014 World Cup</title>	<url>http://qz.com/233803/meet-all-the-real-winners-of-the-2014-world-cup/</url>	<uid>233803</uid></relatedarticle><relatedarticle>	<title>This chart proves nobody cares about third place in the World Cup</title>	<url>http://qz.com/233783/this-chart-proves-nobody-cares-about-third-place-in-the-world-cup/</url>	<uid>233783</uid></relatedarticle><relatedarticle>	<title>These are the World Cup countries that shout &#8220;goooaaaaal!&#8221; the loudest on Facebook</title>	<url>http://qz.com/229553/these-are-the-world-cup-countries-that-shout-goooaaaaal-the-loudest-on-facebook/</url>	<uid>229553</uid></relatedarticle></qz:related>
+      <media:thumbnail url="http://img.qz.com/2014/07/dick-costolo-black-background.jpg?w=640" />
+      <media:content url="http://img.qz.com/2014/07/dick-costolo-black-background.jpg?w=640" medium="image">
+        <media:title type="html">dick-costolo-black-background</media:title>
+      </media:content>
+    </item>
+    <item>
+      <title>Quartz Daily Brief—Europe edition—Twitter results, Cold War redux, China probes Microsoft, dating profiles useless</title>
+      <link>http://qz.com/241715/quartz-daily-brief-twitter-results-cold-war-redux-china-probes-microsoft-dating-profiles-useless/</link>
+      <comments>http://qz.com/241715/quartz-daily-brief-twitter-results-cold-war-redux-china-probes-microsoft-dating-profiles-useless/#comments</comments>
+      <pubDate>Tue, 29 Jul 2014 04:38:22 +0000</pubDate>
+      <dc:creator><![CDATA[Quartz Staff]]></dc:creator>
+      <category><![CDATA[Uncategorized]]></category>
+      <category><![CDATA[daily brief]]></category>
+
+      <guid isPermaLink="false">http://qz.com/241715/quartz-daily-brief-twitter-results-cold-war-redux-china-probes-microsoft-dating-profiles-useless/</guid>
+      <description><![CDATA[What to watch for today Argentina procrastinates. Argentinian negotiators will meet again with a US court-appointed mediator instead of sitting down with &#8220;holdout&#8221; investors directly. A day before the deadline to avoid a default, they are seeking a delay of the US court ruling obliging Argentina to pay up. Deutsche Bank&#8217;s ugly results. Analysts expect revenue and profit to [&#8230;]<img alt="" border="0" src="http://pixel.wp.com/b.gif?host=qz.com&#038;blog=39587363&#038;post=241715&#038;subd=qzprod&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+      <content:encoded><![CDATA[<p><strong><em>What to watch for today</em></strong></p>
+        <p><strong>Argentina procrastinates. </strong>Argentinian negotiators will meet again with a US court-appointed mediator instead of sitting down with &#8220;holdout&#8221; investors directly. A day before the deadline to avoid a default, they are <a href="http://www.bloomberg.com/news/2014-07-28/argentina-s-bonds-fall-as-deadline-nears-with-no-meeting-today.html">seeking a delay of the US court ruling</a> obliging Argentina to pay up.</p>
+        <p><strong>Deutsche Bank&#8217;s ugly results.</strong> Analysts expect revenue and profit to <a href="http://www.bloomberg.com/news/2014-07-25/deutsche-bank-seen-posting-fourth-trading-revenue-slump.html">drop for the fourth consecutive quarter</a>, as the bank&#8217;s debt, currency, and equity trading units all post declines. Deutsche Bank is trying to <a href="http://online.wsj.com/articles/deutsche-bank-sharpens-focus-on-wealth-management-investment-banking-1406463121">shift its focus</a> (paywall) to concentrate on wealth management and investment banking.</p>
+        <p><strong>Did the World Cup give Twitter a kick? </strong>The social network expects to report a surge in quarterly ad sales, but investors will care most about <a href="http://www.marketwatch.com/story/twitter-earnings-investors-focus-on-user-growth-2014-07-25">a growing user base</a>. Twitter may have benefitted from <a href="http://www.forbes.com/sites/greatspeculations/2014/07/28/twitter-earnings-preview-user-base-growth-may-see-temporary-uptick/">the largest sporting event in the world</a>.</p>
+        <p><strong>Big data for the US.</strong> Although a preliminary survey showed that <a href="http://www.reuters.com/article/2014/07/18/us-usa-economy-sentiment-idUSKBN0FN1OO20140718">consumer sentiment dipped</a> in early July, consumer confidence is likely to hit a <a href="http://www.bloomberg.com/news/2014-07-27/fed-u-s-gdp-jobs-data-bp-ubs-week-ahead-july-28-aug-2.html">six-year high</a> as strong jobs reports boosted households. The S&amp;P Case/Shiller Home Price Index for May is expected to show a smaller rise in home prices.</p>
+        <p><em><strong>While you were sleeping</strong></em></p>
+        <p><strong>The US-Russia stand-off got much chillier</strong>. The Obama administration alleged that Russian cruise missile tests <a href="http://www.nytimes.com/2014/07/29/world/europe/us-says-russia-tested-cruise-missile-in-violation-of-treaty.html?hp&amp;action=click&amp;pgtype=Homepage&amp;version=LedeSum&amp;module=first-column-region&amp;region=top-news&amp;WT.nav=top-news">violated a crucial nuclear treaty</a> that helped end the Cold War. Separately, Germany, Britain, France, Italy, and the US agreed <a href="http://www.reuters.com/article/2014/07/28/us-ukraine-crisis-idUSKBN0FX11Z20140728">new restrictions on Russia&#8217;s energy, finance, and defense sectors</a></p>
+        <p><strong>A mixed bag for Japan&#8217;s economy.</strong> <a href="http://www.nytimes.com/reuters/2014/07/28/business/28reuters-japan-economy-jobs.html?ref=business&amp;_r=0">The jobless rate rose unexpectedly to 3.7% in June</a>, from 3.5% in May, but the overall availability of jobs is at its highest point in more than 20 years. Household spending fell by a less-than-expected 3% while retail sales fell by 0.6%.</p>
+        <p><strong>China probed Microsoft.</strong> <a href="http://www.scmp.com/news/china/article/1561233/microsoft-china-placed-under-probe">Officials arrived unannounced at four of its offices</a> across China, and media reports suggested that an anti-trust investigation is underway.</p>
+        <p><strong>Hopes for an Israel-Gaza ceasefire receded</strong>. Israeli prime minister Benjamin Netanyahu warned of a &#8220;long operation&#8221; and said the <a href="http://www.bloomberg.com/news/2014-07-28/israel-holds-gaza-fire-as-obama-seeks-full-combat-halt.html">full demilitarization of Gaza would be required for any truce</a>. Previous hopes of calm during the Muslim festival of Eid al-Fitr were dashed as an explosion at a Gaza refugee camp <a href="http://www.nytimes.com/2014/07/29/world/middleeast/israel-gaza-conflict.html?hp&amp;action=click&amp;pgtype=Homepage&amp;version=HpSum&amp;module=first-column-region&amp;region=top-news&amp;WT.nav=top-news">killed 10 Palestinians</a>.</p>
+        <p><strong>Moody&#8217;s raised Colombia&#8217;s credit rating </strong>to <a href="http://www.bloomberg.com/news/2014-07-28/colombia-s-credit-rating-increased-by-moody-s-one-level-to-baa2.html">a couple of steps above junk-grade</a>. A $25 billion highway-building program is expected to deliver &#8220;robust long-term growth prospects,&#8221; the investment ratings service said.</p>
+        <p><strong>Alarm grew over Ebola. </strong>Two Americans have joined the <a href="http://www.thedailybeast.com/articles/2014/07/28/two-americans-have-now-been-diagnosed-with-ebola-in-record-outbreak.html">ranks of healthcare workers</a> infected by the virus, after one of Liberia&#8217;s top Ebola experts died at the weekend. The record outbreak poses <a href="http://qz.com/241241/why-ebola-reaching-the-nigerian-capital-is-a-whole-new-level-of-scary/">an even greater global threat</a> with its arrival last week in Lagos, Nigeria, a densely-populated international travel hub.</p>
+        <p><em><strong>Quartz <a href="http://qz.com/our-current-obsessions-2/" target="_blank">obsession</a> interlude</strong></em></p>
+        <p><strong>John McDuling on how Major League Baseball made the best argument for net neutrality. </strong>&#8220;BAM employs about 700 people and is on track to generate $800 million in revenue this year. It runs professional baseball’s digital properties, including the websites and social media properties of MLB’s 30 franchises. But it’s best known for its online streaming prowess. It runs the league’s own streaming platform, mlb.tv, and is now even selling services to clients like ESPN and the professional wrestling organization WWE.&#8221; <a href="http://qz.com/241250/the-best-argument-yet-for-net-neutrality-comes-from-major-league-baseball/">Read more here.</a></p>
+        <p><em><strong>Matters of debate</strong></em></p>
+        <p><strong>It&#8217;s not too late to change the internet</strong>. It may seem like the best ideas are taken, <a href="https://medium.com/message/you-are-not-late-b3d76f963142">but we&#8217;re only at the beginning</a>.</p>
+        <p><strong>Israel is fighting two wars:</strong> one against Hamas, and the other against <a href="http://www.newyorker.com/books/page-turner/israels-other-war">citizens who dare to question the government</a>.</p>
+        <p><strong>Asia should fear the end of the Great Bargain.</strong> <a href="http://nationalinterest.org/blog/the-buzz/why-asia-the-world-should-be-worried-the-death-the-great-10964">The deal between Nixon and Mao kept the peace</a>, but that&#8217;s all over now.</p>
+        <p><strong>We should take more time to nap. </strong>The <a href="http://www.bloombergview.com/articles/2014-07-28/read-this-and-take-the-rest-of-the-day-off">three-day workweek</a> that Mexican mogul Carlos Slim advocates is worth a shot.</p>
+        <p><em><strong>Surprising discoveries</strong></em></p>
+        <p><strong>New York&#8217;s smallest private property is 500 square inches.</strong> It&#8217;s <a href="http://factually.gizmodo.com/the-smallest-private-property-in-nyc-is-the-size-of-a-p-1612083409">dedicated to not being a public space</a>.</p>
+        <p><strong>25,000 Ground Zero workers have cancer. </strong>And <a href="http://nypost.com/2014/07/27/cancers-among-ground-zero-workers-skyrocketing/">they&#8217;re seeking compensation</a> for their illnesses.</p>
+        <p><strong>The US is crowdsourcing its airport security </strong>by offering <a href="http://www.latimes.com/business/la-fi-tsa-ideas-to-speed-up-screening-lines-20140725-story.html">$5,000 for the best idea</a> to speed up its screening lines.</p>
+        <p><strong>Hugo Chávez has his own font. </strong><a href="http://www.reuters.com/article/2014/07/28/us-venezuela-chavez-idUSKBN0FX1PD20140728">&#8220;ChavezPro</a>&#8221; is based on the late Venezuelan president&#8217;s handwriting.</p>
+        <p><strong>Don&#8217;t bother writing a better dating profile. </strong><a href="http://qz.com/241479/okcupid-experimented-on-users-and-proved-everyone-just-looks-at-the-pictures/">OKCupid user experiments</a> prove that people just look at the pictures.</p>
+        <p>Our best wishes for a productive day. Please send any news, comments, airport security schemes, and dead dictator fonts to <a href="mailto:hi@qz.com" target="_blank">hi@qz.com</a>. You can follow us <a href="http://us5.list-manage.com/track/click?u=610c6c88d981c23e5c6638b14&amp;id=97a087fb77&amp;e=b306a1f2ef" target="_blank">on Twitter here</a> for updates throughout the day.</p>
+        <h2>Sign up for the Quartz Daily Brief <a href="https://ssl.qz.com/brief">here</a>, tailored for morning delivery in Asia, Europe &amp; Africa, and the Americas.</h2><img alt="" border="0" src="http://pixel.wp.com/b.gif?host=qz.com&#038;blog=39587363&#038;post=241715&#038;subd=qzprod&#038;ref=&#038;feed=1" width="1" height="1" />]]></content:encoded>
+      <wfw:commentRss>http://qz.com/241715/quartz-daily-brief-twitter-results-cold-war-redux-china-probes-microsoft-dating-profiles-useless/feed/</wfw:commentRss>
+      <slash:comments>0</slash:comments>
+      <qz:related><relatedarticle>	<title>Quartz Daily Brief—Asia edition—Eid bloodshed, Abenomics data, Kremlin fine, Chávez font</title>	<url>http://qz.com/241652/quartz-daily-brief-eid-bloodshed-abenomics-data-kremlin-fine-chavez-font/</url>	<uid>241652</uid></relatedarticle><relatedarticle>	<title>Quartz Daily Brief—Americas edition—Gaza Eid ceasefire, Russia&#8217;s $50B verdict, McDonald&#8217;s goes meatless, zero-G geckos saved</title>	<url>http://qz.com/241191/quartz-daily-brief-gaza-eid-ceasefire-russias-50b-verdict-mcdonalds-goes-meatless-zero-g-geckos-saved/</url>	<uid>241191</uid></relatedarticle><relatedarticle>	<title>Quartz Daily Brief—Europe edition—Drug company deal-making, McDonald&#8217;s forced vegetarianism, Ebola outbreak spreads, robot hitchhiker</title>	<url>http://qz.com/241124/quartz-daily-brief-drug-company-deal-making-mcdonalds-forced-vegetarianism-ebola-outbreak-spreads-robot-hitchhiker/</url>	<uid>241124</uid></relatedarticle></qz:related>	</item>
+    <item>
+      <title>Perhaps Bill Ackman&#8217;s best strategy against Herbalife is to keep his mouth shut</title>
+      <link>http://qz.com/241619/perhaps-bill-ackmans-best-strategy-against-herbalife-is-to-keep-his-mouth-shut/</link>
+      <comments>http://qz.com/241619/perhaps-bill-ackmans-best-strategy-against-herbalife-is-to-keep-his-mouth-shut/#comments</comments>
+      <pubDate>Mon, 28 Jul 2014 23:11:23 +0000</pubDate>
+      <dc:creator><![CDATA[Mark DeCambre]]></dc:creator>
+      <category><![CDATA[Uncategorized]]></category>
+      <category><![CDATA[bill ackman]]></category>
+      <category><![CDATA[Herbalife]]></category>
+      <category><![CDATA[Pershing Square]]></category>
+      <category><![CDATA[Pershing Square Capital Management]]></category>
+      <category><![CDATA[short-selling]]></category>
+
+      <guid isPermaLink="false">http://qz.com/?p=241619</guid>
+      <description><![CDATA[Disappointing second-quarter earnings have dealt the resounding blow to Herbalife&#8217;s stock price that hedge-fund billionaire Bill Ackman&#8217;s laborious attempted &#8220;deathblow&#8221; last week tried but failed to deliver. Shares of Herbalife were down in after-hours trading by more than 11% after the nutritional-supplement company made less profit than analysts were predicting for the first time in 21 quarters. The company&#8217;s revenue of $1.3 billion also failed to [&#8230;]<img alt="" border="0" src="http://pixel.wp.com/b.gif?host=qz.com&#038;blog=39587363&#038;post=241619&#038;subd=qzprod&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+      <content:encoded><![CDATA[<img width="640" height="362" src="http://img.qz.com/2013/07/ap120517130122.jpg?w=640" class="attachment-medium_10 wp-post-image" alt="Bill Ackman" /><p>Disappointing second-quarter earnings have dealt the resounding blow to Herbalife&#8217;s stock price that hedge-fund billionaire Bill Ackman&#8217;s laborious <a href="http://dealbook.nytimes.com/2014/07/22/ackmans-death-blow-to-herbalife-falls-short-of-its-billing/?_php=true&amp;_type=blogs&amp;_r=0">attempted &#8220;deathblow&#8221;</a> last week tried but failed to deliver. Shares of Herbalife were down in after-hours trading by more than 11% after the nutritional-supplement company made less profit than analysts were predicting for the first time in 21 quarters. The company&#8217;s <a href="http://www.usatoday.com/story/money/business/2014/07/28/herbalife-posts-second-quarter-earnings/13270653/">revenue of $1.3 billion</a> also failed to beat analyst expectations.</p>
+        <div class="qz-inline-image aligncenter zoom"><img src="http://img.qz.com/2014/07/screen-shot-2014-07-28-at-6-20-31-pm.png" width="982" height="633" class="size-full wp-image-241655" data-retina="http://img.qz.com/2014/07/screen-shot-2014-07-28-at-6-20-31-pm.png" alt="" title="Source:"/><div class="help"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.336px" height="19.256px" viewBox="0 0 19.336 19.256" enable-background="new 0 0 19.336 19.256" xml:space="preserve"> <g> <polygon points="9,4.898 7,4.898 7,6.898 5,6.898 5,8.898 7,8.898 7,10.898 9,10.898 9,8.898 11,8.898 11,6.898 9,6.898 	"/> <path d="M19.037,17.516l-4.836-4.836c1.011-1.328,1.617-2.979,1.617-4.777C15.818,3.538,12.281,0,7.916,0 C3.552,0,0.014,3.538,0.014,7.902c0,4.365,3.538,7.902,7.902,7.902c1.831,0,3.512-0.628,4.852-1.674l4.826,4.826 c0.399,0.398,1.045,0.398,1.443,0S19.436,17.914,19.037,17.516z M7.916,13.805c-3.254,0-5.902-2.647-5.902-5.902 C2.014,4.648,4.662,2,7.916,2c3.255,0,5.902,2.648,5.902,5.902C13.818,11.157,11.171,13.805,7.916,13.805z"/> </g> </svg> Tap to expand image</div><div><span class="caption">Source:</span><span class="credit">Yahoo Finance</span></div></div>
+        <p>It&#8217;s much-needed good news for Ackman, who made a very public $1 billion bet some 18 months ago that Herbalife would collapse after he declared it a pyramid scheme. A showy, three-and-half-hour presentation of his case in Manhattan last week was meant to push Herbalife&#8217;s shares off a cliff but had quite the opposite result: <a href="http://www.ft.com/intl/cms/s/0/6b7d29c0-11b3-11e4-a17a-00144feabdc0.html">The stock enjoyed a 25% bump</a> (paywall).</p>
+        <p>Herbalife&#8217;s stock slide today wasn&#8217;t the only <a href="http://www.valuewalk.com/2014/07/pershing-square-performance/">good news for Ackman</a>, reports ValueWalk. An HSBC report cited his firm, Pershing Square Capital Management, as the best performing fund so far this year.</p>
+        <div class="qz-inline-image aligncenter zoom"><img src="http://img.qz.com/2014/07/best-performing-us-hedge-funds-in-2014-as-of-july-return_chartbuilder.png" width="1024" height="575" class="size-full wp-image-241685" data-retina="http://img.qz.com/2014/07/best-performing-us-hedge-funds-in-2014-as-of-july-return_chartbuilder.png" alt="" title="no-caption"/><div class="help"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.336px" height="19.256px" viewBox="0 0 19.336 19.256" enable-background="new 0 0 19.336 19.256" xml:space="preserve"> <g> <polygon points="9,4.898 7,4.898 7,6.898 5,6.898 5,8.898 7,8.898 7,10.898 9,10.898 9,8.898 11,8.898 11,6.898 9,6.898 	"/> <path d="M19.037,17.516l-4.836-4.836c1.011-1.328,1.617-2.979,1.617-4.777C15.818,3.538,12.281,0,7.916,0 C3.552,0,0.014,3.538,0.014,7.902c0,4.365,3.538,7.902,7.902,7.902c1.831,0,3.512-0.628,4.852-1.674l4.826,4.826 c0.399,0.398,1.045,0.398,1.443,0S19.436,17.914,19.037,17.516z M7.916,13.805c-3.254,0-5.902-2.647-5.902-5.902 C2.014,4.648,4.662,2,7.916,2c3.255,0,5.902,2.648,5.902,5.902C13.818,11.157,11.171,13.805,7.916,13.805z"/> </g> </svg> Tap to expand image</div><div></div></div>
+        <p>All this, and Ackman didn&#8217;t have to utter a single word.</p><img alt="" border="0" src="http://pixel.wp.com/b.gif?host=qz.com&#038;blog=39587363&#038;post=241619&#038;subd=qzprod&#038;ref=&#038;feed=1" width="1" height="1" />]]></content:encoded>
+      <wfw:commentRss>http://qz.com/241619/perhaps-bill-ackmans-best-strategy-against-herbalife-is-to-keep-his-mouth-shut/feed/</wfw:commentRss>
+      <slash:comments>0</slash:comments>
+      <qz:related><relatedarticle>	<title>Bill Ackman just enriched a man he loathes with his failed Herbalife &#8220;death blow&#8221;</title>	<url>http://qz.com/238833/bill-ackman-just-enriched-a-man-he-loathes-with-his-failed-herbalife-death-blow/</url>	<uid>238833</uid></relatedarticle><relatedarticle>	<title>Bill Ackman&#8217;s attempt to destroy Herbalife has had exactly the opposite effect</title>	<url>http://qz.com/238710/bill-ackmans-attempt-to-destroy-herbalife-has-had-exactly-the-opposite-effect/</url>	<uid>238710</uid></relatedarticle><relatedarticle>	<title>Activist investor Bill Ackman says this book explains his firm&#8217;s biggest deal ever</title>	<url>http://qz.com/201754/activist-investor-bill-ackman-says-the-outsiders-book-explains-his-biggest-deal-ever/</url>	<uid>201754</uid></relatedarticle></qz:related>
+      <media:thumbnail url="http://img.qz.com/2013/07/ap120517130122.jpg?w=640" />
+      <media:content url="http://img.qz.com/2013/07/ap120517130122.jpg?w=640" medium="image">
+        <media:title type="html">Bill Ackman</media:title>
+      </media:content>
+
+      <media:content url="http://qzprod.files.wordpress.com/2014/07/screen-shot-2014-07-28-at-6-20-31-pm.png" medium="image">
+        <media:title type="html">Source:</media:title>
+      </media:content>
+
+      <media:content url="http://qzprod.files.wordpress.com/2014/07/best-performing-us-hedge-funds-in-2014-as-of-july-return_chartbuilder.png" medium="image">
+        <media:title type="html">Best-performing-US-hedge-funds-in-2014-as-of-July-Return_chartbuilder</media:title>
+      </media:content>
+    </item>
+    <item>
+      <title>Virgin America is a low-cost airline making its money from high-priced tickets</title>
+      <link>http://qz.com/241402/virgin-america-is-a-low-cost-airline-making-its-money-from-high-priced-tickets/</link>
+      <comments>http://qz.com/241402/virgin-america-is-a-low-cost-airline-making-its-money-from-high-priced-tickets/#comments</comments>
+      <pubDate>Mon, 28 Jul 2014 20:58:14 +0000</pubDate>
+      <dc:creator><![CDATA[David Yanofsky]]></dc:creator>
+      <category><![CDATA[Uncategorized]]></category>
+      <category><![CDATA[Airlines]]></category>
+      <category><![CDATA[flights]]></category>
+      <category><![CDATA[IPO]]></category>
+      <category><![CDATA[plane tickets]]></category>
+      <category><![CDATA[QuartzThings]]></category>
+      <category><![CDATA[s1]]></category>
+      <category><![CDATA[SEC]]></category>
+      <category><![CDATA[Securities and Exchange Commission]]></category>
+      <category><![CDATA[ticket prices]]></category>
+      <category><![CDATA[Travel]]></category>
+      <category><![CDATA[US]]></category>
+      <category><![CDATA[Virgin America]]></category>
+
+      <guid isPermaLink="false">http://qz.com/?p=241402</guid>
+      <description><![CDATA[The low-cost airline Virgin America made its first filings today that indicate its intention to sell shares to the public in an US-based public offering. The documents submitted to the Securities and Exchange Commission detail the airline&#8217;s finances and intentions, but there are few new revelations, because US air carrier regulations require periodic disclosure of operating metrics. In discussing its growth strategy, however, Virgin [&#8230;]<img alt="" border="0" src="http://pixel.wp.com/b.gif?host=qz.com&#038;blog=39587363&#038;post=241402&#038;subd=qzprod&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+      <content:encoded><![CDATA[<img width="640" height="360" src="http://img.qz.com/2014/07/ap5058362932131.jpg?w=640" class="attachment-medium_10 wp-post-image" alt="Richard Branson hands out orange juice." /><p>The low-cost airline Virgin America made its first filings today that indicate its intention to sell shares to the public in an US-based public offering. The <a href="http://www.sec.gov/Archives/edgar/data/1614436/000119312514280868/d761206ds1.htm">documents submitted</a> to the Securities and Exchange Commission detail the airline&#8217;s finances and intentions, but there are few new revelations, because US air carrier regulations require periodic disclosure of operating metrics.</p>
+        <p>In discussing its growth strategy, however, Virgin offered a glimpse of the paradox it faces as a low-cost carrier that disproportionately relies on high-paying customers.</p>
+        <p>According to the filing, 30% of Virgin America&#8217;s 6.3 million passengers in 2013 booked their flights less than 14 days in advance of travel, when tickets are expensive. Those passengers accounted for 40% of the airline&#8217;s revenue—$570 million. (According to Quartz calculations, a ticket bought within two weeks of departure costs at least 55% more than all other tickets on average. Based on the filing, the average markup could be as high as 85%, but Virgin America did not return requests to clarify the figures.)</p>
+        <p>Data on the most popular route in the US—<a title="The economics of business class, explained through America’s most popular flight" href="http://qz.com/225470/the-economics-of-business-class-explained-through-americas-most-popular-flight/">between New York and Los Angeles</a>—shows Virgin can be just as dependent on high-paying customers as a legacy airline such as Delta. On that route, 27% of Virgin&#8217;s revenue comes from round-trip tickets priced higher than $1,200, according to data compiled by <a href="http://planestats.com">PlaneStats.com,</a> more than the 24% of its revenue that Delta books at that price point. JetBlue, another low-cost airline, made just 2.5% of its revenue from tickets priced above $1,200 on the route from New York to LA.</p>
+        <div class="qz-inline-image aligncenter zoom"><img src="http://img.qz.com/2014/07/american-delta-virgin-united-jetblue_jfk-to-lax_chartbuilder.png" width="1024" height="610" class="size-full wp-image-241529" data-retina="http://img.qz.com/2014/07/american-delta-virgin-united-jetblue_jfk-to-lax_chartbuilder.png" alt="" title="no-caption"/><div class="help"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.336px" height="19.256px" viewBox="0 0 19.336 19.256" enable-background="new 0 0 19.336 19.256" xml:space="preserve"> <g> <polygon points="9,4.898 7,4.898 7,6.898 5,6.898 5,8.898 7,8.898 7,10.898 9,10.898 9,8.898 11,8.898 11,6.898 9,6.898 	"/> <path d="M19.037,17.516l-4.836-4.836c1.011-1.328,1.617-2.979,1.617-4.777C15.818,3.538,12.281,0,7.916,0 C3.552,0,0.014,3.538,0.014,7.902c0,4.365,3.538,7.902,7.902,7.902c1.831,0,3.512-0.628,4.852-1.674l4.826,4.826 c0.399,0.398,1.045,0.398,1.443,0S19.436,17.914,19.037,17.516z M7.916,13.805c-3.254,0-5.902-2.647-5.902-5.902 C2.014,4.648,4.662,2,7.916,2c3.255,0,5.902,2.648,5.902,5.902C13.818,11.157,11.171,13.805,7.916,13.805z"/> </g> </svg> Tap to expand image</div><div></div></div><img alt="" border="0" src="http://pixel.wp.com/b.gif?host=qz.com&#038;blog=39587363&#038;post=241402&#038;subd=qzprod&#038;ref=&#038;feed=1" width="1" height="1" />]]></content:encoded>
+      <wfw:commentRss>http://qz.com/241402/virgin-america-is-a-low-cost-airline-making-its-money-from-high-priced-tickets/feed/</wfw:commentRss>
+      <slash:comments>0</slash:comments>
+      <qz:related><relatedarticle>	<title>JetBlue is stealing legroom from coach to give to its new business class</title>	<url>http://qz.com/240159/jetblue-is-stealing-legroom-from-coach-to-give-to-business-class/</url>	<uid>240159</uid></relatedarticle><relatedarticle>	<title>The military isn&#8217;t giving up China&#8217;s airspace, no matter how many flight delays it causes</title>	<url>http://qz.com/239771/the-military-isnt-relinquishing-control-over-chinas-airspace-no-matter-how-many-flight-delays-it-causes/</url>	<uid>239771</uid></relatedarticle><relatedarticle>	<title>Why boarding an airplane feels unfair and chaotic</title>	<url>http://qz.com/239424/why-boarding-an-airplane-feels-unfair-and-chaotic/</url>	<uid>239424</uid></relatedarticle></qz:related>
+      <media:thumbnail url="http://img.qz.com/2014/07/ap5058362932131.jpg?w=640" />
+      <media:content url="http://img.qz.com/2014/07/ap5058362932131.jpg?w=640" medium="image">
+        <media:title type="html">AP505836293213</media:title>
+      </media:content>
+
+      <media:content url="http://qzprod.files.wordpress.com/2014/07/american-delta-virgin-united-jetblue_jfk-to-lax_chartbuilder.png" medium="image">
+        <media:title type="html">American-Delta-Virgin-United-JetBlue_jfk-to-lax_chartbuilder</media:title>
+      </media:content>
+    </item>
+    <item>
+      <title>OkCupid experimented on users and proved everyone just looks at the pictures</title>
+      <link>http://qz.com/241479/okcupid-experimented-on-users-and-proved-everyone-just-looks-at-the-pictures/</link>
+      <comments>http://qz.com/241479/okcupid-experimented-on-users-and-proved-everyone-just-looks-at-the-pictures/#comments</comments>
+      <pubDate>Mon, 28 Jul 2014 20:19:04 +0000</pubDate>
+      <dc:creator><![CDATA[Sonali Kohli]]></dc:creator>
+      <category><![CDATA[Uncategorized]]></category>
+      <category><![CDATA[Dating]]></category>
+      <category><![CDATA[dating sites]]></category>
+      <category><![CDATA[facebook]]></category>
+      <category><![CDATA[okcupid]]></category>
+      <category><![CDATA[online dating]]></category>
+      <category><![CDATA[online experimentation]]></category>
+      <category><![CDATA[profiles]]></category>
+      <category><![CDATA[social experiment]]></category>
+
+      <guid isPermaLink="false">http://qz.com/?p=241479</guid>
+      <description><![CDATA[All that time you spent filling out questions for your OkCupid profile? Pointless. Barely anybody reads the answers. That&#8217;s what the dating website learned from observing its users. (It turns out Facebook isn&#8217;t the only social media site experimenting on its users.) OkCupid co-founder Christian Rudder has blogged about three experiments that the site has run, highlighting data [&#8230;]<img alt="" border="0" src="http://pixel.wp.com/b.gif?host=qz.com&#038;blog=39587363&#038;post=241479&#038;subd=qzprod&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+      <content:encoded><![CDATA[<img width="640" height="360" src="http://img.qz.com/2014/07/okcupid-post.jpg?w=640" class="attachment-medium_10 wp-post-image" alt="Anthony Sanchez and Stephanie Hernandez, left, and John and Analicia Vazquez, right, kiss after taking their vows with dozens of other couples in a mass Valentine&#039;s Day wedding on the steps of the Bexar County Courthouse, Friday, Feb. 14, 2014, in San Antonio. (AP Photo/Eric Gay)" /><p>All that time you spent filling out questions for your OkCupid profile? Pointless. Barely anybody reads the answers.</p>
+        <p>That&#8217;s what the dating website learned from observing its users. (It turns out Facebook isn&#8217;t the only social media site <a href="http://online.wsj.com/articles/facebook-experiments-had-few-limits-1404344378">experimenting on its users</a>.) OkCupid co-founder Christian Rudder has blogged about three experiments that the site has run, highlighting data that mostly show that people are extremely shallow and easily manipulated. For example, here&#8217;s what happened to traffic when OkCupid removed all the pictures from profiles for a day:</p>
+        <div class="qz-inline-image aligncenter zoom"><img src="http://img.qz.com/2014/07/screen-shot-2014-07-28-at-1-35-37-pm.png" width="645" height="439" class="size-full wp-image-241494" data-retina="http://img.qz.com/2014/07/screen-shot-2014-07-28-at-1-35-37-pm.png" alt="" title="no-caption"/><div class="help"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.336px" height="19.256px" viewBox="0 0 19.336 19.256" enable-background="new 0 0 19.336 19.256" xml:space="preserve"> <g> <polygon points="9,4.898 7,4.898 7,6.898 5,6.898 5,8.898 7,8.898 7,10.898 9,10.898 9,8.898 11,8.898 11,6.898 9,6.898 	"/> <path d="M19.037,17.516l-4.836-4.836c1.011-1.328,1.617-2.979,1.617-4.777C15.818,3.538,12.281,0,7.916,0 C3.552,0,0.014,3.538,0.014,7.902c0,4.365,3.538,7.902,7.902,7.902c1.831,0,3.512-0.628,4.852-1.674l4.826,4.826 c0.399,0.398,1.045,0.398,1.443,0S19.436,17.914,19.037,17.516z M7.916,13.805c-3.254,0-5.902-2.647-5.902-5.902 C2.014,4.648,4.662,2,7.916,2c3.255,0,5.902,2.648,5.902,5.902C13.818,11.157,11.171,13.805,7.916,13.805z"/> </g> </svg> Tap to expand image</div><div><span class="credit">OkCupid</span></div></div>
+        <p>When people couldn&#8217;t see photos, they left the site in droves. Users who stuck around wound up responding to first messages faster, spent more time chatting than usual and exchanged contact information sooner. But when the photos returned, the blind dates generally stopped talking.</p>
+        <p>In another experiment, OkCupid found that ratings for attractiveness and personality correlate very closely. The site showed profiles to one group of users who saw pictures and text, while another group of users saw the profiles with photos only. Instead of being asked to submit separate ratings for personality and and attractiveness, the users involved in this experiment were asked for just one rating per profile examined. Here&#8217;s how the ratings compared for profiles with pictures only versus profiles including pictures and text:</p>
+        <div class="qz-inline-image aligncenter zoom"><img src="http://img.qz.com/2014/07/screen-shot-2014-07-28-at-1-48-13-pm.png" width="788" height="595" class="size-full wp-image-241502" data-retina="http://img.qz.com/2014/07/screen-shot-2014-07-28-at-1-48-13-pm.png" alt="" title="no-caption"/><div class="help"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.336px" height="19.256px" viewBox="0 0 19.336 19.256" enable-background="new 0 0 19.336 19.256" xml:space="preserve"> <g> <polygon points="9,4.898 7,4.898 7,6.898 5,6.898 5,8.898 7,8.898 7,10.898 9,10.898 9,8.898 11,8.898 11,6.898 9,6.898 	"/> <path d="M19.037,17.516l-4.836-4.836c1.011-1.328,1.617-2.979,1.617-4.777C15.818,3.538,12.281,0,7.916,0 C3.552,0,0.014,3.538,0.014,7.902c0,4.365,3.538,7.902,7.902,7.902c1.831,0,3.512-0.628,4.852-1.674l4.826,4.826 c0.399,0.398,1.045,0.398,1.443,0S19.436,17.914,19.037,17.516z M7.916,13.805c-3.254,0-5.902-2.647-5.902-5.902 C2.014,4.648,4.662,2,7.916,2c3.255,0,5.902,2.648,5.902,5.902C13.818,11.157,11.171,13.805,7.916,13.805z"/> </g> </svg> Tap to expand image</div><div><span class="credit">OkCupid</span></div></div>
+        <p>So the words on your dating profile—or at least the ones on your OkCupid profile—matter very little compared with the photos you&#8217;ve posted of yourself on the beach or <a href="http://www.usatoday.com/story/news/nation-now/2014/05/27/online-daters-impress-with-tiger-profile-pics-on-tinder/9630069/">hugging a tiger</a>. It also doesn&#8217;t appear to matter much whether OkCupid actually thinks you&#8217;re a match with someone. More influential is whether the site has <em>told you</em> that you are a match with someone.</p>
+        <p>In a third experiment, OkCupid indicated to some users that they were a 90% match with someone on the site, when in fact the &#8220;couple&#8221; measured only 30% on the site&#8217;s compatibility scale. (The site later informed people of the actual match percentage.) It turns out that if a dating website simply tells two people they&#8217;re compatible, the potential lovebirds are more likely to respond to messages from one another, and to keep the conversation going for at least four messages.</p>
+        <div class="qz-inline-image aligncenter zoom"><img src="http://img.qz.com/2014/07/screen-shot-2014-07-28-at-2-07-19-pm.png?w=496" width="496" height="200" class="size-medium_10 wp-image-241509" data-retina="http://img.qz.com/2014/07/screen-shot-2014-07-28-at-2-07-19-pm.png?w=496" alt="" title="no-caption"/><div class="help"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.336px" height="19.256px" viewBox="0 0 19.336 19.256" enable-background="new 0 0 19.336 19.256" xml:space="preserve"> <g> <polygon points="9,4.898 7,4.898 7,6.898 5,6.898 5,8.898 7,8.898 7,10.898 9,10.898 9,8.898 11,8.898 11,6.898 9,6.898 	"/> <path d="M19.037,17.516l-4.836-4.836c1.011-1.328,1.617-2.979,1.617-4.777C15.818,3.538,12.281,0,7.916,0 C3.552,0,0.014,3.538,0.014,7.902c0,4.365,3.538,7.902,7.902,7.902c1.831,0,3.512-0.628,4.852-1.674l4.826,4.826 c0.399,0.398,1.045,0.398,1.443,0S19.436,17.914,19.037,17.516z M7.916,13.805c-3.254,0-5.902-2.647-5.902-5.902 C2.014,4.648,4.662,2,7.916,2c3.255,0,5.902,2.648,5.902,5.902C13.818,11.157,11.171,13.805,7.916,13.805z"/> </g> </svg> Tap to expand image</div><div><span class="credit">OkCupid</span></div></div>
+        <p>Rudder&#8217;s blog post about the findings, entitled <a href="http://blog.okcupid.com/index.php/we-experiment-on-human-beings/">&#8220;We Experiment on Human Beings!&#8221;</a>, does note that when a couple actually <em>is</em> compatible, the likelihood of them holding a conversation goes up to 20%, suggesting there is something in the algorithm that works. But his takeaway from all these experiments? &#8220;OkCupid doesn’t really know what it’s doing. Neither does any other website.&#8221;</p><img alt="" border="0" src="http://pixel.wp.com/b.gif?host=qz.com&#038;blog=39587363&#038;post=241479&#038;subd=qzprod&#038;ref=&#038;feed=1" width="1" height="1" />]]></content:encoded>
+      <wfw:commentRss>http://qz.com/241479/okcupid-experimented-on-users-and-proved-everyone-just-looks-at-the-pictures/feed/</wfw:commentRss>
+      <slash:comments>0</slash:comments>
+      <qz:related><relatedarticle>	<title>The recipe for an ideal match isn&#8217;t beauty plus wealth</title>	<url>http://qz.com/235205/the-recipe-for-an-ideal-match-isnt-beauty-plus-wealth/</url>	<uid>235205</uid></relatedarticle><relatedarticle>	<title>Colleges think students should take classes in dating and romance</title>	<url>http://qz.com/229529/colleges-think-students-should-take-classes-in-dating-and-romance/</url>	<uid>229529</uid></relatedarticle><relatedarticle>	<title>Looking for love online? Forget OkCupid; try Facebook or &#8220;World of Warcraft&#8221;</title>	<url>http://qz.com/195208/looking-for-love-online-forget-okcupid-try-facebook-or-world-of-warcraft/</url>	<uid>195208</uid></relatedarticle></qz:related>
+      <media:thumbnail url="http://img.qz.com/2014/07/okcupid-post.jpg?w=640" />
+      <media:content url="http://img.qz.com/2014/07/okcupid-post.jpg?w=640" medium="image">
+        <media:title type="html">Anthony Sanchez, Stephanie Hernandez</media:title>
+      </media:content>
+
+      <media:content url="http://qzprod.files.wordpress.com/2014/07/screen-shot-2014-07-28-at-1-35-37-pm.png" medium="image">
+        <media:title type="html">Screen Shot 2014-07-28 at 1.35.37 PM</media:title>
+      </media:content>
+
+      <media:content url="http://qzprod.files.wordpress.com/2014/07/screen-shot-2014-07-28-at-1-48-13-pm.png" medium="image">
+        <media:title type="html">OKCupid scatter chart</media:title>
+      </media:content>
+
+      <media:content url="http://qzprod.files.wordpress.com/2014/07/screen-shot-2014-07-28-at-2-07-19-pm.png" medium="image">
+        <media:title type="html">Screen Shot 2014-07-28 at 2.07.19 PM</media:title>
+      </media:content>
+    </item>
+    <item>
+      <title>C-SPAN is going behind the cable TV paywall</title>
+      <link>http://qz.com/241512/c-span-is-going-behind-the-cable-tv-paywall/</link>
+      <comments>http://qz.com/241512/c-span-is-going-behind-the-cable-tv-paywall/#comments</comments>
+      <pubDate>Mon, 28 Jul 2014 19:48:38 +0000</pubDate>
+      <dc:creator><![CDATA[Adam Epstein]]></dc:creator>
+      <category><![CDATA[Uncategorized]]></category>
+      <category><![CDATA[broadcast TV]]></category>
+      <category><![CDATA[c-span]]></category>
+      <category><![CDATA[cable TV]]></category>
+      <category><![CDATA[internet video]]></category>
+      <category><![CDATA[online tv]]></category>
+      <category><![CDATA[online video]]></category>
+      <category><![CDATA[satellite tv]]></category>
+      <category><![CDATA[streaming tv]]></category>
+      <category><![CDATA[streaming video]]></category>
+      <category><![CDATA[television]]></category>
+      <category><![CDATA[television business]]></category>
+      <category><![CDATA[The future of television]]></category>
+      <category><![CDATA[the future of TV]]></category>
+      <category><![CDATA[tv]]></category>
+      <category><![CDATA[video]]></category>
+
+      <guid isPermaLink="false">http://qz.com/?p=241512</guid>
+      <description><![CDATA[C-SPAN, the staple of American government and public affairs programming, will soon require a pay television subscription to watch its flagship channels on the internet. The nonprofit network, created by the cable industry 35 years ago, is currently free online. It&#8217;s also included in most basic subscription TV packages. But starting later this summer, you will have to [&#8230;]<img alt="" border="0" src="http://pixel.wp.com/b.gif?host=qz.com&#038;blog=39587363&#038;post=241512&#038;subd=qzprod&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+      <content:encoded><![CDATA[<img width="640" height="359" src="http://img.qz.com/2014/07/c-span.jpg?w=640" class="attachment-medium_10 wp-post-image" alt="C-Span" /><p>C-SPAN, the staple of American government and public affairs programming, will soon require a pay television subscription to watch its flagship channels on the internet.</p>
+        <p>The nonprofit network, created by the cable industry 35 years ago, is currently free online. It&#8217;s also included in most basic subscription TV packages. But <a href="http://www.c-span.org/about/TVeverywhere/" target="_blank">starting later this summer</a>, you will have to prove that you pay for television before watching C-SPAN, C-SPAN 2, or C-SPAN 3 on the web. (Live streams of the House and Senate chambers will still be available for free.)</p>
+        <p>&#8220;Technology was giving an easy end-around to our core business model,&#8221; Peter Kiley, C-SPAN&#8217;s vice president, told Quartz. Kiley cited the rise of internet video and streaming media devices like Apple TV as the reason why the network needed to start requiring a TV subscription to watch online.</p>
+        <p>Despite common misconceptions, C-SPAN is not funded by the government. All of its revenue stems from license fees paid to it by cable companies. The network felt it needed to ensure its survival as <a href="http://abcnews.go.com/Business/household-cable-cord-cutting-rise/story?id=23411056" target="_blank">more Americans cut the cord</a> and watch TV without paying cable and satellite providers. &#8220;We think that we came up with a very straightforward and hybrid approach to the way we do things on the internet going forward,&#8221; Kiley said.</p>
+        <p>The good news for US politics nerds is that C-SPAN will continue to provide live streams of all federal government events, including House and Senate debates and committee hearings, without requiring a pay TV subscription. All of its other programming will also be available for free without log-in from the site&#8217;s on-demand video library. You just won&#8217;t be able to watch that programming <em>live</em> unless you&#8217;re a cable or satellite TV customer.</p>
+        <p>Used by many streaming video platforms like WatchESPN and HBO Go, the &#8220;TV Everywhere&#8221; authentication model requires viewers to type in their cable TV username and password in order to access streaming video. C-SPAN&#8217;s new system won&#8217;t really affect cable customers beyond the one extra step of logging in before watching.</p>
+        <p>Nonetheless, only <a href="http://glass.qz.com/notes/572" target="_blank">17% of American pay TV customers are even aware</a> of the &#8220;TV Everywhere&#8221; concept, and many <a href="http://www.fiercecable.com/story/cable-leaders-authentication-issues-ott-threat-are-plaguing-industry/2014-04-29" target="_blank">cable industry execs admit that it&#8217;s less than ideal</a> in its current form. John Martin, CEO of Turner Broadcasting, has said that &#8220;authentication is a barrier to usage.&#8221;  C-SPAN is banking on that barrier not being too big.</p>
+        <h2><a href="http://glass.qz.com/">Check out Glass for more on the future of TV.</a></h2><img alt="" border="0" src="http://pixel.wp.com/b.gif?host=qz.com&#038;blog=39587363&#038;post=241512&#038;subd=qzprod&#038;ref=&#038;feed=1" width="1" height="1" />]]></content:encoded>
+      <wfw:commentRss>http://qz.com/241512/c-span-is-going-behind-the-cable-tv-paywall/feed/</wfw:commentRss>
+      <slash:comments>0</slash:comments>
+      <qz:related><relatedarticle>	<title>HBO is finally ready to break out of the cable TV bundle</title>	<url>http://qz.com/241261/hbo-is-finally-ready-to-break-out-of-the-cable-tv-bundle/</url>	<uid>241261</uid></relatedarticle><relatedarticle>	<title>In Aereo&#8217;s Supreme Court case, what&#8217;s really on trial is the cloud</title>	<url>http://qz.com/200294/in-aereos-supreme-court-case-whats-really-on-trial-is-the-cloud/</url>	<uid>200294</uid></relatedarticle><relatedarticle>	<title>Introducing our new obsession: Congress only has 16 working days to prevent the fiscal cliff</title>	<url>http://qz.com/19056/introducing-our-new-obsession-congress-only-has-16-days-to-prevent-the-fiscal-cliff/</url>	<uid>19056</uid></relatedarticle></qz:related>
+      <media:thumbnail url="http://img.qz.com/2014/07/c-span.jpg?w=640" />
+      <media:content url="http://img.qz.com/2014/07/c-span.jpg?w=640" medium="image">
+        <media:title type="html">US healthcare bill passes the Senate, aired on C-Span</media:title>
+      </media:content>
+    </item>
+    <item>
+      <title>The US has lost tens of thousands of AK-47s in Afghanistan</title>
+      <link>http://qz.com/241374/the-us-has-lost-tens-of-thousands-of-ak-47s-in-afghanistan/</link>
+      <comments>http://qz.com/241374/the-us-has-lost-tens-of-thousands-of-ak-47s-in-afghanistan/#comments</comments>
+      <pubDate>Mon, 28 Jul 2014 19:27:49 +0000</pubDate>
+      <dc:creator><![CDATA[Tim Fernholz]]></dc:creator>
+      <category><![CDATA[Uncategorized]]></category>
+      <category><![CDATA[Afghanistan]]></category>
+      <category><![CDATA[AK-47]]></category>
+      <category><![CDATA[arms trade]]></category>
+      <category><![CDATA[arms trafficking]]></category>
+      <category><![CDATA[black market]]></category>
+      <category><![CDATA[geopolitics]]></category>
+      <category><![CDATA[Kalashnikov]]></category>
+      <category><![CDATA[NATO]]></category>
+      <category><![CDATA[Russia]]></category>
+      <category><![CDATA[US military]]></category>
+      <category><![CDATA[USSR]]></category>
+      <category><![CDATA[Weapons]]></category>
+
+      <guid isPermaLink="false">http://qz.com/?p=241374</guid>
+      <description><![CDATA[After more than a decade of weapons supplies, cumulatively worth some $626 million, to Afghan security forces, US inspectors have discovered a problem: the Afghan National Army and Police have more weapons — up to 100,000 more — than they need. What&#8217;s worse? No one is keeping proper track of the surplus weapons, most of [&#8230;]<img alt="" border="0" src="http://pixel.wp.com/b.gif?host=qz.com&#038;blog=39587363&#038;post=241374&#038;subd=qzprod&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+      <content:encoded><![CDATA[<img width="640" height="360" src="http://img.qz.com/2014/07/ana-weapons-us-ak47.jpg?w=640" class="attachment-medium_10 wp-post-image" alt="Afghan National Army soldiers prepare for an operation at the Mir Abadi village of Adraskan district in Herat province, April 4, 2014." /><p>After more than a decade of weapons supplies, cumulatively worth some $626 million, to Afghan security forces, US inspectors have discovered a problem: the Afghan National Army and Police have more weapons — up to 100,000 more — than they need. What&#8217;s worse? No one is keeping proper track of the surplus weapons, most of which are Kalashnikov AK-47 assault rifles.</p>
+        <div class="qz-inline-image aligncenter zoom"><img src="http://img.qz.com/2014/07/the-us-is-leaving-too-many-weapons-behind-in-afghanistan-what-they-need-what-they-have_chartbuilder.png" width="1024" height="469" class="size-full wp-image-241552" data-retina="http://img.qz.com/2014/07/the-us-is-leaving-too-many-weapons-behind-in-afghanistan-what-they-need-what-they-have_chartbuilder.png" alt="" title="no-caption"/><div class="help"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.336px" height="19.256px" viewBox="0 0 19.336 19.256" enable-background="new 0 0 19.336 19.256" xml:space="preserve"> <g> <polygon points="9,4.898 7,4.898 7,6.898 5,6.898 5,8.898 7,8.898 7,10.898 9,10.898 9,8.898 11,8.898 11,6.898 9,6.898 	"/> <path d="M19.037,17.516l-4.836-4.836c1.011-1.328,1.617-2.979,1.617-4.777C15.818,3.538,12.281,0,7.916,0 C3.552,0,0.014,3.538,0.014,7.902c0,4.365,3.538,7.902,7.902,7.902c1.831,0,3.512-0.628,4.852-1.674l4.826,4.826 c0.399,0.398,1.045,0.398,1.443,0S19.436,17.914,19.037,17.516z M7.916,13.805c-3.254,0-5.902-2.647-5.902-5.902 C2.014,4.648,4.662,2,7.916,2c3.255,0,5.902,2.648,5.902,5.902C13.818,11.157,11.171,13.805,7.916,13.805z"/> </g> </svg> Tap to expand image</div><div></div></div>
+        <p>Global arms-trading rules require dealers to issue a license for weapons use and attempt to monitor it—and <a href="http://www.sigar.mil/pdf/Audits/SIGAR-14-84-AR.pdf">this new report</a> (pdf) shows that the Afghan government&#8217;s efforts to track US-supplied weapons are, at best, woeful.</p>
+        <p>This is especially worrisome because of the tendency for surplus arms to find their way into the black market and, from there, into the hands of bad actors. It would not be the first time that happened in Afghanistan: when the Taliban first fought their way to power in the 1990s, it was with weapons left behind by the Soviet Union and arms provided to guerrilla fighters by the US.</p>
+        <p>The new arms surplus, which dates back to shipments made before 2010, is blamed on two choices made by NATO and the Afghan government. The first was a decision to switch from distributing AK-47s to weapons more commonly issued to NATO forces, such as M16 and M4 rifles. There was no accompanying program to recover the Kalashnikovs already handed out. The second was the decision to reduce the size of the standing Afghan army, once expected to be as large as 352,000 personnel but now slated to fall to 228,500 by 2017.</p>
+        <p>Afghan security officials also say that 35,606 of the AK-47s are non-functional, but ensuring that the older weapons are destroyed — and not simply sold into the black market — is a challenge, absent rigorous tracking.</p>
+        <p>There is a high demand for  Kalashnikovs in the region: If the Taliban would love to get their hands on the rifles, so too would Afghans who worry that the departure of US and other NATO troops next year will lead to greater insecurity. An AK-47 cost about $1,049 in Pakistan in 2012, according to the most recent <a href="http://www.smallarmssurvey.org/fileadmin/docs/A-Yearbook/2013/en/Small-Arms-Survey-2013-Chapter-11-EN.pdf">Small Arms Survey</a> (pdf), and <a href="http://www.reuters.com/article/2012/12/18/us-afghanistan-guns-idUSBRE8BH00Y20121218">reports indicated</a> they cost slightly more, $1,150, in Afghanistan (where per capita income is just $700 a year). By contrast, they cost just $731 in Somalia at the same time period.</p>
+        <p>Ultimately, this is a tale typical of the US experience in Afghanistan: High expectations led to over-commitment, and as costs piled up and circumstances changed, US forces were unable to manage changing facts on the ground, leading to unintended consequences. US officials say they are working with the Afghans to improve weapons tracking, but lack the leverage to force them to re-inventory their stockpiles.</p>
+        <p>The US is also <a href="http://wgbhnews.org/post/us-afghanistan-odds-over-weapons-wish-list">trying to limit</a> the heavy weaponry it leaves behind, resisting Afghan calls for more tanks, jets and artillery. When the USSR <a href="http://fmso.leavenworth.army.mil/documents/withdrawal.pdf">pulled out of Afghanistan</a> (pdf) in <a href="http://www.mepc.org/articles-commentary/commentary/lessons-soviet-withdrawal-afghanistan?print">the late eighties</a> (pdf), it left its puppet government with 990 armed vehicles, 142 howitzers and cannons, 82 mortars, 43 multiple rocket launchers, 1,706 single rocket launchers, hundreds of tanks, MIG-27 fighter jets, along with small arms, tons of ammunition, and some 1,300 SCUD missiles. It&#8217;s unlikely the US will make the same mistake, but tens of thousands of loose Kalashnikovs are not exactly a small-bore problem.</p>
+        <h2>Read This Next: <a href="http://qz.com/241241/why-ebola-reaching-the-nigerian-capital-is-a-whole-new-level-of-scary/">Why Ebola reaching Nigeria’s largest city is a whole new level of scary</a></h2><img alt="" border="0" src="http://pixel.wp.com/b.gif?host=qz.com&#038;blog=39587363&#038;post=241374&#038;subd=qzprod&#038;ref=&#038;feed=1" width="1" height="1" />]]></content:encoded>
+      <wfw:commentRss>http://qz.com/241374/the-us-has-lost-tens-of-thousands-of-ak-47s-in-afghanistan/feed/</wfw:commentRss>
+      <slash:comments>0</slash:comments>
+      <qz:related><relatedarticle>	<title>Afghanistan just spawned a multinational that&#8217;s taking on global giants in Africa</title>	<url>http://qz.com/192010/afghanistan-just-spawned-a-multinational-thats-taking-on-global-giants-in-africa/</url>	<uid>192010</uid></relatedarticle><relatedarticle>	<title>How Quartz&#8217;s geopolitical forecasting algorithm fared in 2013</title>	<url>http://qz.com/161439/how-quartzs-geopolitical-forecasting-algorithm-fared-in-2013/</url>	<uid>161439</uid></relatedarticle><relatedarticle>	<title>Economic incentives, not military power, can solve US foreign policy challenges</title>	<url>http://qz.com/154660/economic-incentives-not-military-power-can-solve-us-foreign-policy-challenges/</url>	<uid>154660</uid></relatedarticle></qz:related>
+      <media:thumbnail url="http://img.qz.com/2014/07/ana-weapons-us-ak47.jpg?w=640" />
+      <media:content url="http://img.qz.com/2014/07/ana-weapons-us-ak47.jpg?w=640" medium="image">
+        <media:title type="html">ANA-weapons-US-ak47</media:title>
+      </media:content>
+
+      <media:content url="http://qzprod.files.wordpress.com/2014/07/the-us-is-leaving-too-many-weapons-behind-in-afghanistan-what-they-need-what-they-have_chartbuilder.png" medium="image">
+        <media:title type="html">The-US-is-leaving-too-many-weapons-behind-in-Afghanistan-What-they-need-What-they-have_chartbuilder</media:title>
+      </media:content>
+    </item>
+    <item>
+      <title>Why Ivy League schools can laugh off the disruption &#8220;threat&#8221;</title>
+      <link>http://qz.com/241448/why-ivy-league-schools-can-laugh-off-the-disruption-threat/</link>
+      <comments>http://qz.com/241448/why-ivy-league-schools-can-laugh-off-the-disruption-threat/#comments</comments>
+      <pubDate>Mon, 28 Jul 2014 18:35:53 +0000</pubDate>
+      <dc:creator><![CDATA[Matt Phillips]]></dc:creator>
+      <category><![CDATA[Uncategorized]]></category>
+      <category><![CDATA[college]]></category>
+      <category><![CDATA[distance learning]]></category>
+      <category><![CDATA[education]]></category>
+      <category><![CDATA[elite colleges]]></category>
+      <category><![CDATA[harvard]]></category>
+      <category><![CDATA[Marc Andreessen]]></category>
+      <category><![CDATA[Moody's Investors Service]]></category>
+      <category><![CDATA[online education]]></category>
+
+      <guid isPermaLink="false">http://qz.com/?p=241448</guid>
+      <description><![CDATA[The online education revolution won&#8217;t disrupt Harvard Yard any time soon. In recent years, much has been made of new online educational offerings—from for-profit distance learning companies to absolutely free online courses open to the unwashed masses. Boosters such as the well-connected Silicon Valley venture capitalist Marc Andreessen—who has backed some online education ventures—have argued [&#8230;]<img alt="" border="0" src="http://pixel.wp.com/b.gif?host=qz.com&#038;blog=39587363&#038;post=241448&#038;subd=qzprod&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+      <content:encoded><![CDATA[<img width="640" height="360" src="http://img.qz.com/2014/07/harvard-yard-online-education-ivy-league.jpg?w=640" class="attachment-medium_10 wp-post-image" alt="A man rests his feet on a tree in Harvard Yard at Harvard University in Cambridge, Massachusetts September 21, 2009. REUTERS/Brian Snyder (UNITED STATES) For best quality see GM1E6450PAG01." /><p>The online education revolution won&#8217;t disrupt Harvard Yard any time soon.</p>
+        <p>In recent years, much has been made of new online educational offerings—from for-profit distance learning companies to absolutely free <a href="http://qz.com/?tag=moocs" target="_blank">online courses open to the unwashed masses</a>. Boosters such as the well-connected Silicon Valley venture capitalist <a href="http://online.wsj.com/news/articles/SB10001424053111903480904576512250915629460" target="_blank">Marc Andreessen—who has backed some online education ventures—have argued that education</a> is due for some fundamental disruption by the forces of software and technology.</p>
+        <p>That&#8217;s probably true. (What sector isn&#8217;t?)</p>
+        <p>But in the world of higher education, America&#8217;s elite colleges and universities are the least likely to be disrupted, argue analysts from Moody&#8217;s Investors Service in a new note about the impact of online education.</p>
+        <p>The most vulnerable to the threat of online education are less selective schools that are more reliant on tuition to pay the bills and keep the lights on. &#8220;Colleges with high acceptance rates also tend to be most reliant on student charges and have relatively modest wealth,&#8221; Moody&#8217;s writes. &#8220;They will be most vulnerable to long-term disruption from technology.&#8221;</p>
+        <p>It makes sense. If a degree is commoditized because it&#8217;s so easy to get, why not just go for a cheaper online option? Over time, decisions to opt for free or online education offerings eat into the tuition and fees that finance the schools. That could force some to shut down. (Moody&#8217;s analysts are primarily interested in the creditworthiness of colleges and universities.)</p>
+        <p>But the business model of America&#8217;s elite, selective schools—the Ivy League crowd, Stanford, and others of their ilk—works completely differently. Those schools don&#8217;t depend on tuition. They live mostly off the fat of their endowments, Moody&#8217;s explains.</p>
+        <blockquote><p>The business model of elite universities, which is highly reliant on long-term returns on gifts from<br />
+        successful alumni and friends of the university, highlights the importance of careful selection of the<br />
+        student body. As a result, global and national market leading universities will not significantly grow enrollment in degree granting programs, keeping admission rates very low and contributing to a high perceived value of their degrees. The cachet of attending a highly selective university, limited reliance of these universities on student charges, and wealth compared to operating expenses help insulate them from the competitive threats of technological advancements.</p></blockquote><img alt="" border="0" src="http://pixel.wp.com/b.gif?host=qz.com&#038;blog=39587363&#038;post=241448&#038;subd=qzprod&#038;ref=&#038;feed=1" width="1" height="1" />]]></content:encoded>
+      <wfw:commentRss>http://qz.com/241448/why-ivy-league-schools-can-laugh-off-the-disruption-threat/feed/</wfw:commentRss>
+      <slash:comments>0</slash:comments>
+      <qz:related><relatedarticle>	<title>The future of education should literally be child&#8217;s play</title>	<url>http://qz.com/233646/why-the-future-of-education-may-be-childs-play/</url>	<uid>233646</uid></relatedarticle><relatedarticle>	<title>Stop freaking out about student grade inflation: it&#8217;s not a bad thing</title>	<url>http://qz.com/228351/stop-freaking-out-about-student-grade-inflation-its-not-a-bad-thing/</url>	<uid>228351</uid></relatedarticle><relatedarticle>	<title>Why elites hate it when you say giant student debts aren&#8217;t the problem</title>	<url>http://qz.com/225625/why-elites-hate-it-when-you-say-giant-student-debts-arent-the-problem/</url>	<uid>225625</uid></relatedarticle></qz:related>
+      <media:thumbnail url="http://img.qz.com/2014/07/harvard-yard-online-education-ivy-league.jpg?w=640" />
+      <media:content url="http://img.qz.com/2014/07/harvard-yard-online-education-ivy-league.jpg?w=640" medium="image">
+        <media:title type="html">Harvard-Yard-Online-Education-Ivy-League</media:title>
+      </media:content>
+    </item>
+    <item>
+      <title>Meet the surprisingly avant-garde architects designing George Lucas&#8217; Chicago museum</title>
+      <link>http://qz.com/241290/meet-the-surprisingly-avant-garde-architects-designing-george-lucas-chicago-museum/</link>
+      <comments>http://qz.com/241290/meet-the-surprisingly-avant-garde-architects-designing-george-lucas-chicago-museum/#comments</comments>
+      <pubDate>Mon, 28 Jul 2014 17:56:57 +0000</pubDate>
+      <dc:creator><![CDATA[Michael Silverberg]]></dc:creator>
+      <category><![CDATA[Uncategorized]]></category>
+      <category><![CDATA[architecture]]></category>
+      <category><![CDATA[chicago]]></category>
+      <category><![CDATA[design]]></category>
+      <category><![CDATA[George Lucas]]></category>
+      <category><![CDATA[Jeanne Gang]]></category>
+      <category><![CDATA[Lucas Museum for Narrative Art]]></category>
+      <category><![CDATA[MAD Architects]]></category>
+      <category><![CDATA[Museums]]></category>
+      <category><![CDATA[Studio Gang]]></category>
+
+      <guid isPermaLink="false">http://qz.com/?p=241290</guid>
+      <description><![CDATA[George Lucas gave the first inkling today of what his controversial museum in Chicago might look like when it opens in 2018. Ma Yasong, of the Beijing-based MAD Architects, will design the main building of the Lucas Museum of Narrative Art. Jeanne Gang, who runs local firm Studio Gang, will handle the landscape design and a pedestrian bridge. [&#8230;]<img alt="" border="0" src="http://pixel.wp.com/b.gif?host=qz.com&#038;blog=39587363&#038;post=241290&#038;subd=qzprod&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+      <content:encoded><![CDATA[<img width="640" height="360" src="http://img.qz.com/2014/07/george-lucas-museum-mad-architects.jpg?w=640" class="attachment-medium_10 wp-post-image" alt="A Chinese hotel designed by MAD Architects" /><p>George Lucas gave the first inkling today of what his controversial museum in Chicago might look like when it opens in 2018. Ma Yasong, of the Beijing-based MAD Architects, will design the main building of the Lucas Museum of Narrative Art. Jeanne Gang, who runs local firm Studio Gang, will handle the landscape design and a pedestrian bridge.</p>
+        <p>The choices immediately raised eyebrows in architecture circles. The <em>Star Wars</em> director&#8217;s art collection is a <a href="http://gizmodo.com/17-works-of-art-that-will-hang-in-george-lucass-new-mus-1596102522">kitschy assemblage</a> of Americana and white-bread commercial work; the original proposal for the museum, in San Francisco&#8217;s Presidio, reflected that conservatism in its neoclassical form. But Ma—a rising star in China and, <a href="http://abcnews.go.com/International/made-china-green-futurism-architect-ma-yansong/story?id=20062514">increasingly, the West</a>—favors swelling, <a href="http://abcnews.go.com/International/made-china-green-futurism-architect-ma-yansong/story?id=20062514">futuristic towers</a> that practically drip with the algorithms used to design them. Gang is a well-regarded architect best known for Chicago&#8217;s <a href="http://www.newyorker.com/magazine/2010/02/01/wave-effect">Aqua skyscraper</a>, a residential tower whose facade undulates like fabric.</p>
+        <p>&#8220;I, and I&#8217;m sure many others, were indeed expecting a more conservative architecture team,&#8221; Alexandra Lange, a prominent architecture critic, told Quartz. &#8220;Rewatching <em>Episodes 1-3</em> (as I recently did) is a Where&#8217;s Waldo of early 20th-century architecture, with references to Frank Lloyd Wright, Art Deco trains, and one of Lucas&#8217;s favorite painters, Maxfield Parrish, who never met a neoclassical loggia he didn&#8217;t like.&#8221;</p>
+        <p>But Lucas already had a bruising fight over the proposed San Francisco design (which was <a href="http://articles.chicagotribune.com/2014-02-03/news/sns-rt-usa-sanfransiscopark-20140203_1_george-lucas-lucas-cultural-arts-museum-presidio-trust">rejected in February</a>), and he faces substantial opposition in Chicago: Bears fans are worried about <a href="http://news.artnet.com/in-brief/chicago-bears-fans-vow-to-stop-george-lucas-museum-64880">lost parking</a>, aldermen want the <a href="http://www.hollywoodreporter.com/news/george-lucas-museum-faces-potential-718632#sthash.fmjbMt2J.dpuf">site relocated</a> to a poorer neighborhood, and activists argue that the museum will threaten public space near Lake Michigan. The choice of Ma and Gang could be a canny one if it convinces Chicagoans that they&#8217;ll be getting a landmark.</p>
+        <p>&#8220;If the architects produce a design gem that upgrades the landscape of the Museum Campus, the cluster of shoreline museums to which the Lucas Museum would belong, it could soften, or at least blunt, opposition,&#8221; writes the <a href="http://www.chicagotribune.com/news/local/ct-lucas-museum-met-0728-20140728,0,1427944.story">Chicago Tribune&#8217;s</a> architecture critic, Blair Kamin.</p>
+        <p>&#8220;The choice of MAD and Jeanne Gang may indicate some sort of coming together between retro-futurism and today&#8217;s futurism, linked by a love of curves and ripples,&#8221; Lange says. &#8220;I also think Lucas is good at politics, and knows what works in the Presidio isn&#8217;t going to fly in Chicago.&#8221;</p>
+        <p>The Los Angeles Times&#8217; architecture critic, Christopher Hawthorne, <a href="https://twitter.com/HawthorneLAT/status/493778683593625600">argues</a> that Lucas has overshot in the other direction, describing the selection as an &#8220;odd, lurching overreaction.&#8221;</p>
+        <p>The design will be unveiled at the end of the year, and the museum is scheduled to open four years later.</p><img alt="" border="0" src="http://pixel.wp.com/b.gif?host=qz.com&#038;blog=39587363&#038;post=241290&#038;subd=qzprod&#038;ref=&#038;feed=1" width="1" height="1" />]]></content:encoded>
+      <wfw:commentRss>http://qz.com/241290/meet-the-surprisingly-avant-garde-architects-designing-george-lucas-chicago-museum/feed/</wfw:commentRss>
+      <slash:comments>0</slash:comments>
+      <qz:related><relatedarticle>	<title>Why the US is financing an $100-million aquarium in Brazil</title>	<url>http://qz.com/239926/why-the-us-is-spending-100-million-to-build-an-aquarium-in-brazil/</url>	<uid>239926</uid></relatedarticle><relatedarticle>	<title>The world’s tallest slum—a “pirate utopia”—is being cleared by the Venezuelan government</title>	<url>http://qz.com/239103/the-worlds-tallest-slum-a-pirate-utopia-is-being-cleared-by-the-venezuelan-government/</url>	<uid>239103</uid></relatedarticle><relatedarticle>	<title>The genius of building a maze at a city&#8217;s center</title>	<url>http://qz.com/231148/the-genius-of-building-a-maze-at-a-citys-center/</url>	<uid>231148</uid></relatedarticle></qz:related>
+      <media:thumbnail url="http://img.qz.com/2014/07/george-lucas-museum-mad-architects.jpg?w=640" />
+      <media:content url="http://img.qz.com/2014/07/george-lucas-museum-mad-architects.jpg?w=640" medium="image">
+        <media:title type="html">A man takes pictures of the Sheraton Huzhou Hot Spring Resort in Huzhou</media:title>
+      </media:content>
+    </item>
+    <item>
+      <title>Dubai is rewarding two-year-olds with gold for losing weight. Bad idea.</title>
+      <link>http://qz.com/241272/dubai-is-rewarding-two-year-olds-with-gold-for-losing-weight-bad-idea/</link>
+      <comments>http://qz.com/241272/dubai-is-rewarding-two-year-olds-with-gold-for-losing-weight-bad-idea/#comments</comments>
+      <pubDate>Mon, 28 Jul 2014 17:34:08 +0000</pubDate>
+      <dc:creator><![CDATA[Zainab Mudallal]]></dc:creator>
+      <category><![CDATA[Uncategorized]]></category>
+      <category><![CDATA[child obesity]]></category>
+      <category><![CDATA[dieting]]></category>
+      <category><![CDATA[dubai]]></category>
+      <category><![CDATA[exercise]]></category>
+      <category><![CDATA[gold]]></category>
+      <category><![CDATA[health]]></category>
+      <category><![CDATA[obesity]]></category>
+      <category><![CDATA[weight loss]]></category>
+      <category><![CDATA[Your Child in Gold]]></category>
+      <category><![CDATA[Your Weight in Gold]]></category>
+
+      <guid isPermaLink="false">http://qz.com/?p=241272</guid>
+      <description><![CDATA[Skip the baklava, win some gold. Many in Dubai will be encouraging their kids to pass on the the traditional Eid-al-Fitr feasts to participate in the emirate&#8217;s &#8220;Your Child in Gold&#8221; weight-loss initiative. But doctors warn that the prize could do serious damage to children&#8217;s health. The program, run by Dubai Municipality, rewards participants one [&#8230;]<img alt="" border="0" src="http://pixel.wp.com/b.gif?host=qz.com&#038;blog=39587363&#038;post=241272&#038;subd=qzprod&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+      <content:encoded><![CDATA[<img width="640" height="407" src="http://img.qz.com/2014/07/dubai-gold.jpg?w=640" class="attachment-medium_10 wp-post-image" alt="Keep the kids out of this." /><p>Skip the baklava, win some gold. Many in Dubai will be encouraging their kids to pass on the the traditional Eid-al-Fitr feasts to participate in the emirate&#8217;s &#8220;<a href="http://www.thedmgold.com/">Your Child in Gold</a>&#8221; weight-loss initiative. But doctors warn that the prize could do serious damage to children&#8217;s health.</p>
+        <p>The program, run by Dubai Municipality, rewards participants one gram of gold, currently worth $41.92, for every kilogram (2.2 pounds) lost. If you&#8217;re registered as a family and have a child aged between 2 and 14, you&#8217;ll get double the amount of gold.</p>
+        <p>The campaign is an effort to curb the rise in obesity in the city-state. The United Arab Emirates, of which Dubai is a part, is the sixth-heaviest nation in the world, according to a <a href="http://www.biomedcentral.com/content/pdf/1471-2458-12-439.pdf">2012 survey</a> published by BMC Public Health journal. A recent <a href="http://www.fao.org/docrep/018/i3300e/i3300e.pdf">report</a> from the United Nations Food and Agricultural Organization shows that a third (33.7%) of UAE adults are considered obese, defined as a body-mass index equal to or greater than 30.</p>
+        <p>Last year, the municipal authorities encouraged adults to slim down, and distributed <a href="http://gulfnews.com/news/gulf/uae/general/huge-response-to-dubai-weight-loss-initiative-1.1362432">2.8 million dirhams, </a> or $762,340, in gold. This year, the focus is on children. Some <a href="http://www.thenational.ae/uae/health/25000-sign-up-to-win-gold-in-dubai-weight-loss-competition">25,000 people have signed up</a> for the chance to win gold prizes–almost three times the number who entered last year’s competition. It is not yet clear how many of the applicants are children.</p>
+        <p>To be eligible for the reward, each child must lose at least 2 kilograms in one month. <a href="http://www.thenational.ae/uae/health/doctors-raise-fears-about-dubai-municipality-your-child-in-gold-weight-loss-campaign">But doctors worry</a> this is the wrong way to to address the country&#8217;s obesity problem. The campaign, they say, promotes short-term weight loss, rather than a transition to a healthy lifestyle.</p>
+        <p>For some children, sudden weight loss can be dangerous: extreme dieting can hinder muscle growth, weaken the immune system, reduce energy and concentration. Dieting at an early age also has an impact on children&#8217;s mental and emotional health. Obsession with body image and weight can be detrimental to a child&#8217;s self esteem, and introduce an ongoing pattern of yo-yo dieting and increase<a href="http://link.springer.com/article/10.1023/A:1022266017046"> the risk of eating disorders</a> (paywall). Some studies suggest dieting while very young can result in <a href="http://health.usnews.com/health-news/diet-fitness/diet/articles/2011/10/06/kids-who-diet-when-are-they-too-young">obesity problems</a> at an older age. The best way to keep kids at a healthy weights, experts say, is by setting <a href="http://www.thenational.ae/uae/health/doctors-raise-fears-about-dubai-municipality-your-child-in-gold-weight-loss-campaign">healthy examples</a>.</p>
+        <p>With the final weigh-in slated for September 15, many Dubai families will have their eyes on the shiny—and valuable—prize. The message from their doctors: a healthy lifestyle is worth more than its weight in gold.</p><img alt="" border="0" src="http://pixel.wp.com/b.gif?host=qz.com&#038;blog=39587363&#038;post=241272&#038;subd=qzprod&#038;ref=&#038;feed=1" width="1" height="1" />]]></content:encoded>
+      <wfw:commentRss>http://qz.com/241272/dubai-is-rewarding-two-year-olds-with-gold-for-losing-weight-bad-idea/feed/</wfw:commentRss>
+      <slash:comments>0</slash:comments>
+      <qz:related><relatedarticle>	<title>Introducing our new obsession: Congress only has 16 working days to prevent the fiscal cliff</title>	<url>http://qz.com/19056/introducing-our-new-obsession-congress-only-has-16-days-to-prevent-the-fiscal-cliff/</url>	<uid>19056</uid></relatedarticle><relatedarticle>	<title>I grew up Gangnam Style—but the South Korea of my youth had none of Psy&#8217;s irony</title>	<url>http://qz.com/3565/httpqz-com3565growing-up-gangnam-style-irony-and-the-end-of-history/</url>	<uid>3565</uid></relatedarticle><relatedarticle>	<title>There&#8217;s no longer any doubt that Microsoft is in China&#8217;s crosshairs</title>	<url>http://qz.com/241699/theres-no-longer-any-doubt-that-microsoft-is-in-chinas-crosshairs/</url>	<uid>241699</uid></relatedarticle></qz:related>
+      <media:thumbnail url="http://img.qz.com/2014/07/dubai-gold.jpg?w=640" />
+      <media:content url="http://img.qz.com/2014/07/dubai-gold.jpg?w=640" medium="image">
+        <media:title type="html">dubai-gold</media:title>
+      </media:content>
+    </item>
+    <item>
+      <title>One-third of people in Europe say they don&#8217;t feel European</title>
+      <link>http://qz.com/241428/one-third-of-people-in-europe-say-they-dont-feel-european/</link>
+      <comments>http://qz.com/241428/one-third-of-people-in-europe-say-they-dont-feel-european/#comments</comments>
+      <pubDate>Mon, 28 Jul 2014 17:16:42 +0000</pubDate>
+      <dc:creator><![CDATA[Jason Karaian]]></dc:creator>
+      <category><![CDATA[Uncategorized]]></category>
+      <category><![CDATA[EU]]></category>
+      <category><![CDATA[Eurobarometer]]></category>
+      <category><![CDATA[European Parliament]]></category>
+      <category><![CDATA[european union]]></category>
+      <category><![CDATA[euroskeptics]]></category>
+
+      <guid isPermaLink="false">http://qz.com/?p=241428</guid>
+      <description><![CDATA[The European Union was built on the principle of an &#8220;ever closer union&#8221; between its members. But not everyone who lives in the EU today is feeling the closeness. This is a headache for eurocrats in Brussels, as well as national leaders who want to develop coherent, common policies to match the bloc&#8217;s enormous economic heft. [&#8230;]<img alt="" border="0" src="http://pixel.wp.com/b.gif?host=qz.com&#038;blog=39587363&#038;post=241428&#038;subd=qzprod&#038;ref=&#038;feed=1" width="1" height="1" />]]></description>
+      <content:encoded><![CDATA[<img width="640" height="360" src="http://img.qz.com/2014/07/rtx5ivz.jpg?w=640" class="attachment-medium_10 wp-post-image" alt="Workers hang a giant European Union flag." /><p>The European Union was built on the principle of an &#8220;<a href="http://www.civitas.org.uk/eufacts/FSTREAT/TR1.php">ever closer union</a>&#8221; between its members. But not everyone who lives in the EU today is feeling the closeness.</p>
+        <p>This is a headache for eurocrats in Brussels, as well as national leaders who want to develop coherent, common policies to match the bloc&#8217;s enormous economic heft. Unfortunately for them, voters blame Brussels for a variety of ills, turning out in droves to cast ballots for <a href="http://qz.com/214283/by-the-numbers-the-rise-of-europes-far-right-looks-like-a-trend-not-a-blip/">anti-EU parties</a> during the recent election for the European Parliament, one of the main organs of EU power.</p>
+        <p>And a new survey by the European Commission found that a third of people in the EU—equivalent to roughly 170 million—don&#8217;t feel like they belong to the broader European community. Fewer than half of Greeks, Italians, and Bulgarians say that they feel like citizens of the EU, and its no surprise also to find the  <a href="http://qz.com/227534/how-a-mild-mannered-luxembourger-may-determine-whether-britain-leaves-the-eu/">increasingly euroskeptic UK towards the bottom of the list</a>.</p>
+        <p>Germany, meanwhile, is near the top of the ranking of European-feeling Europeans, alongside the Maltese, Luxembourgers, and Finns.</p>
+        <div class="qz-inline-image alignnone zoom"><img src="http://img.qz.com/2014/07/do-you-feel-you-are-a-citizen-of-the-eu-percentage-answering-yes-_chartbuilder.png?w=640" width="640" height="805" class="size-medium_10 wp-image-241437" data-retina="http://img.qz.com/2014/07/do-you-feel-you-are-a-citizen-of-the-eu-percentage-answering-yes-_chartbuilder.png?w=1192" alt="" title="no-caption"/><div class="help"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.336px" height="19.256px" viewBox="0 0 19.336 19.256" enable-background="new 0 0 19.336 19.256" xml:space="preserve"> <g> <polygon points="9,4.898 7,4.898 7,6.898 5,6.898 5,8.898 7,8.898 7,10.898 9,10.898 9,8.898 11,8.898 11,6.898 9,6.898 	"/> <path d="M19.037,17.516l-4.836-4.836c1.011-1.328,1.617-2.979,1.617-4.777C15.818,3.538,12.281,0,7.916,0 C3.552,0,0.014,3.538,0.014,7.902c0,4.365,3.538,7.902,7.902,7.902c1.831,0,3.512-0.628,4.852-1.674l4.826,4.826 c0.399,0.398,1.045,0.398,1.443,0S19.436,17.914,19.037,17.516z M7.916,13.805c-3.254,0-5.902-2.647-5.902-5.902 C2.014,4.648,4.662,2,7.916,2c3.255,0,5.902,2.648,5.902,5.902C13.818,11.157,11.171,13.805,7.916,13.805z"/> </g> </svg> Tap to expand image</div><div></div></div><img alt="" border="0" src="http://pixel.wp.com/b.gif?host=qz.com&#038;blog=39587363&#038;post=241428&#038;subd=qzprod&#038;ref=&#038;feed=1" width="1" height="1" />]]></content:encoded>
+      <wfw:commentRss>http://qz.com/241428/one-third-of-people-in-europe-say-they-dont-feel-european/feed/</wfw:commentRss>
+      <slash:comments>0</slash:comments>
+      <qz:related><relatedarticle>	<title>As Europe&#8217;s leaders dither, public opinion is hardening against Russia</title>	<url>http://qz.com/239191/as-europes-leaders-dither-public-opinion-is-hardening-against-russia/</url>	<uid>239191</uid></relatedarticle><relatedarticle>	<title>The Malaysian Airlines crash will force the EU to either unite against Russia or admit it is hopelessly divided</title>	<url>http://qz.com/237053/the-malaysian-airlines-crash-will-force-the-eu-to-either-unite-against-russia-or-admit-it-is-hopelessly-divided/</url>	<uid>237053</uid></relatedarticle><relatedarticle>	<title>Russia dismisses new sanctions, but the markets dumped Russian stocks in droves</title>	<url>http://qz.com/236363/russia-dismisses-new-sanctions-but-the-markets-dumped-russian-stocks-in-droves/</url>	<uid>236363</uid></relatedarticle></qz:related>
+      <media:thumbnail url="http://img.qz.com/2014/07/rtx5ivz.jpg?w=640" />
+      <media:content url="http://img.qz.com/2014/07/rtx5ivz.jpg?w=640" medium="image">
+        <media:title type="html">European-Union-flag-unfurled</media:title>
+      </media:content>
+      
+      <media:content url="http://qzprod.files.wordpress.com/2014/07/do-you-feel-you-are-a-citizen-of-the-eu-percentage-answering-yes-_chartbuilder.png?w=640" medium="image">
+        <media:title type="html">Do-you-feel-you-are-a-citizen-of-the-EU-Percentage-answering-yes-_chartbuilder</media:title>
+      </media:content>
+    </item>
+</channel>
+</rss>

@@ -1,0 +1,24 @@
+"FeedsListTitle" = "Beslemeler";
+"DefaultFeedName" = "Adsız";
+"CannotReachHost" = "\"%@\" adresine ulaşılamıyor.";
+"FeedEditorNameFieldPlaceholder" = "Adı";
+"FeedEditorURLFieldPlaceholder" = "Adresi (URL)";
+"FeedGroupSelectorTitle" = "Gruplar";
+"EmptyFeedGroup" = "boş";
+"AndMore" = "vb.";
+"OpenInSafari" = "Safari ile aç";
+
+"ViewCloseButtonTitle" = "Kapat";
+
+// Help
+"HelpVersionLabelString" = "sürüm %@";
+"HelpSelectingGroup" = "Bir Grubu Seçmek";
+"HelpAssigningToGroup" = "Başka Gruba Atamak";
+
+// In-App Purchase
+"Purchase_PromptWithPrice" = "%@ ödeyerek iki grup daha ekleyin.";
+"Purchase_CanNotPurchase" = "Ek grup satın almak şu an maalesef mümkün değil. İnternet bağlantınızı ve iTunes hesabınızı kontrol edin.";
+"Purchase_Button_BuyNow" = "Satın al!";
+"Purchase_Button_Restore" = "Önceki alımı yerine getir.";
+"Purchase_Button_Cancel" = "Yok, kalsın.";
+"Purchase_Button_Dismiss" = "Kapat";

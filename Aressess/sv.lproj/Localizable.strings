@@ -1,0 +1,24 @@
+"FeedsListTitle" = "Flöden";
+"DefaultFeedName" = "Ny flöde";
+"CannotReachHost" = "Kan inte nå \"%@\".";
+"FeedEditorNameFieldPlaceholder" = "Namn";
+"FeedEditorURLFieldPlaceholder" = "Adress (URL)";
+"FeedGroupSelectorTitle" = "Grupper";
+"EmptyFeedGroup" = "tom";
+"AndMore" = "osv.";
+"OpenInSafari" = "Öppna";
+
+"ViewCloseButtonTitle" = "Klar";
+
+// Help
+"HelpVersionLabelString" = "version %@";
+"HelpSelectingGroup" = "Välj En Grupp";
+"HelpAssigningToGroup" = "Tilldela En Annan Grupp";
+
+// In-App Purchase
+"Purchase_PromptWithPrice" = "Lås upp ytterligare två grupper för %@.";
+"Purchase_CanNotPurchase" = "Du kan tyvärr inte köpa ytterligare grupper just nu. Kontrollera din Internetanslutning och ditt iTunes-konto.";
+"Purchase_Button_BuyNow" = "Köp nu!";
+"Purchase_Button_Restore" = "Återställ tidigare köp.";
+"Purchase_Button_Cancel" = "Nej, tack.";
+"Purchase_Button_Dismiss" = "Stänga";

@@ -1,0 +1,24 @@
+"FeedsListTitle" = "Feeds";
+"DefaultFeedName" = "Ohne Titel";
+"CannotReachHost" = "Kann \"%@\" nicht erreichen.";
+"FeedEditorNameFieldPlaceholder" = "Titel";
+"FeedEditorURLFieldPlaceholder" = "Adresse (URL)";
+"FeedGroupSelectorTitle" = "Gruppen";
+"EmptyFeedGroup" = "leer";
+"AndMore" = "u. Ä.";
+"OpenInSafari" = "In Safari öffnen";
+
+"ViewCloseButtonTitle" = "Schließen";
+
+// Help
+"HelpVersionLabelString" = "Version %@";
+"HelpSelectingGroup" = "Eine Gruppe auswählen";
+"HelpAssigningToGroup" = "Einer anderen Gruppe zuweisen";
+
+// In-App Purchase
+"Purchase_PromptWithPrice" = "Schalten Sie zwei zusätzliche Gruppen frei für %@.";
+"Purchase_CanNotPurchase" = "Leider können Sie momentan keine zusätzlichen Gruppen kaufen. Überprüfen Sie Ihre Internetverbindung und Ihr iTunes-Konto.";
+"Purchase_Button_BuyNow" = "Jetzt kaufen!";
+"Purchase_Button_Restore" = "Früheren Kauf wiederherstellen.";
+"Purchase_Button_Cancel" = "Nein, danke.";
+"Purchase_Button_Dismiss" = "Schließen";
