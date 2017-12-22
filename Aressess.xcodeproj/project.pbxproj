@@ -33,8 +33,6 @@
 		C070022F199B41D700F809C5 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C070022E199B41D600F809C5 /* Feed.swift */; };
 		C079856719AC5C7100B0E0FE /* ErrorMessageCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C079856619AC5C7100B0E0FE /* ErrorMessageCellView.swift */; };
 		C079856919AC8F6200B0E0FE /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C079856819AC8F6200B0E0FE /* HelpViewController.swift */; };
-		C07E1C0519F7805700B5CAFE /* FXKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B868401994D28E00317166 /* FXKit.framework */; };
-		C07E1C0619F7805700B5CAFE /* FXKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C0B868401994D28E00317166 /* FXKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C083409E199828C100A87E5C /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083409D199828C100A87E5C /* Utilities.swift */; };
 		C0A5EE591B97629900905A09 /* MainSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A5EE581B97629900905A09 /* MainSplitViewController.swift */; };
 		C0ABAFA71992D0430003A33E /* NewsContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0ABAFA61992D0430003A33E /* NewsContentViewController.swift */; };
@@ -64,13 +62,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C00207C619B7A82800DDE1E3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C0B8683A1994D28E00317166 /* FXKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C0C17CB619B4F35E0085FABA;
-			remoteInfo = "FXKit-iOS-Tests";
-		};
 		C008ABAA197898E700699DC6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C0B249D619785EBB00003357 /* Project object */;
@@ -85,40 +76,12 @@
 			remoteGlobalIDString = C0B249DD19785EBB00003357;
 			remoteInfo = Aressess;
 		};
-		C03C99641997791700319869 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C0B8683A1994D28E00317166 /* FXKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C03C9940199772E400319869;
-			remoteInfo = "FXKit-OSX";
-		};
-		C0643FA119974BD100307370 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C0B8683A1994D28E00317166 /* FXKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = C04D24ED198D90FB00D4E979;
-			remoteInfo = FXKit;
-		};
-		C07E1C0719F7805700B5CAFE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C0B8683A1994D28E00317166 /* FXKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = C04D24ED198D90FB00D4E979;
-			remoteInfo = "FXKit-iOS";
-		};
 		C0B249F319785EBB00003357 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C0B249D619785EBB00003357 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C0B249DD19785EBB00003357;
 			remoteInfo = Aressess;
-		};
-		C0B8683F1994D28E00317166 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C0B8683A1994D28E00317166 /* FXKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C04D24EE198D90FB00D4E979;
-			remoteInfo = FXKit;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -129,7 +92,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C07E1C0619F7805700B5CAFE /* FXKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,7 +155,6 @@
 		C0B6B173199958E9004C5365 /* Example-RSS1.0-2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Example-RSS1.0-2.xml"; sourceTree = "<group>"; };
 		C0B6B17519995B28004C5365 /* RSS10Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSS10Parser.swift; sourceTree = "<group>"; };
 		C0B6B17719995B3B004C5365 /* RSSParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSParser.swift; sourceTree = "<group>"; };
-		C0B8683A1994D28E00317166 /* FXKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FXKit.xcodeproj; path = ../FXKit/FXKit.xcodeproj; sourceTree = "<group>"; };
 		C0BB2B3319C6F9960063EF8F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C0C0B3D919C0916D0001E58E /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C0C3DEB619AA74110076FEAC /* InitialFeeds.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = InitialFeeds.plist; sourceTree = "<group>"; };
@@ -206,7 +167,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C07E1C0519F7805700B5CAFE /* FXKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +232,6 @@
 		C0B249D519785EBB00003357 = {
 			isa = PBXGroup;
 			children = (
-				C0B8683A1994D28E00317166 /* FXKit.xcodeproj */,
 				C0B249E019785EBB00003357 /* Aressess */,
 				C0B249F519785EBB00003357 /* AressessTests */,
 				C0B249DF19785EBB00003357 /* Products */,
@@ -352,16 +311,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C0B8683B1994D28E00317166 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C0B868401994D28E00317166 /* FXKit.framework */,
-				C03C99651997791700319869 /* FXKit.framework */,
-				C00207C719B7A82800DDE1E3 /* FXKit-iOS-Tests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -378,8 +327,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				C0643FA219974BD100307370 /* PBXTargetDependency */,
-				C07E1C0819F7805700B5CAFE /* PBXTargetDependency */,
 			);
 			name = Aressess;
 			productName = Aressess;
@@ -414,13 +361,13 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = KulFX;
 				TargetAttributes = {
 					C0B249DD19785EBB00003357 = {
 						CreatedOnToolsVersion = 6.0;
 						LastSwiftMigration = 0900;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.iCloud = {
 								enabled = 0;
@@ -430,6 +377,7 @@
 					C0B249F119785EBB00003357 = {
 						CreatedOnToolsVersion = 6.0;
 						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
 						TestTargetID = C0B249DD19785EBB00003357;
 					};
 				};
@@ -453,12 +401,6 @@
 			mainGroup = C0B249D519785EBB00003357;
 			productRefGroup = C0B249DF19785EBB00003357 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = C0B8683B1994D28E00317166 /* Products */;
-					ProjectRef = C0B8683A1994D28E00317166 /* FXKit.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				C0B249DD19785EBB00003357 /* Aressess */,
@@ -466,30 +408,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		C00207C719B7A82800DDE1E3 /* FXKit-iOS-Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "FXKit-iOS-Tests.xctest";
-			remoteRef = C00207C619B7A82800DDE1E3 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C03C99651997791700319869 /* FXKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = FXKit.framework;
-			remoteRef = C03C99641997791700319869 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C0B868401994D28E00317166 /* FXKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = FXKit.framework;
-			remoteRef = C0B8683F1994D28E00317166 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C0B249DC19785EBB00003357 /* Resources */ = {
@@ -605,16 +523,6 @@
 			target = C0B249DD19785EBB00003357 /* Aressess */;
 			targetProxy = C008ABAC197898E700699DC6 /* PBXContainerItemProxy */;
 		};
-		C0643FA219974BD100307370 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FXKit;
-			targetProxy = C0643FA119974BD100307370 /* PBXContainerItemProxy */;
-		};
-		C07E1C0819F7805700B5CAFE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "FXKit-iOS";
-			targetProxy = C07E1C0719F7805700B5CAFE /* PBXContainerItemProxy */;
-		};
 		C0B249F419785EBB00003357 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C0B249DD19785EBB00003357 /* Aressess */;
@@ -657,21 +565,39 @@
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				ONLY_ACTIVE_ARCH = YES;
@@ -690,15 +616,33 @@
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				SDKROOT = iphoneos;
@@ -716,7 +660,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Aressess/Info.plist;
@@ -741,7 +685,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Aressess/Info.plist;
@@ -763,11 +707,15 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/feed-r.app/feed-r";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = AressessTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "feed-r.test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -779,10 +727,14 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/feed-r.app/feed-r";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AressessTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "feed-r.test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};

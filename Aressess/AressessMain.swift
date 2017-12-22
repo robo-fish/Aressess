@@ -120,11 +120,11 @@ extension AressessMain : UIApplicationDelegate
           var host = url.host ?? ""
           if host.hasPrefix("www.")
           {
-            host = host.substring(from: host.index(host.startIndex, offsetBy: 4))
+            host = String(host[host.index(host.startIndex, offsetBy: 4)...])
           }
           if host.hasSuffix(".com") || host.hasSuffix(".org") || host.hasSuffix(".net") || host.hasSuffix(".edu")
           {
-            host = host.substring(to: host.index(host.endIndex, offsetBy: -4))
+            host = String(host[...host.index(host.endIndex, offsetBy: -4)])
           }
           controller.insertFeed(name: host, for: url)
         }

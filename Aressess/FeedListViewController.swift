@@ -381,7 +381,7 @@ class FeedListViewController : UITableViewController, FeedGroupSelectionDelegate
       if let navController = self.navigationController
       {
         navController.navigationBar.barTintColor = nightModeIsOn ? NightModeNavigationBarBackgroundColor : DefaultNavigationBarBackgroundColor
-        navController.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor.rawValue : (nightModeIsOn ? NightModeTitleColor : DefaultTitleColor)]
+        navController.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : (nightModeIsOn ? NightModeTitleColor : DefaultTitleColor)]
         navController.toolbar.barTintColor = navController.navigationBar.barTintColor
         navController.view.backgroundColor = nightModeIsOn ? NightModeBackgroundColor : DefaultBackgroundColor
       }

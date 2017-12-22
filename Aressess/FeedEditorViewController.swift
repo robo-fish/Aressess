@@ -107,7 +107,7 @@ class FeedEditorViewController : UIViewController, UITextFieldDelegate
       {
         if var url = URL(string:text)
         {
-          if URLField.text!.characters.count > 0
+          if URLField.text!.count > 0
           {
             if let prefixedURL = URL(string:"http://\(text)")
             {

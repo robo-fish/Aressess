@@ -193,7 +193,7 @@ class NewsContentViewController : UIViewController, UIWebViewDelegate
     {
       navController.navigationBar.barTintColor = _nightMode ? NightModeNavigationBarBackgroundColor : DefaultNavigationBarBackgroundColor
       let textColor = _nightMode ? NightModeTitleColor : DefaultTitleColor
-      navController.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor.rawValue : textColor]
+      navController.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : textColor]
       navController.toolbar.barTintColor = navController.navigationBar.barTintColor
     }
     webview?.scrollView.indicatorStyle = _nightMode ? .white : .default
