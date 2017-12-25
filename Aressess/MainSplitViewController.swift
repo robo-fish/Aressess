@@ -2,8 +2,8 @@
 //  MainSplitViewController.swift
 //  Aressess
 //
-//  Created by Kai Özer on 9/2/15.
-//  Copyright © 2015, 2017 Kai Özer. All rights reserved.
+//  Created by Kai Oezer on 9/2/15.
+//  Copyright © 2015, 2017 Kai Oezer. All rights reserved.
 //
 
 import UIKit

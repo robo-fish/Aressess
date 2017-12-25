@@ -2,12 +2,11 @@
 //  FeedViewController.swift
 //  Aressess
 //
-//  Created by Kai Özer on 7/17/14.
-//  Copyright (c) 2014, 2017 Kai Özer. All rights reserved.
+//  Created by Kai Oezer on 7/17/14.
+//  Copyright (c) 2014, 2017 Kai Oezer. All rights reserved.
 //
 
 import UIKit
-import FXKit
 
 private let NewsCellIdentifier = "NewsCellIdentifier"
 private let ErrorMessageCellIdentifier = "ErrorMessageCellIdentifier"
@@ -86,9 +85,11 @@ class FeedViewController: UITableViewController,
     _activityIndicator.hidesWhenStopped = true
     navigationItem.rightBarButtonItem = UIBarButtonItem(customView:_activityIndicator)
 
+    navigationItem.largeTitleDisplayMode = .never
+
     NotificationCenter.default.addObserver(self, selector:#selector(FeedViewController.handleNightModeChanged(_:)), name:NSNotification.Name(rawValue: NightModeChangedNotification), object:nil)
 
-    _setUpSearchController()
+    _createSearchController()
     _setUpRefreshControl()
 
     _configureView()
@@ -99,6 +100,13 @@ class FeedViewController: UITableViewController,
     super.viewWillAppear(animated)
     _updateColors()
     _updateToolbar()
+  #if true
+    _searchController.searchBar.sizeToFit()
+    navigationItem.searchController = _searchController
+    navigationItem.hidesSearchBarWhenScrolling = false
+  #else
+    tableView.tableHeaderView = _searchController.searchBar
+  #endif
     if let keywords = _searchKeywords
     {
       if !keywords.isEmpty
@@ -255,13 +263,12 @@ class FeedViewController: UITableViewController,
 
   //MARK: Private
 
-  private func _setUpSearchController()
+  private func _createSearchController()
   {
     _searchController = UISearchController(searchResultsController:nil)
     _searchController.searchResultsUpdater = self
-    _searchController.searchBar.sizeToFit()
+    //_searchController.searchBar.sizeToFit()
     _searchController.searchBar.searchBarStyle = .default
-    tableView.tableHeaderView = _searchController.searchBar
     _searchController.dimsBackgroundDuringPresentation = false
     _searchController.hidesNavigationBarDuringPresentation = false
     _searchController.searchBar.delegate = self

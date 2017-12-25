@@ -2,11 +2,17 @@
 //  Utilities.swift
 //  Aressess
 //
-//  Created by Kai Özer on 8/11/14.
-//  Copyright (c) 2014, 2017 Kai Özer. All rights reserved.
+//  Created by Kai Oezer on 8/11/14.
+//  Copyright (c) 2014, 2017 Kai Oezer. All rights reserved.
 //
 
 import UIKit
+
+#if DEBUG
+  public func DebugLog(_ s:String) { NSLog(s) }
+#else
+  public func DebugLog(_ s:String) {}
+#endif
 
 let PreferenceKey_NightModeEnabled = "NightModeEnabled"
 let NightModeChangedNotification = "NightModeChangedNotification"
@@ -78,4 +84,23 @@ func toggleGlobalNightMode()
   let oldState = UserDefaults.standard.bool(forKey: PreferenceKey_NightModeEnabled)
   UserDefaults.standard.set(!oldState, forKey:PreferenceKey_NightModeEnabled)
   NotificationCenter.default.post(name: Notification.Name(rawValue: NightModeChangedNotification), object:nil)
+}
+
+
+extension UIColor
+{
+  /// - returns: A lighter or darker variant, depending on the given factor.
+  /// - parameter factor: needs to be greater than 1 in order to produce a lighter color
+  public func lighter(_ factor:CGFloat) -> UIColor
+  {
+    var r : CGFloat = 0.0
+    var g : CGFloat = 0.0
+    var b : CGFloat = 0.0
+    var a : CGFloat = 1.0
+    if self.getRed(&r, green:&g, blue:&b, alpha:&a)
+    {
+      return UIColor(red:factor*r, green:factor*g, blue:factor*b, alpha:a)
+    }
+    return self
+  }
 }

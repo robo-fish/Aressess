@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,9 @@
 		C0327ADB199F2ECD009A66F3 /* pageBeautification.js in Resources */ = {isa = PBXBuildFile; fileRef = C0327ADA199F2ECD009A66F3 /* pageBeautification.js */; };
 		C0327ADE199FDC12009A66F3 /* FeedGroupSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0327ADD199FDC12009A66F3 /* FeedGroupSelectionViewController.swift */; };
 		C049E9A419B0E28300CC5788 /* FeedGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C049E9A319B0E28300CC5788 /* FeedGroupView.swift */; };
+		C04B63F51FEED62300E0ACF8 /* NetworkConnectionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04B63F41FEED62300E0ACF8 /* NetworkConnectionChecker.swift */; };
+		C04B63F71FEF362200E0ACF8 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04B63F61FEF362200E0ACF8 /* ImageUtils.swift */; };
+		C04B63F91FEF36F100E0ACF8 /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04B63F81FEF36F100E0ACF8 /* ViewUtils.swift */; };
 		C068460E19876C8900357A3E /* RSS20Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C068460D19876C8900357A3E /* RSS20Parser.swift */; };
 		C068460F19876C8900357A3E /* RSS20Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C068460D19876C8900357A3E /* RSS20Parser.swift */; };
 		C068461119876D1800357A3E /* RSSTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C068461019876D1800357A3E /* RSSTypes.swift */; };
@@ -109,6 +112,9 @@
 		C049E9A319B0E28300CC5788 /* FeedGroupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedGroupView.swift; sourceTree = "<group>"; };
 		C049E9A619B1AE6800CC5788 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C049E9A719B1EF0700CC5788 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C04B63F41FEED62300E0ACF8 /* NetworkConnectionChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnectionChecker.swift; sourceTree = "<group>"; };
+		C04B63F61FEF362200E0ACF8 /* ImageUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
+		C04B63F81FEF36F100E0ACF8 /* ViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
 		C060370F1991D0AD0073D8FE /* entities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = entities.json; sourceTree = "<group>"; };
 		C068460D19876C8900357A3E /* RSS20Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSS20Parser.swift; sourceTree = "<group>"; };
 		C068461019876D1800357A3E /* RSSTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSTypes.swift; sourceTree = "<group>"; };
@@ -261,9 +267,12 @@
 				C008ABB51979193500699DC6 /* FeedLoader.swift */,
 				C0B24A0219785F3C00003357 /* FeedManager.swift */,
 				C079856819AC8F6200B0E0FE /* HelpViewController.swift */,
+				C04B63F61FEF362200E0ACF8 /* ImageUtils.swift */,
 				C0A5EE581B97629900905A09 /* MainSplitViewController.swift */,
+				C04B63F41FEED62300E0ACF8 /* NetworkConnectionChecker.swift */,
 				C0ABAFA61992D0430003A33E /* NewsContentViewController.swift */,
 				C083409D199828C100A87E5C /* Utilities.swift */,
+				C04B63F81FEF36F100E0ACF8 /* ViewUtils.swift */,
 				C0B249EC19785EBB00003357 /* Images.xcassets */,
 				C008ABA91978923400699DC6 /* Resources */,
 				C0B249E119785EBB00003357 /* Supporting Files */,
@@ -362,10 +371,10 @@
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0920;
-				ORGANIZATIONNAME = KulFX;
 				TargetAttributes = {
 					C0B249DD19785EBB00003357 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = "";
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -383,7 +392,7 @@
 				};
 			};
 			buildConfigurationList = C0B249D919785EBB00003357 /* Build configuration list for PBXProject "Aressess" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -459,7 +468,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# This must be executed AFTER copying bundle resources and BEFORE code signing.\nmajor_version_prefix=\"1.2.\"\ncd $PROJECT_DIR\n#--- Subversion ---\n#svn up -q\n#build_number=`svnversion -n`\n#--- Git ---\n#build_number=`git log --oneline master a3db4f4..HEAD | wc -l`\nbuild_number=`git rev-list --count a3db4f4..HEAD`\n# trim whitespace\nbuild_number=`echo $build_number | sed 's/^ *//;s/ *$//'`\n# add an offset to obtain a larger build number for the App Store\n#build_number=`echo $build_number + 300 | bc -l`\n#-----------\nbundle_version=$major_version_prefix$build_number\n# Only the plist in the build targets directory is modified. The source plist is left unchanged.\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion ${bundle_version}\" \"${TARGET_BUILD_DIR}\"/${INFOPLIST_PATH}\n";
+			shellScript = "# This must be executed AFTER copying bundle resources and BEFORE code signing.\nmajor_version_prefix=\"1.4.\"\ncd $PROJECT_DIR\n#--- Subversion ---\n#svn up -q\n#build_number=`svnversion -n`\n#--- Git ---\n#build_number=`git log --oneline master a3db4f4..HEAD | wc -l`\nbuild_number=`git rev-list --count a3db4f4..HEAD`\n# trim whitespace\nbuild_number=`echo $build_number | sed 's/^ *//;s/ *$//'`\n# add an offset to obtain a larger build number for the App Store\n#build_number=`echo $build_number + 300 | bc -l`\n#-----------\nbundle_version=$major_version_prefix$build_number\n# Only the plist in the build targets directory is modified. The source plist is left unchanged.\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion ${bundle_version}\" \"${TARGET_BUILD_DIR}\"/${INFOPLIST_PATH}\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -485,6 +494,7 @@
 				C0B249E619785EBB00003357 /* FeedListViewController.swift in Sources */,
 				C079856919AC8F6200B0E0FE /* HelpViewController.swift in Sources */,
 				C0B249E419785EBB00003357 /* AressessMain.swift in Sources */,
+				C04B63F51FEED62300E0ACF8 /* NetworkConnectionChecker.swift in Sources */,
 				C0B24A0319785F3C00003357 /* FeedManager.swift in Sources */,
 				C0A5EE591B97629900905A09 /* MainSplitViewController.swift in Sources */,
 				C068460E19876C8900357A3E /* RSS20Parser.swift in Sources */,
@@ -494,6 +504,8 @@
 				C0B6B17819995B3B004C5365 /* RSSParser.swift in Sources */,
 				C0AD1CDC198B034100B6E043 /* AtomParser.swift in Sources */,
 				C070022D199B418E00F809C5 /* FeedGroup.swift in Sources */,
+				C04B63F91FEF36F100E0ACF8 /* ViewUtils.swift in Sources */,
+				C04B63F71FEF362200E0ACF8 /* ImageUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,7 +611,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				SDKROOT = iphoneos;
@@ -644,7 +656,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -664,7 +676,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Aressess/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "-DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = "feed-r";
@@ -689,7 +701,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Aressess/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "feed-r";
 				PRODUCT_MODULE_NAME = Aressess;

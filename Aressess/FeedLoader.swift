@@ -2,12 +2,11 @@
 //  FeedLoader.swift
 //  Aressess
 //
-//  Created by Kai Özer
-//  Copyright (c) 2014, 2017 Kai Özer. All rights reserved.
+//  Created by Kai Oezer
+//  Copyright (c) 2014, 2017 Kai Oezer. All rights reserved.
 //
 
 import Foundation
-import FXKit
 
 private enum MIMEType : String
 {
@@ -33,7 +32,12 @@ class FeedLoader : NSObject, URLSessionDelegate
   var news = [News]()
   var delegate : FeedLoaderDelegate? = nil
   var handledResponse = false
-  lazy var connectionChecker = NetworkConnectionChecker()
+  lazy var _connectionChecker = NetworkConnectionChecker(handler: { (hostName : String?, isConnected : Bool) in
+    if !isConnected
+    {
+      self.delegate?.handleErrorMessage(String(format:LocString("CannotReachHost"), hostName ?? ""), forLoader:self)
+    }
+  })
 
   init(feed : Feed)
   {
@@ -49,13 +53,7 @@ class FeedLoader : NSObject, URLSessionDelegate
     self.delegate = delegate
     if let address = _convertAddressToHttp(feedAddress), let host = address.host
     {
-      connectionChecker.checkConnection(toHost: host, handler:{ (s : String, isConnected : Bool) in
-        if !isConnected
-        {
-          delegate.handleErrorMessage(String(format:LocString("CannotReachHost"), s), forLoader:self)
-        }
-        self.connectionChecker.stopChecking()
-      })
+      _connectionChecker.checkConnection(to: host)
       var request = URLRequest(url:address)
       request.addValue("utf-8", forHTTPHeaderField:"Accept-Charset")
       let session = URLSession(configuration: URLSessionConfiguration.default)

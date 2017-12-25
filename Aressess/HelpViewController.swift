@@ -2,12 +2,11 @@
 //  HelpViewController.swift
 //  Aressess
 //
-//  Created by Kai Özer on 8/26/14.
-//  Copyright (c) 2014, 2017 Kai Özer. All rights reserved.
+//  Created by Kai Oezer on 8/26/14.
+//  Copyright (c) 2014, 2017 Kai Oezer. All rights reserved.
 //
 
 import UIKit
-import FXKit
 
 class HelpContentCell : UICollectionViewCell
 {
@@ -38,7 +37,7 @@ class HelpContentCell : UICollectionViewCell
     let horizontalMargin : NSNumber = 20.0
     let width = NSNumber(value:Float(width) - 2*horizontalMargin.floatValue)
     let height = NSNumber(value:Float(height) - 32 - 2 * verticalMargin.floatValue)
-    ViewUtils.layoutInView(contentView,
+    ViewUtils.layout(in: contentView,
       visualFormats:["H:|-hm-[iv(w)]-hm-|", "H:|-hm-[label]-hm-|", "V:|-vm-[label(32)]-vm-[iv(h)]|"],
       metricsInfo: ["hm":horizontalMargin, "vm":verticalMargin, "w":width, "h":height],
       viewsInfo:["iv":imageView, "label":label]

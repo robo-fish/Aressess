@@ -2,12 +2,11 @@
 //  RSSParser.swift
 //  Aressess
 //
-//  Created by Kai Özer on 8/11/14.
-//  Copyright (c) 2014, 2017 Kai Özer. All rights reserved.
+//  Created by Kai Oezer on 8/11/14.
+//  Copyright (c) 2014, 2017 Kai Oezer. All rights reserved.
 //
 
 import Foundation
-import FXKit
 
 /// Detects the RSS format and selects one of the concrete RSS parsers to actually do the parsing.
 public class RSSParser : Parser

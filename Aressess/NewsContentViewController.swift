@@ -2,14 +2,14 @@
 //  NewsContentViewController.swift
 //  Aressess
 //
-//  Created by Kai Özer on 8/6/14.
-//  Copyright (c) 2014, 2017 Kai Özer. All rights reserved.
+//  Created by Kai Oezer on 8/6/14.
+//  Copyright (c) 2014, 2017 Kai Oezer. All rights reserved.
 //
 
 import UIKit
 
 
-class NewsContentViewController : UIViewController, UIWebViewDelegate
+class NewsContentViewController : UIViewController
 {
   @IBOutlet weak var webview : UIWebView!
   private var _activityIndicator : UIActivityIndicatorView!
@@ -42,6 +42,7 @@ class NewsContentViewController : UIViewController, UIWebViewDelegate
   override func viewWillAppear(_ animated : Bool)
   {
     super.viewWillAppear(animated)
+    navigationItem.searchController = nil
     _updateColors()
     _updateToolbar()
   }
@@ -61,40 +62,6 @@ class NewsContentViewController : UIViewController, UIWebViewDelegate
     {
       _loadLinkedPage()
     }
-  }
-
-  //MARK: UIWebViewDelegate
-
-  func webViewDidStartLoad(_ webView : UIWebView)
-  {
-    navigationItem.setRightBarButton(_activityBarItem, animated:true)
-    self._activityIndicator.startAnimating()
-  }
-
-  func webViewDidFinishLoad(_ webView : UIWebView)
-  {
-    var stopActivityIndicator = true
-    if _loadingNewsItemContent
-    {
-      _loadingNewsItemContent = false
-      if _pageIsEmpty()
-      {
-        _loadLinkedPage()
-        stopActivityIndicator = false
-      }
-    }
-    if stopActivityIndicator
-    {
-      _activityIndicator.stopAnimating()
-      _updateToolbar()
-    }
-    _preparePage()
-  }
-
-  func webView(_ webView: UIWebView, didFailLoadWithError error : Error)
-  {
-    self._activityIndicator.stopAnimating()
-    _updateToolbar()
   }
 
   //MARK: Actions and Notifications
@@ -219,3 +186,39 @@ class NewsContentViewController : UIViewController, UIWebViewDelegate
     self.toolbarItems = items
   }
 }
+
+extension NewsContentViewController : UIWebViewDelegate
+{
+  func webViewDidStartLoad(_ webView : UIWebView)
+  {
+    navigationItem.setRightBarButton(_activityBarItem, animated:true)
+    self._activityIndicator.startAnimating()
+  }
+
+  func webViewDidFinishLoad(_ webView : UIWebView)
+  {
+    var stopActivityIndicator = true
+    if _loadingNewsItemContent
+    {
+      _loadingNewsItemContent = false
+      if _pageIsEmpty()
+      {
+        _loadLinkedPage()
+        stopActivityIndicator = false
+      }
+    }
+    if stopActivityIndicator
+    {
+      _activityIndicator.stopAnimating()
+      _updateToolbar()
+    }
+    _preparePage()
+  }
+
+  func webView(_ webView: UIWebView, didFailLoadWithError error : Error)
+  {
+    self._activityIndicator.stopAnimating()
+    _updateToolbar()
+  }
+}
+

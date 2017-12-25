@@ -2,14 +2,13 @@
 //  FeedListViewController.swift
 //  Aressess
 //
-//  Created by Kai Özer on 7/17/14.
-//  Copyright (c) 2014, 2017 Kai Özer. All rights reserved.
+//  Created by Kai Oezer on 7/17/14.
+//  Copyright (c) 2014, 2017 Kai Oezer. All rights reserved.
 //
 
 import UIKit
-import FXKit
 
-class FeedListViewController : UITableViewController, FeedGroupSelectionDelegate, FeedManagerExternalChangeObserver
+class FeedListViewController : UITableViewController
 {
   var detailViewController: FeedViewController? = nil
   private var selectedRow = -1 // we need to store the row index here because 'cell.selected' does not work reliably
@@ -37,6 +36,7 @@ class FeedListViewController : UITableViewController, FeedGroupSelectionDelegate
     }
 
     title = LocString("FeedsListTitle")
+    navigationController?.navigationBar.prefersLargeTitles = true
     _createToolbarItems()
     FeedManager.sharedFeedManager().addExternalChangeObserver(self)
     _handleFeedGroupChange() // for initial configuration
@@ -78,15 +78,6 @@ class FeedListViewController : UITableViewController, FeedGroupSelectionDelegate
   {
     _createNewFeed(name: name, for: location, insertAtTopOfGroup: true)
   }
-
-  //MARK: FeedManagerExternalChangeObserver
-
-  func handleFeedGroupContentsChangedExternally()
-  {
-    _handleFeedGroupChange()
-  }
-
-  //MARK: Segues
 
   override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool
   {
@@ -140,56 +131,6 @@ class FeedListViewController : UITableViewController, FeedGroupSelectionDelegate
         }
       }
     }
-  }
-
-  //MARK: UITableViewDataSource
-
-  override func numberOfSections(in tableView: UITableView) -> Int
-  {
-    return 1
-  }
-
-  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-  {
-    return FeedManager.sharedFeedManager().activeFeeds.count
-  }
-
-  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-  {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) 
-    cell.accessoryType = .detailDisclosureButton
-    let feed = FeedManager.sharedFeedManager().activeFeeds[(indexPath as NSIndexPath).row]
-    cell.textLabel?.text = feed.name
-    cell.textLabel?.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)
-    cell.textLabel?.textColor = nightModeIsOn ? NightModeTextColor : DefaultTextColor
-    cell.textLabel?.highlightedTextColor = nightModeIsOn ? NightModeTextColor : DefaultTextColor
-    let coloredBackgroundView = UIView()
-    coloredBackgroundView.backgroundColor = nightModeIsOn ? FeedManager.sharedFeedManager().darkerActiveColor : FeedManager.sharedFeedManager().lighterActiveColor
-    cell.selectedBackgroundView = coloredBackgroundView
-    cell.backgroundColor = nightModeIsOn ? NightModeBackgroundColor : DefaultBackgroundColor
-    return cell
-  }
-
-  override func tableView(_ tableView:UITableView, moveRowAt sourceIndexPath:IndexPath, to destinationIndexPath:IndexPath)
-  {
-    let sourceRowIndex = (sourceIndexPath as NSIndexPath).row
-    let destinationRowIndex = (destinationIndexPath as NSIndexPath).row
-    FeedManager.sharedFeedManager().moveFeedInActiveGroupFromRow(sourceRowIndex, toRow:destinationRowIndex)
-
-    if selectedRow == sourceRowIndex
-    {
-      selectedRow = destinationRowIndex
-    }
-    else if (selectedRow > sourceRowIndex) && (selectedRow < destinationRowIndex)
-    {
-      selectedRow -= 1
-    }
-    else if (selectedRow >= destinationRowIndex) && (selectedRow < sourceRowIndex)
-    {
-      selectedRow += 1
-    }
-
-    tableView.reloadData()
   }
 
   //MARK: UITableViewDelegate
@@ -265,20 +206,6 @@ class FeedListViewController : UITableViewController, FeedGroupSelectionDelegate
       cell.backgroundColor = UIColor.clear
     }
     return indexPath
-  }
-
-  //MARK: FeedGroupSelectionDelegate
-
-  func feedGroupSelector(_ feedGroupSelector:FeedGroupSelectionViewController, selectedGroupIndex:Int)
-  {
-    let fm = FeedManager.sharedFeedManager()
-    if (selectedGroupIndex >= 0) && (selectedGroupIndex < fm.feedGroups.count)
-    {
-      fm.activeGroupIndex = selectedGroupIndex
-      _handleFeedGroupChange()
-      feedGroupSelector.delegate = nil // prevents retain cycle
-      feedGroupSelector.dismiss(animated: true, completion:nil)
-    }
   }
 
   //MARK: Actions and Notification Handlers
@@ -432,6 +359,82 @@ class FeedListViewController : UITableViewController, FeedGroupSelectionDelegate
     tableView.scrollToRow(at: indexPath, at:.top, animated:true)
     selectedRow += 1
     performSegue(withIdentifier: "showFeedEditor", sender:self.tableView.cellForRow(at: indexPath))
+  }
+}
+
+extension FeedListViewController // UITableViewDataSource
+{
+  override func numberOfSections(in tableView: UITableView) -> Int
+  {
+    return 1
+  }
+
+  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+  {
+    return FeedManager.sharedFeedManager().activeFeeds.count
+  }
+
+  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+  {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+    cell.accessoryType = .detailDisclosureButton
+    let feed = FeedManager.sharedFeedManager().activeFeeds[(indexPath as NSIndexPath).row]
+    cell.textLabel?.text = feed.name
+    cell.textLabel?.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)
+    cell.textLabel?.textColor = nightModeIsOn ? NightModeTextColor : DefaultTextColor
+    cell.textLabel?.highlightedTextColor = nightModeIsOn ? NightModeTextColor : DefaultTextColor
+    let coloredBackgroundView = UIView()
+    coloredBackgroundView.backgroundColor = nightModeIsOn ? FeedManager.sharedFeedManager().darkerActiveColor : FeedManager.sharedFeedManager().lighterActiveColor
+    cell.selectedBackgroundView = coloredBackgroundView
+    cell.backgroundColor = nightModeIsOn ? NightModeBackgroundColor : DefaultBackgroundColor
+    return cell
+  }
+
+  override func tableView(_ tableView:UITableView, moveRowAt sourceIndexPath:IndexPath, to destinationIndexPath:IndexPath)
+  {
+    let sourceRowIndex = (sourceIndexPath as NSIndexPath).row
+    let destinationRowIndex = (destinationIndexPath as NSIndexPath).row
+    FeedManager.sharedFeedManager().moveFeedInActiveGroupFromRow(sourceRowIndex, toRow:destinationRowIndex)
+
+    if selectedRow == sourceRowIndex
+    {
+      selectedRow = destinationRowIndex
+    }
+    else if (selectedRow > sourceRowIndex) && (selectedRow < destinationRowIndex)
+    {
+      selectedRow -= 1
+    }
+    else if (selectedRow >= destinationRowIndex) && (selectedRow < sourceRowIndex)
+    {
+      selectedRow += 1
+    }
+
+    tableView.reloadData()
+  }
+
+}
+
+extension FeedListViewController : FeedManagerExternalChangeObserver
+{
+  func handleFeedGroupContentsChangedExternally()
+  {
+    _handleFeedGroupChange()
+  }
+}
+
+
+extension FeedListViewController : FeedGroupSelectionDelegate
+{
+  func feedGroupSelector(_ feedGroupSelector:FeedGroupSelectionViewController, selectedGroupIndex:Int)
+  {
+    let fm = FeedManager.sharedFeedManager()
+    if (selectedGroupIndex >= 0) && (selectedGroupIndex < fm.feedGroups.count)
+    {
+      fm.activeGroupIndex = selectedGroupIndex
+      _handleFeedGroupChange()
+      feedGroupSelector.delegate = nil // prevents retain cycle
+      feedGroupSelector.dismiss(animated: true, completion:nil)
+    }
   }
 }
 
