@@ -102,7 +102,7 @@ class FeedEditorViewController : UIViewController, UITextFieldDelegate
     }
     else if textField === URLField
     {
-      if let feed_ = feed, let text = URLField.text
+      if var feed_ = feed, let text = URLField.text
       {
         if var url = URL(string:text)
         {

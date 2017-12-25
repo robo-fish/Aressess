@@ -92,13 +92,9 @@ class News : NSObject
           }
         }
       }
-      catch let error as NSError
+      catch
       {
-        print("Error while loading web characters table. \(error.localizedDescription)")
-      }
-      catch _
-      {
-        print("Error while loading web characters table.")
+        print("Error while loading web characters table. " + error.localizedDescription)
       }
     }
   }
@@ -140,6 +136,11 @@ class News : NSObject
     //webCharacters["&;"] = "\u{}"
   }
 
+}
+
+extension News : Nameable
+{
+  var name : String { return title }
 }
 
 

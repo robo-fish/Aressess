@@ -10,6 +10,8 @@
 		2AAEF9DB1FF0D12E00604EF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AAEF9D91FF0D12E00604EF3 /* Main.storyboard */; };
 		2AAEF9DF1FF0F74400604EF3 /* AressessNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAEF9DE1FF0F74400604EF3 /* AressessNavigationController.swift */; };
 		2AAEF9E11FF12A7000604EF3 /* SearchWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAEF9E01FF12A7000604EF3 /* SearchWorker.swift */; };
+		2AAEF9E31FF1745800604EF3 /* AressessTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAEF9E21FF1745800604EF3 /* AressessTableViewDataSource.swift */; };
+		2AAEF9E51FF1983600604EF3 /* Nameable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAEF9E41FF1983600604EF3 /* Nameable.swift */; };
 		C008ABA61978809900699DC6 /* FeedEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008ABA51978809900699DC6 /* FeedEditorViewController.swift */; };
 		C008ABB01978994900699DC6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C008ABB21978994900699DC6 /* Localizable.strings */; };
 		C008ABB61979193500699DC6 /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008ABB51979193500699DC6 /* FeedLoader.swift */; };
@@ -106,6 +108,8 @@
 		2AAEF9DA1FF0D12E00604EF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2AAEF9DE1FF0F74400604EF3 /* AressessNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AressessNavigationController.swift; sourceTree = "<group>"; };
 		2AAEF9E01FF12A7000604EF3 /* SearchWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWorker.swift; sourceTree = "<group>"; };
+		2AAEF9E21FF1745800604EF3 /* AressessTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AressessTableViewDataSource.swift; sourceTree = "<group>"; };
+		2AAEF9E41FF1983600604EF3 /* Nameable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nameable.swift; sourceTree = "<group>"; };
 		C008ABA51978809900699DC6 /* FeedEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedEditorViewController.swift; sourceTree = "<group>"; };
 		C008ABB11978994900699DC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C008ABB51979193500699DC6 /* FeedLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedLoader.swift; sourceTree = "<group>"; };
@@ -230,6 +234,7 @@
 				C0AD1CDD198B042400B6E043 /* AtomTypes.swift */,
 				C070022E199B41D600F809C5 /* Feed.swift */,
 				C070022C199B418E00F809C5 /* FeedGroup.swift */,
+				2AAEF9E41FF1983600604EF3 /* Nameable.swift */,
 				C008ABB719791BF000699DC6 /* News.swift */,
 				C068461019876D1800357A3E /* RSSTypes.swift */,
 			);
@@ -262,6 +267,7 @@
 				C079856519AC5C5100B0E0FE /* Views */,
 				C0B249E319785EBB00003357 /* AressessMain.swift */,
 				2AAEF9DE1FF0F74400604EF3 /* AressessNavigationController.swift */,
+				2AAEF9E21FF1745800604EF3 /* AressessTableViewDataSource.swift */,
 				C0B249E719785EBB00003357 /* FeedViewController.swift */,
 				C008ABA51978809900699DC6 /* FeedEditorViewController.swift */,
 				C0327ADD199FDC12009A66F3 /* FeedGroupListViewController.swift */,
@@ -378,7 +384,6 @@
 				TargetAttributes = {
 					C0B249DD19785EBB00003357 = {
 						CreatedOnToolsVersion = 6.0;
-						DevelopmentTeam = "";
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -487,6 +492,7 @@
 				C008ABA61978809900699DC6 /* FeedEditorViewController.swift in Sources */,
 				C083409E199828C100A87E5C /* Utilities.swift in Sources */,
 				C008ABB819791BF000699DC6 /* News.swift in Sources */,
+				2AAEF9E31FF1745800604EF3 /* AressessTableViewDataSource.swift in Sources */,
 				C0700219199AD5BB00F809C5 /* RSS091Parser.swift in Sources */,
 				C079856719AC5C7100B0E0FE /* ErrorMessageCellView.swift in Sources */,
 				C0AD1CE3198B557000B6E043 /* Parser.swift in Sources */,
@@ -510,6 +516,7 @@
 				C0AD1CDC198B034100B6E043 /* AtomParser.swift in Sources */,
 				C070022D199B418E00F809C5 /* FeedGroup.swift in Sources */,
 				C04B63F91FEF36F100E0ACF8 /* ViewUtils.swift in Sources */,
+				2AAEF9E51FF1983600604EF3 /* Nameable.swift in Sources */,
 				C04B63F71FEF362200E0ACF8 /* ImageUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -679,7 +686,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+                DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Aressess/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -705,7 +712,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+                DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Aressess/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

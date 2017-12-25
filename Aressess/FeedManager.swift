@@ -26,6 +26,7 @@ class FeedManager
 {
   enum ArchivingKey : String
   {
+    case FeedGroups = "FeedGroups"
     case ActiveFeedGroupIndex = "ActiveFeedGroupIndex"
     case CloudFormatVersion = "CloudFormatVersion"
     case Timestamp = "Timestamp"
@@ -81,7 +82,6 @@ class FeedManager
 
   private init()
   {
-    _createFeedGroups()
     _initializeCloud()
     _load()
   }
@@ -202,15 +202,16 @@ class FeedManager
 
   private func _saveFeeds()
   {
-    let defs = UserDefaults.standard
-    let saveGroup = { (index:FeedGroup.UserGroup, key : FeedGroup.ArchivingKey) -> () in
-      let archivedFeeds = NSKeyedArchiver.archivedData(withRootObject: self.feedGroups[index.rawValue].feeds)
-      defs.set(archivedFeeds, forKey:key.rawValue)
+    do
+    {
+      let encoder = JSONEncoder()
+      let encodedFeeds = try encoder.encode(feedGroups)
+      UserDefaults.standard.set(encodedFeeds, forKey:ArchivingKey.FeedGroups.rawValue)
     }
-    saveGroup(.blue, .BlueGroup)
-    saveGroup(.red, .RedGroup)
-    saveGroup(.green, .GreenGroup)
-    saveGroup(.orange, .OrangeGroup)
+    catch
+    {
+      DebugLog("There was a problem encoding the feed groups. " + error.localizedDescription)
+    }
   }
 
   private func _saveActiveGroupIndex()
@@ -223,49 +224,33 @@ class FeedManager
     UserDefaults.standard.set(Date.timeIntervalSinceReferenceDate, forKey:ArchivingKey.Timestamp.rawValue)
   }
 
-  private func _loadUserFeedGroup(_ group:FeedGroup.ArchivingKey) -> [Feed]
-  {
-    var loadedFeeds = [Feed]()
-    let data = UserDefaults.standard.data(forKey: group.rawValue)
-    if data != nil
-    {
-      let unarchivedData: AnyObject! = NSKeyedUnarchiver.unarchiveObject(with: data!) as AnyObject!
-      if let unarchivedFeeds = unarchivedData as? [Feed]
-      {
-        loadedFeeds = unarchivedFeeds
-      }
-    }
-    return loadedFeeds
-  }
-
   private func _load()
   {
     _loadFromCloud()
 
-    if _feedGroupsAreEmpty()
+    if feedGroups.isEmpty
     {
-      feedGroups[FeedGroup.UserGroup.blue.rawValue].feeds = _loadUserFeedGroup(.BlueGroup)
-      feedGroups[FeedGroup.UserGroup.green.rawValue].feeds = _loadUserFeedGroup(.GreenGroup)
-      feedGroups[FeedGroup.UserGroup.orange.rawValue].feeds = _loadUserFeedGroup(.OrangeGroup)
-      feedGroups[FeedGroup.UserGroup.red.rawValue].feeds = _loadUserFeedGroup(.RedGroup)
-      _activeGroupIndex = UserDefaults.standard.integer(forKey: ArchivingKey.ActiveFeedGroupIndex.rawValue)
-
-      if _feedGroupsAreEmpty()
+      if let feedGroupsData = UserDefaults.standard.data(forKey: ArchivingKey.FeedGroups.rawValue)
+      {
+        do
+        {
+          feedGroups = try JSONDecoder().decode([FeedGroup].self, from:feedGroupsData)
+        }
+        catch
+        {
+          DebugLog("Error while decoding feed groups. " + error.localizedDescription)
+        }
+      }
+      if feedGroups.isEmpty
       {
         _loadInitialFeeds()
+        assert(!feedGroups.isEmpty)
       }
+      _activeGroupIndex = UserDefaults.standard.integer(forKey: ArchivingKey.ActiveFeedGroupIndex.rawValue)
+      _activeGroupIndex = max(0, min(feedGroups.count - 1, _activeGroupIndex))
 
       _saveToCloud()
     }
-  }
-
-  private func _createFeedGroups()
-  {
-    feedGroups.append(FeedGroup(name:"blue", userGroup:.blue))
-    feedGroups.append(FeedGroup(name:"red", userGroup:.red))
-    feedGroups.append(FeedGroup(name:"green", userGroup:.green, locked:true))
-    feedGroups.append(FeedGroup(name:"orange", userGroup:.orange, locked:true))
-    _activeGroupIndex = 0
   }
 
   private func _loadInitialFeeds()
@@ -312,80 +297,66 @@ class FeedManager
       do
       {
         let initialFeedsData = try Data(contentsOf: initialFeedsFileLocation, options:[])
-        if let initialFeedsPlist = try PropertyListSerialization.propertyList(from: initialFeedsData, options:[], format:nil) as? NSDictionary
+        guard let initialFeedsPlist = try PropertyListSerialization.propertyList(from: initialFeedsData, options:[], format:nil) as? NSDictionary else { return }
+
+        //println("\(NSLocale.availableLocaleIdentifiers())")
+
+        let defaultLanguage = "en"
+        let defaultRegionCode = "en_US"
+
+        var languageCode = defaultLanguage
+        let languages = Locale.preferredLanguages
+        if !languages.isEmpty
         {
-          //println("\(NSLocale.availableLocaleIdentifiers())")
+          languageCode = languages[0] as String
+        }
 
-          let defaultLanguage = "en"
-          let defaultRegionCode = "en_US"
+        let regionCode = Locale.current.identifier
+        var groups : NSArray? = nil
 
-          var languageCode = defaultLanguage
-          let languages = Locale.preferredLanguages
-          if !languages.isEmpty
+        if let regions = initialFeedsPlist[languageCode] as? NSDictionary
+        {
+          groups = regions[regionCode] as? NSArray
+          if groups == nil
           {
-            languageCode = languages[0] as String
+            groups = regions.allValues[0] as? NSArray
           }
-
-          let regionCode = Locale.current.identifier
-          var groups : NSArray? = nil
-
-          if let regions = initialFeedsPlist[languageCode] as? NSDictionary
+        }
+        else
+        {
+          if let defaultLanguageRegions = initialFeedsPlist[defaultLanguage] as? NSDictionary
           {
-            groups = regions[regionCode] as? NSArray
-            if groups == nil
-            {
-              groups = regions.allValues[0] as? NSArray
-            }
+            groups = defaultLanguageRegions[defaultRegionCode] as? NSArray
           }
-          else
-          {
-            if let defaultLanguageRegions = initialFeedsPlist[defaultLanguage] as? NSDictionary
-            {
-              groups = defaultLanguageRegions[defaultRegionCode] as? NSArray
-            }
-          }
+        }
 
-          if groups != nil
+        if let groups_ = groups
+        {
+          for (groupIndex,group) in groups_.enumerated()
           {
-            for (groupIndex,group) in (groups!).enumerated()
+            if let localizedFeeds = group as? [NSDictionary]
             {
-              if let localizedFeeds = group as? [NSDictionary]
+              feeds.removeAll()
+              for feed in localizedFeeds
               {
-                feeds.removeAll()
-                for feed in localizedFeeds
+                if
+                  let feedName = feed["name"] as? String,
+                  let feedLocation = feed["location"] as? String
                 {
-                  if
-                    let feedName = feed["name"] as? String,
-                    let feedLocation = feed["location"] as? String
-                  {
-                    append(feedName, feedLocation)
-                  }
+                  append(feedName, feedLocation)
                 }
-                feedGroups[groupIndex].feeds = feeds
               }
+              feedGroups.append(FeedGroup(name:"Group\(groupIndex)", feeds:feeds))
             }
           }
         }
       }
-      catch let error as NSError
+      catch
       {
         DebugLog(error.localizedDescription)
       }
     }
   #endif
-  }
-
-  private func _feedGroupsAreEmpty() -> Bool
-  {
-    var result = true
-    for group in feedGroups
-    {
-      if !group.feeds.isEmpty {
-        result = false
-        break
-      }
-    }
-    return result
   }
 
   fileprivate func _isValidFormatVersion(_ version:Int64) -> Bool
@@ -445,22 +416,17 @@ extension FeedManager
     let version = store.longLong(forKey: ArchivingKey.CloudFormatVersion.rawValue)
     if _isValidFormatVersion(version)
     {
-      let loadGroup = { (group:FeedGroup.UserGroup) -> Void in
-        let key = FeedGroup.ArchivingKey.keyForFeedGroup(group)
-        let data = NSUbiquitousKeyValueStore.default.data(forKey: key.rawValue)
-        if data != nil
+      if let data = NSUbiquitousKeyValueStore.default.data(forKey: ArchivingKey.FeedGroups.rawValue)
+      {
+        do
         {
-          let unarchivedData: AnyObject! = NSKeyedUnarchiver.unarchiveObject(with: data!) as AnyObject!
-          if let unarchivedFeeds = unarchivedData as? [Feed]
-          {
-            self.feedGroups[group.rawValue].feeds = unarchivedFeeds
-          }
+          self.feedGroups = try JSONDecoder().decode([FeedGroup].self, from:data)
+        }
+        catch
+        {
+          DebugLog("Error while decoding feed groups. " + error.localizedDescription)
         }
       }
-      loadGroup(.blue)
-      loadGroup(.red)
-      loadGroup(.green)
-      loadGroup(.orange)
       activeGroupIndex = Int(store.longLong(forKey: ArchivingKey.ActiveFeedGroupIndex.rawValue))
     }
   }
@@ -469,15 +435,15 @@ extension FeedManager
   {
     let store = NSUbiquitousKeyValueStore.default
     store.set(CloudFormatVersion, forKey:ArchivingKey.CloudFormatVersion.rawValue)
-    let saveGroup = { (feedGroup:FeedGroup.UserGroup) -> () in
-      let archivedFeeds = NSKeyedArchiver.archivedData(withRootObject: self.feedGroups[feedGroup.rawValue].feeds)
-      let key = FeedGroup.ArchivingKey.keyForFeedGroup(feedGroup)
-      store.set(archivedFeeds, forKey:key.rawValue)
+    do
+    {
+      let encodedGroups = try JSONEncoder().encode(feedGroups)
+      store.set(encodedGroups, forKey: ArchivingKey.FeedGroups.rawValue)
     }
-    saveGroup(.blue)
-    saveGroup(.red)
-    saveGroup(.green)
-    saveGroup(.orange)
+    catch
+    {
+      DebugLog("Error while encoding feed groups. " + error.localizedDescription)
+    }
     store.set(Int64(activeGroupIndex), forKey:ArchivingKey.ActiveFeedGroupIndex.rawValue)
     store.set(Date.timeIntervalSinceReferenceDate, forKey:ArchivingKey.Timestamp.rawValue)
   }

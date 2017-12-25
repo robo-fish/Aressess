@@ -148,7 +148,7 @@ class FeedViewController : UITableViewController
   /// :return: whether the news are being downloaded
   private func _fetchNewsItems() -> Bool
   {
-    if feed?.location?.scheme != nil
+    if feed?.location.scheme != nil
     {
       _loader = FeedLoader(feed:feed!)
       _loader!.loadNewsWithDelegate(self)

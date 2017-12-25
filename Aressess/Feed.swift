@@ -9,10 +9,10 @@
 import Foundation
 
 
-class Feed : NSObject, NSCoding
+struct Feed : Nameable, Codable
 {
-  var location : URL? = nil
-  var name : String = ""
+  var location : URL
+  var name : String
 
   init(location: URL, name: String)
   {
@@ -20,29 +20,13 @@ class Feed : NSObject, NSCoding
     self.name = name
   }
 
-  //MARK: NSCoding
-
-  private let CodingKey_Location = "location"
-  private let CodingKey_Name = "name"
-
-  func encode(with coder: NSCoder)
-  {
-    if location != nil
-    {
-      coder.encode(location!, forKey:CodingKey_Location)
-    }
-    coder.encode(name, forKey:CodingKey_Name)
-  }
-
-  required init?(coder decoder: NSCoder)
-  {
-    location = decoder.decodeObject(forKey: CodingKey_Location) as? URL
-    name = decoder.decodeObject(forKey: CodingKey_Name) as! String
-  }
+  // The compiler automatically generates the Encodable-compliant function and Decodable-compliant initializer.
 }
 
-// implementation of Equatable
-func ==(lhs:Feed, rhs:Feed) -> Bool
+extension Feed : Equatable
 {
-  return (lhs.name == rhs.name) && (lhs.location == rhs.location)
+  static func ==(lhs: Feed, rhs: Feed) -> Bool
+  {
+    return (lhs.name == rhs.name) && (lhs.location == rhs.location)
+  }
 }
