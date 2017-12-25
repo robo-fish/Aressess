@@ -8,23 +8,18 @@
 
 import UIKit
 
-private let NewsCellIdentifier = "NewsCellIdentifier"
+private let NewsCellIdentifier = "NewsItemCell"
 private let ErrorMessageCellIdentifier = "ErrorMessageCellIdentifier"
 
 
-class FeedViewController: UITableViewController,
-  FeedLoaderDelegate,
-  UISplitViewControllerDelegate,
-  UISearchBarDelegate, UISearchResultsUpdating
+class FeedViewController : UITableViewController
 {
   private var _nightMode = false
   private var _news : [News]?
   private var _readNews : [News]? // news that have been read
-  private var _searchResults : [News]?
-  private var _searchKeywords : [String]?
   private var _errorMessage = ""
   private var _activityIndicator : UIActivityIndicatorView! // used to indicate activity when loading news of a new feed
-  private var _searchController : UISearchController! // used to indicate activity when refreshing the news of the current feed
+  private var _searchWorker = SearchWorker<News>()
   private var _loader : FeedLoader?
 
   var feed: Feed?
@@ -35,7 +30,6 @@ class FeedViewController: UITableViewController,
       _configureView()
       _news = nil
       _readNews = nil
-      _searchResults = nil
       tableView?.reloadData()
       if feed != nil
       {
@@ -52,28 +46,22 @@ class FeedViewController: UITableViewController,
     NotificationCenter.default.removeObserver(self)
   }
 
-  //MARK: NSViewController overrides
-
   override func prepare(for segue: UIStoryboardSegue, sender: Any?)
   {
-    if segue.identifier == "showNewsContent"
-    {
-      if let indexPath = self.tableView.indexPathForSelectedRow
-      {
-        if
-          let newsItem = _searchResults?[(indexPath as NSIndexPath).row] ?? _news?[(indexPath as NSIndexPath).row],
-          let newsContentViewController = segue.destination as? NewsContentViewController
-        {
-          newsItem.hasBeenRead = true
-          newsContentViewController.news = newsItem
-        }
-      }
-    }
+    guard segue.identifier == "showNewsContent" else { return }
+    guard let indexPath = self.tableView.indexPathForSelectedRow else { return }
+    let row = indexPath.row
+    guard let newsItem = _searchWorker.results?[row] ?? _news?[row] else { return }
+    guard let newsContentViewController = segue.destination as? NewsContentViewController else { return }
+    newsItem.hasBeenRead = true
+    newsContentViewController.news = newsItem
   }
 
   override func viewDidLoad()
   {
     super.viewDidLoad()
+
+    hidesBottomBarWhenPushed = true
 
     assert(tableView != nil, "reference to table should already be set")
     tableView.register(NewsCellView.self, forCellReuseIdentifier:NewsCellIdentifier)
@@ -85,13 +73,15 @@ class FeedViewController: UITableViewController,
     _activityIndicator.hidesWhenStopped = true
     navigationItem.rightBarButtonItem = UIBarButtonItem(customView:_activityIndicator)
 
-    navigationItem.largeTitleDisplayMode = .never
+    self.navigationItem.largeTitleDisplayMode = .never
 
     NotificationCenter.default.addObserver(self, selector:#selector(FeedViewController.handleNightModeChanged(_:)), name:NSNotification.Name(rawValue: NightModeChangedNotification), object:nil)
 
-    _createSearchController()
-    _setUpRefreshControl()
+    self.navigationItem.searchController = _searchWorker.controller
+    self.navigationItem.hidesSearchBarWhenScrolling = true
+    _searchWorker.completionHandler = { self.tableView.reloadData() }
 
+    _setUpRefreshControl()
     _configureView()
   }
 
@@ -99,28 +89,13 @@ class FeedViewController: UITableViewController,
   {
     super.viewWillAppear(animated)
     _updateColors()
-    _updateToolbar()
-  #if true
-    _searchController.searchBar.sizeToFit()
-    navigationItem.searchController = _searchController
-    navigationItem.hidesSearchBarWhenScrolling = false
-  #else
-    tableView.tableHeaderView = _searchController.searchBar
-  #endif
-    if let keywords = _searchKeywords
-    {
-      if !keywords.isEmpty
-      {
-        _searchController.isActive = true
-        _searchController.searchBar.text = (keywords as NSArray).componentsJoined(by: " ") // triggers new search
-      }
-    }
+    _searchWorker.refreshView()
     self.tableView?.reloadData()
   }
 
   override func viewWillDisappear(_ animated: Bool)
   {
-    _searchController.isActive = false
+    _searchWorker.deactivateView()
     if _loader != nil
     {
       _loader!.delegate = nil
@@ -132,111 +107,6 @@ class FeedViewController: UITableViewController,
   override var preferredStatusBarStyle : UIStatusBarStyle
   {
     get { return _nightMode ? .lightContent : .default }
-  }
-
-  //MARK: UISplitViewControllerDelegate
-
-  func splitViewController(_ splitController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool
-  {
-    return true // Indicates that we have handled the collapse by doing nothing; the secondary controller will be discarded.
-  }
-
-  //MARK: FeedLoaderDelegate
-
-  func handleLoadedFeedForLoader(_ loader:FeedLoader)
-  {
-    loader.delegate = nil // prevents retain cycle
-    self._news = loader.news
-    _dismissErrorMessage()
-    DispatchQueue.main.async(execute: {self.tableView.reloadData()}) // UI refreshes must be performed in the main thread
-    _stopActivityIndicator()
-    _markReadNews()
-  }
-
-  func handleErrorMessage(_ message:String, forLoader loader:FeedLoader)
-  {
-    loader.delegate = nil // prevents retain cycle
-    _showErrorMessage(message)
-    _stopActivityIndicator()
-  }
-
-  //MARK: UITableViewDataSource
-
-  override func numberOfSections(in tableView: UITableView) -> Int
-  {
-    return 1
-  }
-
-  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-  {
-    return _errorMessage.isEmpty ? (_searchResults?.count ?? (_news?.count ?? 0)) : 1
-  }
-
-  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-  {
-    if _errorMessage.isEmpty
-    {
-      if let cell = tableView.dequeueReusableCell(withIdentifier: NewsCellIdentifier) as? NewsCellView
-      {
-        cell.news = _searchResults?[(indexPath as NSIndexPath).row] ?? _news?[(indexPath as NSIndexPath).row]
-        cell.backgroundColor = _nightMode ? NightModeBackgroundColor : DefaultBackgroundColor
-        let coloredBackgroundView = UIView()
-        coloredBackgroundView.backgroundColor = _nightMode ? FeedManager.sharedFeedManager().darkerActiveColor : FeedManager.sharedFeedManager().lighterActiveColor
-        cell.selectedBackgroundView = coloredBackgroundView
-        return cell
-      }
-    }
-    else
-    {
-      if let cell = tableView.dequeueReusableCell(withIdentifier: ErrorMessageCellIdentifier) as? ErrorMessageCellView
-      {
-        cell.message = _errorMessage
-        cell.backgroundColor = _nightMode ? NightModeBackgroundColor : DefaultBackgroundColor
-        cell.messageLabel.textColor = _nightMode ? NightModeTextColor : DefaultTextColor
-        return cell
-      }
-    }
-    return UITableViewCell()
-  }
-
-  //MARK: UITableViewDelegate
-
-  override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath?
-  {
-    return _errorMessage.isEmpty ? indexPath : nil
-  }
-
-  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
-  {
-    performSegue(withIdentifier: "showNewsContent", sender:self)
-  }
-
-  override func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool
-  {
-    return _errorMessage.isEmpty
-  }
-
-  //MARK: UISearchBarDelegate
-
-  func searchBarSearchButtonClicked(_ searchBar: UISearchBar)
-  {
-    searchBar.resignFirstResponder()
-  }
-
-  //MARK: UISearchResultsUpdating
-
-  func updateSearchResults(for searchController: UISearchController)
-  {
-    if navigationController?.visibleViewController == self // do nothing if the view is offscreen
-    {
-      _searchKeywords = nil
-      if let text = searchController.searchBar.text, !text.isEmpty
-      {
-        let strippedString = text.trimmingCharacters(in: CharacterSet.whitespaces)
-        _searchKeywords = strippedString.components(separatedBy: " ")
-      }
-      _updateSearchResults()
-    }
   }
 
   //MARK: Actions and Notifications
@@ -263,41 +133,15 @@ class FeedViewController: UITableViewController,
 
   //MARK: Private
 
-  private func _createSearchController()
-  {
-    _searchController = UISearchController(searchResultsController:nil)
-    _searchController.searchResultsUpdater = self
-    //_searchController.searchBar.sizeToFit()
-    _searchController.searchBar.searchBarStyle = .default
-    _searchController.dimsBackgroundDuringPresentation = false
-    _searchController.hidesNavigationBarDuringPresentation = false
-    _searchController.searchBar.delegate = self
-    self.definesPresentationContext = true // necessary for search results to be displayed as a subview of this view controller
-    extendedLayoutIncludesOpaqueBars = true
-  }
-
   private func _setUpRefreshControl()
   {
-    let refreshControl = UIRefreshControl()
-    refreshControl.addTarget(self, action:#selector(FeedViewController.handleFeedRefresh(_:)), for:.valueChanged)
-    self.refreshControl = refreshControl
-  }
-
-  private func _updateToolbar()
-  {
-    if traitCollection.horizontalSizeClass == .compact
-    {
-      let night_mode_toolbar_icon = UIImage(named:"toolbar_night_mode")
-      assert(night_mode_toolbar_icon != nil)
-      let leftButton = UIBarButtonItem(image:night_mode_toolbar_icon, landscapeImagePhone:night_mode_toolbar_icon, style:.plain, target:self, action:#selector(FeedViewController.toggleNightMode(_:)))
-      let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-      self.toolbarItems = [leftButton, spacer]
-    }
+    refreshControl = UIRefreshControl()
+    refreshControl?.addTarget(self, action:#selector(FeedViewController.handleFeedRefresh(_:)), for:.valueChanged)
   }
 
   private func _configureView()
   {
-    title = feed?.name ?? ""
+    self.navigationItem.title = feed?.name ?? ""
     _updateColors()
   }
 
@@ -319,7 +163,7 @@ class FeedViewController: UITableViewController,
     setNeedsStatusBarAppearanceUpdate()
 
     tableView.backgroundColor = _nightMode ? NightModeBackgroundColor : DefaultBackgroundColor
-    let darkActiveColor = FeedManager.sharedFeedManager().darkerActiveColor
+    let darkActiveColor = FeedManager.shared.darkerActiveColor
     let veryDarkActiveColor = darkActiveColor.lighter(0.6)
     tableView.separatorColor = _nightMode ? veryDarkActiveColor : darkActiveColor
     tableView.indicatorStyle = _nightMode ? .white : .default
@@ -336,24 +180,16 @@ class FeedViewController: UITableViewController,
     refreshControl?.tintColor = _nightMode ? NightModeTextColor : DefaultTextColor
     refreshControl?.backgroundColor = _nightMode ? NightModeBackgroundColor : DefaultBackgroundColor
 
-    let searchBar = _searchController.searchBar
+    let searchBar = _searchWorker.controller.searchBar
     searchBar.barStyle = _nightMode ? .black : .default
     searchBar.keyboardAppearance = _nightMode ? .dark : .default
-  }
-
-  private func _showErrorMessage(_ message:String)
-  {
-    _errorMessage = message
-    tableView.separatorStyle = .none
-    tableView.isScrollEnabled = false
-    tableView.reloadData()
   }
 
   private func _dismissErrorMessage()
   {
     _errorMessage = ""
     tableView?.separatorStyle = .singleLine
-    tableView?.isScrollEnabled = true
+    DispatchQueue.main.async { self.tableView?.isScrollEnabled = true }
   }
 
   private func _startActivityIndicator()
@@ -392,6 +228,88 @@ class FeedViewController: UITableViewController,
     }
   }
 
+}
+
+extension FeedViewController
+{
+  //MARK: UITableViewDataSource
+
+  override func numberOfSections(in tableView: UITableView) -> Int
+  {
+    return 1
+  }
+
+  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+  {
+    return _errorMessage.isEmpty ? (_searchWorker.results?.count ?? (_news?.count ?? 0)) : 1
+  }
+
+  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+  {
+    if _errorMessage.isEmpty
+    {
+      if let cell = tableView.dequeueReusableCell(withIdentifier: NewsCellIdentifier) as? NewsCellView
+      {
+        cell.news = _searchWorker.results?[indexPath.row] ?? _news?[indexPath.row]
+        cell.backgroundColor = _nightMode ? NightModeBackgroundColor : DefaultBackgroundColor
+        let coloredBackgroundView = UIView()
+        coloredBackgroundView.backgroundColor = _nightMode ? FeedManager.shared.darkerActiveColor : FeedManager.shared.lighterActiveColor
+        cell.selectedBackgroundView = coloredBackgroundView
+        return cell
+      }
+    }
+    else
+    {
+      if let cell = tableView.dequeueReusableCell(withIdentifier: ErrorMessageCellIdentifier) as? ErrorMessageCellView
+      {
+        cell.message = _errorMessage
+        cell.backgroundColor = _nightMode ? NightModeBackgroundColor : DefaultBackgroundColor
+        cell.messageLabel.textColor = _nightMode ? NightModeTextColor : DefaultTextColor
+        return cell
+      }
+    }
+    return UITableViewCell()
+  }
+
+  //MARK: UITableViewDelegate
+
+  override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath?
+  {
+    return _errorMessage.isEmpty ? indexPath : nil
+  }
+
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+  {
+    performSegue(withIdentifier: "showNewsContent", sender:self)
+  }
+
+  override func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool
+  {
+    return _errorMessage.isEmpty
+  }
+
+}
+
+extension FeedViewController : FeedLoaderDelegate
+{
+  func handleLoadedFeedForLoader(_ loader:FeedLoader)
+  {
+    loader.delegate = nil // prevents retain cycle
+    _news = loader.news
+    _searchWorker.searchables = _news
+    _dismissErrorMessage()
+    DispatchQueue.main.async(execute: {self.tableView.reloadData()}) // UI refreshes must be performed in the main thread
+    _stopActivityIndicator()
+    _markReadNews()
+  }
+
+  func handleErrorMessage(_ message:String, forLoader loader:FeedLoader)
+  {
+    loader.delegate = nil // prevents retain cycle
+    _showErrorMessage(message)
+    _stopActivityIndicator()
+  }
+
   private func _markReadNews()
   {
     if (_news != nil) && (_readNews != nil)
@@ -409,28 +327,12 @@ class FeedViewController: UITableViewController,
     }
   }
 
-  /// The search results will include the news items that contain all of the given keywords in their title.
-  private func _updateSearchResults()
+  private func _showErrorMessage(_ message:String)
   {
-    _searchResults = nil
-    if let keywords = _searchKeywords
-    {
-      if !keywords.isEmpty
-      {
-        var searchPredicates = [NSPredicate]()
-        for keyword in keywords
-        {
-          let lhs = NSExpression(forKeyPath:"title")
-          let rhs = NSExpression(forConstantValue:keyword)
-          let predicate = NSComparisonPredicate(leftExpression:lhs, rightExpression:rhs, modifier:.direct, type:.contains, options:.caseInsensitive)
-          searchPredicates.append(predicate)
-        }
-        let compoundSearchPredicate = NSCompoundPredicate(andPredicateWithSubpredicates:searchPredicates)
-        _searchResults = _news?.filter( { (n : News) in return compoundSearchPredicate.evaluate(with: n) } )
-      }
-    }
-
-    self.tableView.reloadData()
+    _errorMessage = message
+    tableView.separatorStyle = .none
+    tableView.isScrollEnabled = false
+    tableView.reloadData()
   }
 
 }

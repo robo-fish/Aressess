@@ -12,11 +12,10 @@ class FeedEditorViewController : UIViewController, UITextFieldDelegate
 {
   @IBOutlet var nameField : UITextField!
   @IBOutlet var URLField : UITextField!
-  @IBOutlet var groupViewsContainer : UIView!
+  @IBOutlet var groupPicker : UIPickerView!
   @IBOutlet var nameFieldTopMargin : NSLayoutConstraint!
   @IBOutlet var nameFieldToURLFieldVerticalMargin : NSLayoutConstraint!
 
-  private var _groupViews = [FeedGroupView]()
   private var _nightMode = false
 
   required init?(coder:NSCoder)
@@ -56,8 +55,9 @@ class FeedEditorViewController : UIViewController, UITextFieldDelegate
     URLField.placeholder = LocString("FeedEditorURLFieldPlaceholder")
     URLField.delegate = self
 
-    assert(groupViewsContainer != nil, "the view for assigning feeds to groups is not available")
-    _createGroupAssignmentButtons()
+    assert(groupPicker != nil, "the view for reassigning a feed to another group is not available")
+    groupPicker.dataSource = self
+    groupPicker.delegate = self
 
     let nc = NotificationCenter.default
     nc.addObserver(self, selector:#selector(FeedEditorViewController.adjustLayoutForKeyboard(_:)), name:NSNotification.Name.UIKeyboardWillShow, object:nil)
@@ -69,7 +69,6 @@ class FeedEditorViewController : UIViewController, UITextFieldDelegate
   {
     _nightMode = UserDefaults.standard.bool(forKey: PreferenceKey_NightModeEnabled)
     self.view.tintColor = _nightMode ? UIColor(red:0.4, green:0.227, blue:0.94, alpha:1.0) : self.view.window?.tintColor
-    _layoutGroupAssignmentButtons()
     _updateViewsFromModel()
   }
 
@@ -86,7 +85,7 @@ class FeedEditorViewController : UIViewController, UITextFieldDelegate
   {
     if feed != nil
     {
-      FeedManager.sharedFeedManager().save()
+      FeedManager.shared.save()
     }
   }
 
@@ -137,27 +136,6 @@ class FeedEditorViewController : UIViewController, UITextFieldDelegate
     return false
   }
 
-  //MARK: Actions
-
-  @objc func handleSelectFeedGroup(_ gestureRecognizer:UIGestureRecognizer)
-  {
-    if feed != nil
-    {
-      var selectedGroupViewIndex = -1
-      for (index,groupView) in _groupViews.enumerated()
-      {
-        if groupView === gestureRecognizer.view
-        {
-          selectedGroupViewIndex = index
-          break
-        }
-      }
-      assert(selectedGroupViewIndex >= 0, "The action method should only be callable by tapping on a group view.")
-      _moveFeedToGroupAtIndex(selectedGroupViewIndex)
-      _dismissWithDelay(0.2)
-    }
-  }
-
   //MARK: Notification Handlers
 
   @objc func adjustLayoutForKeyboard(_ notification:Notification)
@@ -191,13 +169,6 @@ class FeedEditorViewController : UIViewController, UITextFieldDelegate
     }
   }
 
-  //MARK: FeedManagerExtrasObserver
-
-  func handleDidUpdateExtras()
-  {
-    _updateViewsFromModel()
-  }
-
   //MARK: Private
 
   private func _updateViewsFromModel()
@@ -207,47 +178,31 @@ class FeedEditorViewController : UIViewController, UITextFieldDelegate
     let backgroundColor = _nightMode ? NightModeBackgroundColor : DefaultBackgroundColor
     let keyboardColor = _nightMode ? UIKeyboardAppearance.dark : UIKeyboardAppearance.default
     self.view.backgroundColor = backgroundColor
-    groupViewsContainer.backgroundColor = backgroundColor
+    groupPicker.backgroundColor = backgroundColor
 
-    if nameField != nil
+    nameField.backgroundColor = textBackgroundColor
+    nameField.textColor = textColor
+    nameField.keyboardAppearance = keyboardColor
+    if let name = feed?.name
     {
-      nameField.backgroundColor = textBackgroundColor
-      nameField.textColor = textColor
-      nameField.keyboardAppearance = keyboardColor
-      if let name = feed?.name
-      {
-        nameField!.text = name
-      }
+      nameField!.text = name
     }
 
-    if URLField != nil
+    URLField.backgroundColor = textBackgroundColor
+    URLField.textColor = textColor
+    URLField.keyboardAppearance = keyboardColor
+    if let location = feed?.location
     {
-      URLField.backgroundColor = textBackgroundColor
-      URLField.textColor = textColor
-      URLField.keyboardAppearance = keyboardColor
-      if let location = feed?.location
-      {
-        URLField!.text = location.absoluteString
-        _validateDisplayedURL()
-      }
+      URLField!.text = location.absoluteString
+      _validateDisplayedURL()
     }
 
-    if !_groupViews.isEmpty
+    for (groupIndex, group) in FeedManager.shared.feedGroups.enumerated()
     {
-      for (index,feedGroup) in FeedManager.sharedFeedManager().feedGroups.enumerated()
+      if group.feeds.contains(feed!)
       {
-        let groupView = _groupViews[index]
-        if feedGroup.feeds.contains(feed!)
-        {
-          groupView.layer.borderWidth = 4.0
-          groupView.layer.borderColor = feedGroup.color.cgColor
-          groupView.backgroundColor = UIColor.clear
-        }
-        else
-        {
-          groupView.layer.borderWidth = 0
-          groupView.backgroundColor = feedGroup.color
-        }
+        groupPicker.selectRow(groupIndex, inComponent: 0, animated: false)
+        break
       }
     }
   }
@@ -293,75 +248,6 @@ class FeedEditorViewController : UIViewController, UITextFieldDelegate
     }
   }
 
-  private func _createGroupAssignmentButton(_ color:UIColor) -> FeedGroupView
-  {
-    let feedGroupView = FeedGroupView(frame:CGRect(x: 0, y: 0, width: 20, height: 20))
-    let layer = feedGroupView.layer
-    layer.cornerRadius = 6.0
-    layer.backgroundColor = color.cgColor
-    feedGroupView.addGestureRecognizer(UITapGestureRecognizer(target:self, action:#selector(FeedEditorViewController.handleSelectFeedGroup(_:))))
-    feedGroupView.translatesAutoresizingMaskIntoConstraints = false
-    groupViewsContainer.addSubview(feedGroupView)
-    return feedGroupView
-  }
-
-  private func _createGroupAssignmentButtons()
-  {
-    assert(_groupViews.count == 0, "group view creation should be performed only once")
-    groupViewsContainer.clipsToBounds = false
-    for feedGroup in FeedManager.sharedFeedManager().feedGroups
-    {
-      let buttonView = _createGroupAssignmentButton(feedGroup.color)
-      _groupViews.append(buttonView)
-    }
-  }
-
-  private func _layoutGroupAssignmentButtons()
-  {
-    let numSubviews = _groupViews.count
-    if numSubviews > 0
-    {
-      let metrics = ["hm":12.0]
-      var previousGroupView : UIView! = nil
-      for (index, groupView) in _groupViews.enumerated()
-      {
-        if index == 0
-        {
-          groupViewsContainer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v]", options:[], metrics:metrics, views:["v":groupView]))
-        }
-        else
-        {
-          if index == numSubviews - 1
-          {
-            groupViewsContainer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:[pv]-hm-[v]|", options:[], metrics:metrics, views:["v":groupView, "pv":previousGroupView]))
-          }
-          else
-          {
-            groupViewsContainer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:[pv]-hm-[v]", options:[], metrics:metrics, views:["v":groupView, "pv":previousGroupView]))
-          }
-          groupViewsContainer.addConstraint(NSLayoutConstraint(item:groupView, attribute:.width, relatedBy:.equal, toItem:previousGroupView, attribute:.width, multiplier:1.0, constant:0))
-        }
-        groupViewsContainer.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v]|", options:[], metrics:metrics, views:["v":groupView]))
-        previousGroupView = groupView as UIView
-      }
-    }
-  }
-
-  private func _moveFeedToGroupAtIndex(_ groupIndex:Int)
-  {
-    for feedGroup in FeedManager.sharedFeedManager().feedGroups
-    {
-      let feedIndex = (feedGroup.feeds as NSArray).index(of: feed!)
-      if feedIndex != NSNotFound
-      {
-        feedGroup.feeds.remove(at: feedIndex)
-        break
-      }
-    }
-    FeedManager.sharedFeedManager().feedGroups[groupIndex].feeds.append(feed!)
-    _updateViewsFromModel()
-  }
-
   private func _dismissWithDelay(_ delayInSeconds:TimeInterval)
   {
     let dispatchTime = DispatchTime.now() + Double(Int64(delayInSeconds * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
@@ -390,4 +276,49 @@ class FeedEditorViewController : UIViewController, UITextFieldDelegate
       }
     }
   }
+}
+
+extension FeedEditorViewController : UIPickerViewDelegate, UIPickerViewDataSource
+{
+  func numberOfComponents(in pickerView: UIPickerView) -> Int
+  {
+    return FeedManager.shared.feedGroups.count
+  }
+
+  func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
+  {
+    return 1
+  }
+
+  func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
+  {
+    let groups = FeedManager.shared.feedGroups
+    return row < groups.count ? groups[row].name : nil
+  }
+
+  func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+  {
+    if feed != nil
+    {
+      assert(row >= 0, "The action method should only be callable by tapping on a group view.")
+      _moveFeedToGroupAtIndex(row)
+      _dismissWithDelay(0.2)
+    }
+  }
+
+  private func _moveFeedToGroupAtIndex(_ groupIndex:Int)
+  {
+    for feedGroup in FeedManager.shared.feedGroups
+    {
+      let feedIndex = (feedGroup.feeds as NSArray).index(of: feed!)
+      if feedIndex != NSNotFound
+      {
+        feedGroup.feeds.remove(at: feedIndex)
+        break
+      }
+    }
+    FeedManager.shared.feedGroups[groupIndex].feeds.append(feed!)
+    _updateViewsFromModel()
+  }
+
 }

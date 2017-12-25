@@ -151,7 +151,7 @@ class HelpViewController : UIViewController, UICollectionViewDataSource, UIColle
   {
     let cell = cv.dequeueReusableCell(withReuseIdentifier: "HelpContentCell", for:indexPath) as! HelpContentCell
     let layer = cell.imageView.layer
-    if (indexPath as NSIndexPath).row == 0
+    if indexPath.row == 0
     {
       if let image = UIImage(named:"help_select_group")
       {

@@ -7,11 +7,11 @@
 //
 
 import UIKit
-
+import WebKit
 
 class NewsContentViewController : UIViewController
 {
-  @IBOutlet weak var webview : UIWebView!
+  @IBOutlet var webview : WKWebView!
   private var _activityIndicator : UIActivityIndicatorView!
   private var _activityBarItem : UIBarButtonItem!
   private var _loadingNewsItemContent = false
@@ -28,9 +28,12 @@ class NewsContentViewController : UIViewController
 
   override func viewDidLoad()
   {
+    hidesBottomBarWhenPushed = true
+
     assert(webview != nil)
     webview.isOpaque = false
-    webview.delegate = self
+    webview.uiDelegate = self
+    webview.navigationDelegate = self
 
     _activityIndicator = UIActivityIndicatorView(activityIndicatorStyle:.gray)
     _activityIndicator.hidesWhenStopped = true
@@ -98,7 +101,12 @@ class NewsContentViewController : UIViewController
       do
       {
         let scriptContent = try String(contentsOfFile:scriptFilePath, encoding:String.Encoding.utf8)
-        webview.stringByEvaluatingJavaScript(from: scriptContent)
+        webview.evaluateJavaScript(scriptContent, completionHandler: { (_, err) in
+          if let error = err
+          {
+            DebugLog("Error while running page beautification script. " + error.localizedDescription)
+          }
+        })
       }
       catch let error as NSError
       {
@@ -116,38 +124,25 @@ class NewsContentViewController : UIViewController
     }
     if content != nil && !content!.isEmpty
     {
-      webview.scalesPageToFit = false
       _loadingNewsItemContent = true
       let white = "white"
       let black = "black"
       let pageStyle = "body { background-color: \(_nightMode ? black : white); color: \(_nightMode ? white : black); }"
       let wrappedContent = "<html><head><style>\(pageStyle)</style></head><body><div id=\"topContainer\">\(content!)</div></body></html>"
-      webview.loadHTMLString(wrappedContent, baseURL:URL(string:""))
+      _ = webview.loadHTMLString(wrappedContent, baseURL:URL(string:""))
       return true
     }
     return false
   }
 
-  private func _pageIsEmpty() -> Bool
-  {
-    let PageHeightThreshold = 8 // points
-    var result = false
-    if let pageHeight : String = webview.stringByEvaluatingJavaScript(from: "document.getElementById('topContainer').clientHeight;")
-    {
-      result = (Int(pageHeight)! < PageHeightThreshold)
-    }
-    return result
-  }
-
   private func _loadLinkedPage()
   {
-    if !news!.link.isEmpty
+    if let n = news, !n.link.isEmpty
     {
-      webview!.scalesPageToFit = true
-      if let pageLocation = URL(string:news!.link)
-      {
+      guard let pageLocation = URL(string:news!.link) else { return }
+      DispatchQueue.main.async {
         let request = URLRequest(url:pageLocation)
-        DispatchQueue.main.async(execute: {self.webview!.loadRequest(request)})
+        self.webview.load(request)
       }
     }
   }
@@ -187,38 +182,57 @@ class NewsContentViewController : UIViewController
   }
 }
 
-extension NewsContentViewController : UIWebViewDelegate
+extension NewsContentViewController : WKUIDelegate, WKNavigationDelegate
 {
-  func webViewDidStartLoad(_ webView : UIWebView)
+  func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!)
   {
     navigationItem.setRightBarButton(_activityBarItem, animated:true)
     self._activityIndicator.startAnimating()
   }
 
-  func webViewDidFinishLoad(_ webView : UIWebView)
+  func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error)
   {
-    var stopActivityIndicator = true
+    _stopPageLoadIndication()
+  }
+
+  func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error)
+  {
+    _stopPageLoadIndication()
+  }
+
+  func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!)
+  {
     if _loadingNewsItemContent
     {
       _loadingNewsItemContent = false
-      if _pageIsEmpty()
-      {
-        _loadLinkedPage()
-        stopActivityIndicator = false
+
+      webview.evaluateJavaScript("document.getElementById('topContainer').clientHeight;") { (result, err) in
+        var stopActivityIndicator = true
+        if let pageHeight = result as? Int
+        {
+          let PageHeightThreshold = 8 // points
+          let isEmpty = pageHeight < PageHeightThreshold
+          if isEmpty
+          {
+            stopActivityIndicator = false
+            self._loadLinkedPage()
+          }
+        }
+        if stopActivityIndicator
+        {
+          self._stopPageLoadIndication()
+        }
+        self._preparePage()
       }
     }
-    if stopActivityIndicator
-    {
-      _activityIndicator.stopAnimating()
-      _updateToolbar()
-    }
-    _preparePage()
   }
 
-  func webView(_ webView: UIWebView, didFailLoadWithError error : Error)
+  private func _stopPageLoadIndication()
   {
-    self._activityIndicator.stopAnimating()
-    _updateToolbar()
+    DispatchQueue.main.async {
+      self._activityIndicator.stopAnimating()
+      self._updateToolbar()
+    }
   }
 }
 

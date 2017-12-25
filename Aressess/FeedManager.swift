@@ -77,10 +77,7 @@ class FeedManager
 
   static private let _sharedFeedManager = FeedManager()
 
-  class func sharedFeedManager() -> FeedManager
-  {
-    return _sharedFeedManager
-  }
+  class var shared : FeedManager { return _sharedFeedManager }
 
   private init()
   {
@@ -113,7 +110,34 @@ class FeedManager
     }
   }
 
-  func removeFeedAtIndex(_ feedIndex:Int, groupIndex:Int = -1)
+  func removeFeedGroup(at groupIndex : Int)
+  {
+    if groupIndex < feedGroups.count
+    {
+      feedGroups.remove(at: groupIndex)
+      _handleFeedsChanged()
+    }
+  }
+
+  func moveFeedGroup(fromRow sourceRowIndex : Int, toRow destinationRowIndex : Int)
+  {
+    if (sourceRowIndex < feedGroups.count) && (destinationRowIndex < feedGroups.count)
+    {
+      let movedGroup = feedGroups[sourceRowIndex]
+      feedGroups.remove(at: sourceRowIndex)
+      if destinationRowIndex > sourceRowIndex
+      {
+        feedGroups.insert(movedGroup, at:destinationRowIndex)
+      }
+      else
+      {
+        feedGroups.insert(movedGroup, at:destinationRowIndex)
+      }
+      _handleFeedsChanged()
+    }
+  }
+
+  func removeFeed(at feedIndex:Int, fromGroupAt groupIndex:Int = -1)
   {
     let targetGroup = feedGroups[groupIndex >= 0 ? groupIndex : _activeGroupIndex]
     if (feedIndex >= 0) && (feedIndex < targetGroup.feeds.count)
@@ -123,7 +147,7 @@ class FeedManager
     }
   }
 
-  func moveFeedInActiveGroupFromRow(_ sourceRowIndex:Int, toRow destinationRowIndex:Int)
+  func moveFeedInActiveGroup(fromRow sourceRowIndex:Int, toRow destinationRowIndex:Int)
   {
     let activeGroup = feedGroups[_activeGroupIndex]
     if (sourceRowIndex < activeGroup.feeds.count) && (destinationRowIndex < activeGroup.feeds.count)

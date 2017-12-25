@@ -97,9 +97,10 @@ extension UIColor
     var g : CGFloat = 0.0
     var b : CGFloat = 0.0
     var a : CGFloat = 1.0
+    let clamp : (CGFloat)->(CGFloat) = { return max(0.0, min(1.0, $0)) }
     if self.getRed(&r, green:&g, blue:&b, alpha:&a)
     {
-      return UIColor(red:factor*r, green:factor*g, blue:factor*b, alpha:a)
+      return UIColor(red:clamp(factor*r), green:clamp(factor*g), blue:clamp(factor*b), alpha:a)
     }
     return self
   }
