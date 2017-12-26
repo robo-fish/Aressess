@@ -10,8 +10,10 @@
 		2AAEF9DB1FF0D12E00604EF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AAEF9D91FF0D12E00604EF3 /* Main.storyboard */; };
 		2AAEF9DF1FF0F74400604EF3 /* AressessNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAEF9DE1FF0F74400604EF3 /* AressessNavigationController.swift */; };
 		2AAEF9E11FF12A7000604EF3 /* SearchWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAEF9E01FF12A7000604EF3 /* SearchWorker.swift */; };
-		2AAEF9E31FF1745800604EF3 /* AressessTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAEF9E21FF1745800604EF3 /* AressessTableViewDataSource.swift */; };
+		2AAEF9E31FF1745800604EF3 /* AressessTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAEF9E21FF1745800604EF3 /* AressessTableViewHandler.swift */; };
 		2AAEF9E51FF1983600604EF3 /* Nameable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAEF9E41FF1983600604EF3 /* Nameable.swift */; };
+		2AAEF9E71FF23A7F00604EF3 /* FeedGroupEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAEF9E61FF23A7F00604EF3 /* FeedGroupEditorViewController.swift */; };
+		2AAEF9E91FF23B0400604EF3 /* ColorMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAEF9E81FF23B0400604EF3 /* ColorMatrix.swift */; };
 		C008ABA61978809900699DC6 /* FeedEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008ABA51978809900699DC6 /* FeedEditorViewController.swift */; };
 		C008ABB01978994900699DC6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C008ABB21978994900699DC6 /* Localizable.strings */; };
 		C008ABB61979193500699DC6 /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008ABB51979193500699DC6 /* FeedLoader.swift */; };
@@ -108,8 +110,10 @@
 		2AAEF9DA1FF0D12E00604EF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2AAEF9DE1FF0F74400604EF3 /* AressessNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AressessNavigationController.swift; sourceTree = "<group>"; };
 		2AAEF9E01FF12A7000604EF3 /* SearchWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWorker.swift; sourceTree = "<group>"; };
-		2AAEF9E21FF1745800604EF3 /* AressessTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AressessTableViewDataSource.swift; sourceTree = "<group>"; };
+		2AAEF9E21FF1745800604EF3 /* AressessTableViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AressessTableViewHandler.swift; sourceTree = "<group>"; };
 		2AAEF9E41FF1983600604EF3 /* Nameable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nameable.swift; sourceTree = "<group>"; };
+		2AAEF9E61FF23A7F00604EF3 /* FeedGroupEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedGroupEditorViewController.swift; sourceTree = "<group>"; };
+		2AAEF9E81FF23B0400604EF3 /* ColorMatrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMatrix.swift; sourceTree = "<group>"; };
 		C008ABA51978809900699DC6 /* FeedEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedEditorViewController.swift; sourceTree = "<group>"; };
 		C008ABB11978994900699DC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C008ABB51979193500699DC6 /* FeedLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedLoader.swift; sourceTree = "<group>"; };
@@ -210,6 +214,7 @@
 			children = (
 				C079856619AC5C7100B0E0FE /* ErrorMessageCellView.swift */,
 				C0E11957198F6A1B00493710 /* NewsCellView.swift */,
+				2AAEF9E81FF23B0400604EF3 /* ColorMatrix.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -267,9 +272,10 @@
 				C079856519AC5C5100B0E0FE /* Views */,
 				C0B249E319785EBB00003357 /* AressessMain.swift */,
 				2AAEF9DE1FF0F74400604EF3 /* AressessNavigationController.swift */,
-				2AAEF9E21FF1745800604EF3 /* AressessTableViewDataSource.swift */,
+				2AAEF9E21FF1745800604EF3 /* AressessTableViewHandler.swift */,
 				C0B249E719785EBB00003357 /* FeedViewController.swift */,
 				C008ABA51978809900699DC6 /* FeedEditorViewController.swift */,
+				2AAEF9E61FF23A7F00604EF3 /* FeedGroupEditorViewController.swift */,
 				C0327ADD199FDC12009A66F3 /* FeedGroupListViewController.swift */,
 				C0B249E519785EBB00003357 /* FeedGroupViewController.swift */,
 				C008ABB51979193500699DC6 /* FeedLoader.swift */,
@@ -492,7 +498,7 @@
 				C008ABA61978809900699DC6 /* FeedEditorViewController.swift in Sources */,
 				C083409E199828C100A87E5C /* Utilities.swift in Sources */,
 				C008ABB819791BF000699DC6 /* News.swift in Sources */,
-				2AAEF9E31FF1745800604EF3 /* AressessTableViewDataSource.swift in Sources */,
+				2AAEF9E31FF1745800604EF3 /* AressessTableViewHandler.swift in Sources */,
 				C0700219199AD5BB00F809C5 /* RSS091Parser.swift in Sources */,
 				C079856719AC5C7100B0E0FE /* ErrorMessageCellView.swift in Sources */,
 				C0AD1CE3198B557000B6E043 /* Parser.swift in Sources */,
@@ -501,6 +507,7 @@
 				2AAEF9E11FF12A7000604EF3 /* SearchWorker.swift in Sources */,
 				C070022F199B41D700F809C5 /* Feed.swift in Sources */,
 				2AAEF9DF1FF0F74400604EF3 /* AressessNavigationController.swift in Sources */,
+				2AAEF9E71FF23A7F00604EF3 /* FeedGroupEditorViewController.swift in Sources */,
 				C0327ADE199FDC12009A66F3 /* FeedGroupListViewController.swift in Sources */,
 				C0B249E619785EBB00003357 /* FeedGroupViewController.swift in Sources */,
 				C079856919AC8F6200B0E0FE /* HelpViewController.swift in Sources */,
@@ -508,6 +515,7 @@
 				C04B63F51FEED62300E0ACF8 /* NetworkConnectionChecker.swift in Sources */,
 				C0B24A0319785F3C00003357 /* FeedManager.swift in Sources */,
 				C0A5EE591B97629900905A09 /* MainSplitViewController.swift in Sources */,
+				2AAEF9E91FF23B0400604EF3 /* ColorMatrix.swift in Sources */,
 				C068460E19876C8900357A3E /* RSS20Parser.swift in Sources */,
 				C0E11958198F6A1B00493710 /* NewsCellView.swift in Sources */,
 				C0ABAFA71992D0430003A33E /* NewsContentViewController.swift in Sources */,

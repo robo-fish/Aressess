@@ -33,7 +33,7 @@ public class ViewUtils
 
    - parameter view: the view to which the constraints are added
    */
-  public class func layout(in view:UIView, visualFormats:[String], metricsInfo metrics:[String:NSNumber]!, viewsInfo views:[String:UIView]!)
+  public class func layout(in view:UIView, visualFormats:[String], metricsInfo metrics:[String:Any]?, viewsInfo views:[String:UIView])
   {
     for subview in views.values
     {
@@ -49,7 +49,7 @@ public class ViewUtils
 
 public extension UIView
 {
-  public func layoutWithVisualFormats(_ visualFormats:[String], metricsInfo metrics:[String:NSNumber]!, viewsInfo views:[String:UIView]!)
+  public func layoutWithVisualFormats(_ visualFormats:[String], metricsInfo metrics:[String:NSNumber]?, viewsInfo views:[String:UIView])
   {
     ViewUtils.layout(in: self, visualFormats:visualFormats, metricsInfo:metrics, viewsInfo:views)
   }

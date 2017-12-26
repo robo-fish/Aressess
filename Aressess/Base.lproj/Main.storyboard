@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -34,7 +35,8 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="Gsh-jR-bK6"/>
                     <connections>
-                        <segue destination="5qC-qA-EGu" kind="show" identifier="showFeedList" id="pim-fs-ubP"/>
+                        <segue destination="5qC-qA-EGu" kind="show" identifier="showGroup" id="pim-fs-ubP"/>
+                        <segue destination="Q2e-az-szp" kind="show" identifier="showGroupEditor" id="b2y-md-s30"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hFY-Pc-72R" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -248,6 +250,48 @@
             </objects>
             <point key="canvasLocation" x="-994" y="564"/>
         </scene>
+        <!--Group Editor-->
+        <scene sceneID="1ed-fb-yID">
+            <objects>
+                <viewController title="Group Editor" id="Q2e-az-szp" customClass="FeedGroupEditorViewController" customModule="Aressess" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6hV-pw-yfH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Group Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7yu-Pc-HQd">
+                                <rect key="frame" x="28" y="104" width="319" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ngv-tK-e9U">
+                                <rect key="frame" x="28" y="174" width="319" height="319"/>
+                                <color key="backgroundColor" red="0.91839552899561205" green="0.91182507797014756" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ngv-tK-e9U" secondAttribute="height" multiplier="1:1" id="MP8-pA-1sT"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7yu-Pc-HQd" firstAttribute="leading" secondItem="fDI-bw-a86" secondAttribute="leading" constant="28" id="4R5-L2-8FP"/>
+                            <constraint firstItem="fDI-bw-a86" firstAttribute="trailing" secondItem="7yu-Pc-HQd" secondAttribute="trailing" constant="28" id="E2b-I2-oZY"/>
+                            <constraint firstItem="Ngv-tK-e9U" firstAttribute="leading" secondItem="7yu-Pc-HQd" secondAttribute="leading" id="Ftw-rx-Fsn"/>
+                            <constraint firstItem="7yu-Pc-HQd" firstAttribute="top" secondItem="fDI-bw-a86" secondAttribute="top" constant="40" id="J30-AT-qPH"/>
+                            <constraint firstItem="Ngv-tK-e9U" firstAttribute="top" secondItem="7yu-Pc-HQd" secondAttribute="bottom" constant="40" id="d1C-3g-hIn"/>
+                            <constraint firstItem="Ngv-tK-e9U" firstAttribute="trailing" secondItem="7yu-Pc-HQd" secondAttribute="trailing" id="mcW-8y-h95"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fDI-bw-a86"/>
+                    </view>
+                    <connections>
+                        <outlet property="colorMatrixContainer" destination="Ngv-tK-e9U" id="8Pt-Gi-hqu"/>
+                        <outlet property="nameField" destination="7yu-Pc-HQd" id="l6a-hU-uPt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HU9-7Y-BZ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-178.40000000000001" y="563.56821589205401"/>
+        </scene>
         <!--Feed Editor-->
         <scene sceneID="CSe-c6-wip">
             <objects>
@@ -288,6 +332,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fN1-8L-YgJ"/>
                     </view>
+                    <connections>
+                        <outlet property="URLField" destination="BFk-e7-Czi" id="UmX-Zw-yfA"/>
+                        <outlet property="groupPicker" destination="Rhq-yI-FJK" id="vgn-vb-EM2"/>
+                        <outlet property="nameField" destination="0Zl-k1-CC9" id="gJJ-Sx-dXV"/>
+                        <outlet property="nameFieldToURLFieldVerticalMargin" destination="u6b-ft-7q0" id="BjB-Sa-7YX"/>
+                        <outlet property="nameFieldTopMargin" destination="rZn-pj-swR" id="Pga-7h-5r3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="70Q-Y8-glL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

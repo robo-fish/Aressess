@@ -1,5 +1,5 @@
 //
-//  AressessTableViewController.swift
+//  AressessTableViewHandler.swift
 //  Aressess
 //
 //  Created by Kai Oezer on 12/25/17.
@@ -8,13 +8,19 @@
 
 import UIKit
 
-class AressessTableViewDataSource<Element:Codable&Nameable> : NSObject, UITableViewDataSource, UITableViewDelegate
+class AressessTableViewHandler<Element:Codable&Nameable> : NSObject, UITableViewDataSource, UITableViewDelegate
 {
   private var _elements : [Element]
   private var _tableView : UITableView
   private var _searchWorker = SearchWorker<Element>()
   private let _cellID : String
   private var _selectedRow : Int = -1
+
+  typealias DataSourceCallback = (IndexPath)->()
+  var selectionCallback : DataSourceCallback?
+  var editingCallback : DataSourceCallback?
+  var removalCallback : DataSourceCallback?
+  var insertionCallback : DataSourceCallback?
 
   init(tableView : UITableView, cellIdentifier : String)
   {
@@ -26,7 +32,7 @@ class AressessTableViewDataSource<Element:Codable&Nameable> : NSObject, UITableV
     _tableView.delegate = self
     _searchWorker.completionHandler = { self._tableView.reloadData() }
 
-    NotificationCenter.default.addObserver(self, selector:#selector(AressessTableViewDataSource<Element>.handleNightModeChanged), name:NSNotification.Name(rawValue: NightModeChangedNotification), object:nil)
+    NotificationCenter.default.addObserver(self, selector:#selector(AressessTableViewHandler<Element>.handleNightModeChanged), name:NSNotification.Name(rawValue: NightModeChangedNotification), object:nil)
   }
 
   deinit
@@ -61,7 +67,7 @@ class AressessTableViewDataSource<Element:Codable&Nameable> : NSObject, UITableV
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
   {
-    return _searchWorker.results?.count ?? FeedManager.shared.activeFeeds.count
+    return _searchWorker.results?.count ?? _elements.count
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
@@ -103,11 +109,62 @@ class AressessTableViewDataSource<Element:Codable&Nameable> : NSObject, UITableV
     tableView.reloadData()
   }
 
+  // MARK: UITableViewDelegate
+
+  func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
+  {
+    return true
+  }
+
+  func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
+  {
+    if editingStyle == .delete
+    {
+      removalCallback?(indexPath)
+      if _selectedRow == indexPath.row
+      {
+        _selectedRow = -1
+      }
+      else if _selectedRow > indexPath.row
+      {
+        _selectedRow -= 1
+      }
+      tableView.deleteRows(at: [indexPath], with: .fade)
+    }
+    else if editingStyle == .insert
+    {
+      insertionCallback?(indexPath)
+      tableView.reloadData()
+    }
+  }
+
+  func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath)
+  {
+    editingCallback?(indexPath)
+  }
+
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+  {
+    selectionCallback?(indexPath)
+  }
+
+  func tableView(_ tableView:UITableView, willDeselectRowAt indexPath : IndexPath) -> IndexPath?
+  {
+    if let cell = tableView.cellForRow(at: indexPath)
+    {
+      cell.backgroundColor = UIColor.clear
+    }
+    return indexPath
+  }
+
   // MARK: Notification Handlers
 
   @objc func handleNightModeChanged(notification : Notification)
   {
     
   }
+
+  // MARK: Private
+
 }
 

@@ -11,20 +11,26 @@ import UIKit
 
 class FeedGroupListViewController : UITableViewController
 {
-  @IBOutlet var backgroundView : UIImageView!
+  private var _tableViewHandler : AressessTableViewHandler<FeedGroup>?
   private var _nightModeIsOn = false
-  private var _selectedRow : Int = -1
-  private let FeedGroupListCellIdentifier = "FeedGroupListCell"
 
-  var backgroundImage : UIImage? = nil
+  deinit
+  {
+    NotificationCenter.default.removeObserver(self)
+    FeedManager.shared.removeExternalChangeObserver(self)
+  }
 
   override func viewDidLoad()
   {
     super.viewDidLoad()
+    self.clearsSelectionOnViewWillAppear = true
+
     navigationItem.rightBarButtonItem = editButtonItem
     navigationItem.largeTitleDisplayMode = .automatic
     navigationItem.title = LocString("FeedGroupSelectorTitle")
     hidesBottomBarWhenPushed = false
+
+    _setUpTableViewHandler()
   }
 
   override func viewWillAppear(_ animated:Bool)
@@ -32,6 +38,8 @@ class FeedGroupListViewController : UITableViewController
     super.viewWillAppear(animated)
     _nightModeIsOn = UserDefaults.standard.bool(forKey: PreferenceKey_NightModeEnabled)
     self.view.backgroundColor = _nightModeIsOn ? NightModeBackgroundColor : DefaultBackgroundColor
+
+    _refreshTable()
   }
 
   override func viewDidAppear(_ animated: Bool)
@@ -40,125 +48,35 @@ class FeedGroupListViewController : UITableViewController
     _createToolbarItems()
   }
 
-  private func _removeGroup(at rowIndex : Int)
+  private func _setUpTableViewHandler()
   {
-    FeedManager.shared.removeFeedGroup(at:rowIndex)
-    if _selectedRow == rowIndex
-    {
-      _selectedRow = -1
+    let handler = AressessTableViewHandler<FeedGroup>(tableView: tableView, cellIdentifier:"FeedGroupListCell")
+    handler.removalCallback = {
+      FeedManager.shared.removeFeedGroup(at:$0.row)
     }
-    else if _selectedRow > rowIndex
-    {
-      _selectedRow -= 1
+    handler.selectionCallback = {
+      FeedManager.shared.activeGroupIndex = $0.row
+      self.performSegue(withIdentifier:"showGroup", sender:self.tableView.cellForRow(at: $0))
     }
+    handler.editingCallback = {
+      self.performSegue(withIdentifier:"showGroupEditor", sender:self.tableView.cellForRow(at: $0))
+    }
+    _tableViewHandler = handler
+  }
+
+  private func _refreshTable()
+  {
+    _tableViewHandler?.elements = FeedManager.shared.feedGroups
   }
 }
 
-
-extension FeedGroupListViewController
+extension FeedGroupListViewController : FeedManagerExternalChangeObserver
 {
-  // MARK: UITableViewDataSource
+  // MARK: FeedManagerExternalChangeObserver to be implemented
 
-  override func numberOfSections(in tableView: UITableView) -> Int
+  func handleFeedGroupContentsChangedExternally()
   {
-    return 1
-  }
-
-  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-  {
-    return FeedManager.shared.feedGroups.count
-  }
-
-  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-  {
-    let cell = tableView.dequeueReusableCell(withIdentifier: FeedGroupListCellIdentifier, for: indexPath)
-    let feedGroup = FeedManager.shared.feedGroups[indexPath.row]
-    cell.textLabel?.text = feedGroup.name
-    cell.textLabel?.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)
-    cell.textLabel?.textColor = _nightModeIsOn ? NightModeTextColor : DefaultTextColor
-    cell.textLabel?.highlightedTextColor = _nightModeIsOn ? NightModeTextColor : DefaultTextColor
-    let coloredBackgroundView = UIView()
-    coloredBackgroundView.backgroundColor = _nightModeIsOn ? FeedManager.shared.darkerActiveColor : FeedManager.shared.lighterActiveColor
-    cell.selectedBackgroundView = coloredBackgroundView
-    cell.backgroundColor = _nightModeIsOn ? NightModeBackgroundColor : DefaultBackgroundColor
-    return cell
-  }
-
-  override func tableView(_ tableView:UITableView, moveRowAt sourceIndexPath:IndexPath, to destinationIndexPath:IndexPath)
-  {
-    let sourceRowIndex = sourceIndexPath.row
-    let destinationRowIndex = destinationIndexPath.row
-    FeedManager.shared.moveFeedGroup(fromRow:sourceRowIndex, toRow:destinationRowIndex)
-
-    if _selectedRow == sourceRowIndex
-    {
-      _selectedRow = destinationRowIndex
-    }
-    else if (_selectedRow > sourceRowIndex) && (_selectedRow < destinationRowIndex)
-    {
-      _selectedRow -= 1
-    }
-    else if (_selectedRow >= destinationRowIndex) && (_selectedRow < sourceRowIndex)
-    {
-      _selectedRow += 1
-    }
-
-    tableView.reloadData()
-  }
-}
-
-
-extension FeedGroupListViewController
-{
-  // MARK: UITableViewDelegate
-
-  override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
-  {
-    return true
-  }
-
-  override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
-  {
-    if editingStyle == .delete
-    {
-      _removeGroup(at: indexPath.row)
-      tableView.deleteRows(at: [indexPath], with: .fade)
-    }
-    else if editingStyle == .insert
-    {
-      //_insertNewGroup(self)
-    }
-  }
-
-  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
-  {
-    FeedManager.shared.activeGroupIndex = indexPath.row
-    performSegue(withIdentifier:"showFeedList", sender:self.tableView.cellForRow(at: indexPath))
-  }
-
-  override func tableView(_ tableView:UITableView, willSelectRowAt indexPath : IndexPath) -> IndexPath?
-  {
-    if tableView.cellForRow(at: indexPath) != nil
-    {
-      if _selectedRow >= 0
-      {
-        if let currentSelectedCell = tableView.cellForRow(at: NSIndexPath(indexes:[0,_selectedRow], length: 2) as IndexPath)
-        {
-          currentSelectedCell.backgroundColor = UIColor.clear
-        }
-      }
-      _selectedRow = indexPath.row
-    }
-    return indexPath
-  }
-
-  override func tableView(_ tableView:UITableView, willDeselectRowAt indexPath : IndexPath) -> IndexPath?
-  {
-    if let cell = tableView.cellForRow(at: indexPath)
-    {
-      cell.backgroundColor = UIColor.clear
-    }
-    return indexPath
+    _refreshTable()
   }
 }
 

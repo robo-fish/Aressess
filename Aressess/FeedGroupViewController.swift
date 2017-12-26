@@ -10,10 +10,9 @@ import UIKit
 
 class FeedGroupViewController : UITableViewController
 {
-  private var _dataSource : AressessTableViewDataSource<Feed>?
+  private var _tableViewHandler : AressessTableViewHandler<Feed>?
   private var _selectedRow = -1 // we need to store the row index here because 'cell.selected' does not work reliably
   private var _nightModeIsOn = false
-  private let FeedGroupCellIdentifier = "FeedGroupCell"
 
   deinit
   {
@@ -21,26 +20,21 @@ class FeedGroupViewController : UITableViewController
     FeedManager.shared.removeExternalChangeObserver(self)
   }
 
-  override func awakeFromNib()
-  {
-    super.awakeFromNib()
-    self.clearsSelectionOnViewWillAppear = true
-    tableView.delegate = self
-    _dataSource = AressessTableViewDataSource<Feed>(tableView: tableView, cellIdentifier:"FeedGroupCell")
-  }
-
   override func viewDidLoad()
   {
     super.viewDidLoad()
+    self.clearsSelectionOnViewWillAppear = true
 
     self.navigationItem.rightBarButtonItem = editButtonItem
     self.navigationItem.largeTitleDisplayMode = .always
     self.navigationItem.title = LocString("FeedsListTitle")
-    self.navigationItem.searchController = _dataSource?.searchController
+    self.navigationItem.searchController = _tableViewHandler?.searchController
     hidesBottomBarWhenPushed = true
 
+    _setUpTableViewHandler()
+
     FeedManager.shared.addExternalChangeObserver(self)
-    _handleFeedGroupChange() // for initial configuration
+    _refreshContents()
 
     _updateColors()
     NotificationCenter.default.addObserver(self, selector:#selector(FeedGroupViewController.handleNightModeChanged(_:)), name:NSNotification.Name(rawValue: NightModeChangedNotification), object:nil)
@@ -49,7 +43,7 @@ class FeedGroupViewController : UITableViewController
   override func viewWillAppear(_ animated:Bool)
   {
     super.viewWillAppear(animated)
-    _dataSource?.elements = FeedManager.shared.activeFeeds
+    _tableViewHandler?.elements = FeedManager.shared.activeFeeds
     _selectedRow = -1
     tableView.reloadData()
   }
@@ -115,7 +109,6 @@ class FeedGroupViewController : UITableViewController
         let editedFeed = FeedManager.shared.activeFeeds[indexPath.row]
         feedEditorViewController.feed = editedFeed
         _selectedRow = -1
-        _clearFeedView()
       }
     }
   }
@@ -129,28 +122,31 @@ class FeedGroupViewController : UITableViewController
 extension FeedGroupViewController
 {
   //MARK: Private
-  private func _clearFeedView()
+
+  private func _setUpTableViewHandler()
   {
-    if let split = self.splitViewController
-    {
-      let controllers = split.viewControllers
-      if let navController = controllers[controllers.count-1] as? UINavigationController
+    let handler = AressessTableViewHandler<Feed>(tableView: tableView, cellIdentifier:"FeedGroupCell")
+    handler.selectionCallback = {
+      let feed = FeedManager.shared.activeFeeds[$0.row]
+      if isValidFeedAddress(feed.location)
       {
-        if let feedViewController = navController.topViewController as? FeedViewController
-        {
-          feedViewController.feed = nil
-        }
-        else
-        {
-          // Dismissing the news content view before clearing the feed view.
-          navController.popViewController(animated: true)
-          if let feedViewController = navController.topViewController as? FeedViewController
-          {
-            feedViewController.feed = nil
-          }
-        }
+        self.performSegue(withIdentifier: "showFeed", sender:self.tableView.cellForRow(at: $0))
+      }
+      else
+      {
+        self.performSegue(withIdentifier: "showFeedEditor", sender:self.tableView.cellForRow(at: $0))
       }
     }
+    handler.removalCallback = {
+      FeedManager.shared.removeFeed(at:$0.row)
+    }
+    handler.insertionCallback = { _ in
+      self.insertNewFeed(self)
+    }
+    handler.editingCallback = {
+      self.performSegue(withIdentifier: "showFeedEditor", sender:self.tableView.cellForRow(at: $0))
+    }
+    _tableViewHandler = handler
   }
 
   private func _popNewsContentView()
@@ -190,11 +186,10 @@ extension FeedGroupViewController
     tableView.separatorColor = _nightModeIsOn ? veryDarkActiveColor : darkerActiveColor
   }
 
-  private func _handleFeedGroupChange()
+  private func _refreshContents()
   {
     _updateGroupColors()
-    _dataSource?.elements = FeedManager.shared.activeFeeds
-    tableView.reloadData()
+    _tableViewHandler?.elements = FeedManager.shared.activeFeeds
   }
 
   private func _createNewFeed(name : String, for location : URL?, insertAtTopOfGroup : Bool)
@@ -218,82 +213,11 @@ extension FeedGroupViewController
 }
 
 
-extension FeedGroupViewController
-{
-  // MARK: UITableViewDelegate
-
-  override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
-  {
-    return true
-  }
-
-  override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
-  {
-    if editingStyle == .delete
-    {
-      FeedManager.shared.removeFeed(at:indexPath.row)
-      tableView.deleteRows(at: [indexPath], with: .fade)
-      if _selectedRow == indexPath.row
-      {
-        _selectedRow = -1
-        _clearFeedView()
-      }
-      else if _selectedRow > indexPath.row
-      {
-        _selectedRow -= 1
-      }
-    }
-    else if editingStyle == .insert
-    {
-      insertNewFeed(self)
-    }
-  }
-
-  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
-  {
-    let feed = FeedManager.shared.activeFeeds[indexPath.row]
-    if isValidFeedAddress(feed.location)
-    {
-      performSegue(withIdentifier: "showFeed", sender:self.tableView.cellForRow(at: indexPath))
-    }
-    else
-    {
-      performSegue(withIdentifier: "showFeedEditor", sender:self.tableView.cellForRow(at: indexPath))
-    }
-  }
-
-  override func tableView(_ tableView:UITableView, willSelectRowAt indexPath : IndexPath) -> IndexPath?
-  {
-    if tableView.cellForRow(at: indexPath) != nil
-    {
-      if _selectedRow >= 0
-      {
-        if let currentSelectedCell = tableView.cellForRow(at: NSIndexPath(indexes:[0,_selectedRow], length: 2) as IndexPath)
-        {
-          currentSelectedCell.backgroundColor = UIColor.clear
-        }
-      }
-      _selectedRow = indexPath.row
-    }
-    return indexPath
-  }
-
-  override func tableView(_ tableView:UITableView, willDeselectRowAt indexPath : IndexPath) -> IndexPath?
-  {
-    if let cell = tableView.cellForRow(at: indexPath)
-    {
-      cell.backgroundColor = UIColor.clear
-    }
-    return indexPath
-  }
-}
-
-
 extension FeedGroupViewController : FeedManagerExternalChangeObserver
 {
   func handleFeedGroupContentsChangedExternally()
   {
-    _handleFeedGroupChange()
+    _refreshContents()
   }
 }
 
