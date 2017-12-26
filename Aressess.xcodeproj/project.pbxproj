@@ -14,6 +14,7 @@
 		2AAEF9E51FF1983600604EF3 /* Nameable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAEF9E41FF1983600604EF3 /* Nameable.swift */; };
 		2AAEF9E71FF23A7F00604EF3 /* FeedGroupEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAEF9E61FF23A7F00604EF3 /* FeedGroupEditorViewController.swift */; };
 		2AAEF9E91FF23B0400604EF3 /* ColorMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAEF9E81FF23B0400604EF3 /* ColorMatrix.swift */; };
+		2AAEF9EB1FF2733A00604EF3 /* CloudExchangeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAEF9EA1FF2733A00604EF3 /* CloudExchangeManager.swift */; };
 		C008ABA61978809900699DC6 /* FeedEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008ABA51978809900699DC6 /* FeedEditorViewController.swift */; };
 		C008ABB01978994900699DC6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C008ABB21978994900699DC6 /* Localizable.strings */; };
 		C008ABB61979193500699DC6 /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008ABB51979193500699DC6 /* FeedLoader.swift */; };
@@ -114,6 +115,7 @@
 		2AAEF9E41FF1983600604EF3 /* Nameable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nameable.swift; sourceTree = "<group>"; };
 		2AAEF9E61FF23A7F00604EF3 /* FeedGroupEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedGroupEditorViewController.swift; sourceTree = "<group>"; };
 		2AAEF9E81FF23B0400604EF3 /* ColorMatrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMatrix.swift; sourceTree = "<group>"; };
+		2AAEF9EA1FF2733A00604EF3 /* CloudExchangeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudExchangeManager.swift; sourceTree = "<group>"; };
 		C008ABA51978809900699DC6 /* FeedEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedEditorViewController.swift; sourceTree = "<group>"; };
 		C008ABB11978994900699DC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C008ABB51979193500699DC6 /* FeedLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedLoader.swift; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 				C0B249E319785EBB00003357 /* AressessMain.swift */,
 				2AAEF9DE1FF0F74400604EF3 /* AressessNavigationController.swift */,
 				2AAEF9E21FF1745800604EF3 /* AressessTableViewHandler.swift */,
+				2AAEF9EA1FF2733A00604EF3 /* CloudExchangeManager.swift */,
 				C0B249E719785EBB00003357 /* FeedViewController.swift */,
 				C008ABA51978809900699DC6 /* FeedEditorViewController.swift */,
 				2AAEF9E61FF23A7F00604EF3 /* FeedGroupEditorViewController.swift */,
@@ -517,6 +520,7 @@
 				C0A5EE591B97629900905A09 /* MainSplitViewController.swift in Sources */,
 				2AAEF9E91FF23B0400604EF3 /* ColorMatrix.swift in Sources */,
 				C068460E19876C8900357A3E /* RSS20Parser.swift in Sources */,
+				2AAEF9EB1FF2733A00604EF3 /* CloudExchangeManager.swift in Sources */,
 				C0E11958198F6A1B00493710 /* NewsCellView.swift in Sources */,
 				C0ABAFA71992D0430003A33E /* NewsContentViewController.swift in Sources */,
 				C068461119876D1800357A3E /* RSSTypes.swift in Sources */,

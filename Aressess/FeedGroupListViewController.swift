@@ -17,7 +17,7 @@ class FeedGroupListViewController : UITableViewController
   deinit
   {
     NotificationCenter.default.removeObserver(self)
-    FeedManager.shared.removeExternalChangeObserver(self)
+    FeedManager.shared.removeChangeObserver(self)
   }
 
   override func viewDidLoad()
@@ -52,11 +52,25 @@ class FeedGroupListViewController : UITableViewController
   {
     let handler = AressessTableViewHandler<FeedGroup>(tableView: tableView, cellIdentifier:"FeedGroupListCell")
     handler.removalCallback = {
-      FeedManager.shared.removeFeedGroup(at:$0.row)
+      let row = $0.row
+      let fm = FeedManager.shared
+      fm.commitChanges(by: self) {
+        fm.removeFeedGroup(at:row)
+      }
     }
-    handler.selectionCallback = {
-      FeedManager.shared.activeGroupIndex = $0.row
-      self.performSegue(withIdentifier:"showGroup", sender:self.tableView.cellForRow(at: $0))
+    handler.selectionCallback = { indexPath in
+      let fm = FeedManager.shared
+      fm.commitChanges(by:self) {
+        fm.activeGroupIndex = indexPath.row
+        self.performSegue(withIdentifier:"showGroup", sender:self.tableView.cellForRow(at: indexPath))
+      }
+    }
+    handler.reorderingCallback = { source, destination in
+      let (sourceRow, destinationRow) = (source.row, destination.row)
+      let fm = FeedManager.shared
+      fm.commitChanges(by: self) {
+        fm.moveFeedGroup(fromRow:sourceRow, toRow:destinationRow)
+      }
     }
     handler.editingCallback = {
       self.performSegue(withIdentifier:"showGroupEditor", sender:self.tableView.cellForRow(at: $0))
@@ -70,11 +84,11 @@ class FeedGroupListViewController : UITableViewController
   }
 }
 
-extension FeedGroupListViewController : FeedManagerExternalChangeObserver
+extension FeedGroupListViewController : FeedGroupsChangeObserver
 {
   // MARK: FeedManagerExternalChangeObserver to be implemented
 
-  func handleFeedGroupContentsChangedExternally()
+  func handleFeedGroupsChanged()
   {
     _refreshTable()
   }

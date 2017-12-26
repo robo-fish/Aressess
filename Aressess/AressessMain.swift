@@ -12,6 +12,17 @@ import UIKit
 class AressessMain: UIResponder
 {
   var window: UIWindow?
+
+  private var _cloudManager : CloudExchangeManager
+
+  override init()
+  {
+    let fm = FeedManager.shared
+    _cloudManager = CloudExchangeManager(feedManager:fm)
+    super.init()
+    _loadFeeds()
+  }
+
 }
 
 extension AressessMain : UIApplicationDelegate
@@ -61,7 +72,7 @@ extension AressessMain : UIApplicationDelegate
       shouldPerformAdditionalDelegateHandling = false
     }
     _updateShortcutItems()
-    FeedManager.shared.addInternalChangeObserver(self)
+    FeedManager.shared.registerChangeObserver(self)
 
     return shouldPerformAdditionalDelegateHandling
   }
@@ -129,11 +140,155 @@ extension AressessMain : UIApplicationDelegate
 }
 
 
-extension AressessMain : FeedManagerInternalChangeObserver
+extension AressessMain : FeedGroupsChangeObserver
 {
-  func handleFeedGroupContentsChangedInternally()
+  func handleFeedGroupsChanged()
   {
     _updateShortcutItems()
+  }
+}
+
+extension AressessMain
+{
+
+  private func _loadFeeds()
+  {
+    _cloudManager.load()
+
+    let fm = FeedManager.shared
+    fm.commitChanges(by:self) {
+      if fm.feedGroups.isEmpty
+      {
+        if let feedGroupsData = UserDefaults.standard.data(forKey: FeedManager.ArchivingKey.FeedGroups.rawValue)
+        {
+          do
+          {
+            fm.feedGroups = try JSONDecoder().decode([FeedGroup].self, from:feedGroupsData)
+          }
+          catch
+          {
+            DebugLog("Error while decoding feed groups. " + error.localizedDescription)
+          }
+        }
+        if fm.feedGroups.isEmpty
+        {
+          self._loadInitialFeeds()
+          assert(!fm.feedGroups.isEmpty)
+        }
+        fm.activeGroupIndex = UserDefaults.standard.integer(forKey: FeedManager.ArchivingKey.ActiveFeedGroupIndex.rawValue)
+
+        self._cloudManager.save()
+      }
+    }
+  }
+
+  private func _loadInitialFeeds()
+  {
+    var feeds = [Feed]()
+    var append = { (name:String, address:String) -> Void in
+      if let url = URL(string:address)
+      {
+        feeds.append(Feed(location:url, name:name))
+      }
+    }
+
+    #if false
+      append("Quartz",           "http://qz.com/feed")
+      append("Mashable",         "feed://feeds.mashable.com/Mashable")
+      append("Zeit Online",      "feed://newsfeed.zeit.de/index")
+      append("ORF News",         "feed://rss.orf.at/news.xml")
+      append("Der Standard",     "http://derstandard.at/?page=rss&ressort=seite1")
+      append("Dagens Nyheter",   "http://www.dn.se/nyheter/m/rss/")
+      append("Asahi Shimbun",    "http://www3.asahi.com/rss/science.rdf")
+      append("Spiegel Online",   "http://www.spiegel.de/schlagzeilen/tops/index.rss")
+      append("Focus Online",     "http://rss.focus.de/fol/XML/rss_folnews.xml")
+      append("Milliyet",         "http://www.milliyet.com.tr/D/rss/rss/Rss_2.xml")
+      append("Sabah",            "http://www.sabah.com.tr/rss/Anasayfa.xml")
+      append("Hürriyet Daily News", "feed://www.hurriyetdailynews.com/rss.aspx")
+      append("Xinhua World",     "http://www.xinhuanet.com/world/news_world.xml")
+      append("Xinhua Autos",     "http://www.xinhuanet.com/auto/news_auto.xml")
+      feedGroups[UserFeedGroup.Blue.rawValue].feeds = feeds
+
+      feeds.removeAll()
+      append("Slashdot",         "feed://rss.slashdot.org/Slashdot/slashdot")
+      append("Golem RSS 0.91",   "http://rss.golem.de/rss.php?feed=RSS0.91")
+      append("Golem RSS 1.0",    "http://rss.golem.de/rss.php?feed=RSS1.0")
+      append("Golem RSS 2.0",    "http://rss.golem.de/rss.php?feed=RSS2.0")
+      append("Golem Atom 1.0",   "http://rss.golem.de/rss.php?feed=ATOM1.0")
+      append("Golem OPML",       "http://rss.golem.de/rss.php?feed=OPML")
+      append("The Verge",        "http://www.theverge.com/rss/index.xml")
+      append("AppleInsider",     "http://appleinsider.com/appleinsider.rss")
+      append("MacRumors",        "feed://feeds.macrumors.com/MacRumors-All?format=xml")
+      feedGroups[UserFeedGroup.Red.rawValue].feeds = feeds
+    #else
+      if let initialFeedsFileLocation = Bundle.main.url(forResource:"InitialFeeds", withExtension:"plist")
+      {
+        do
+        {
+          let initialFeedsData = try Data(contentsOf: initialFeedsFileLocation, options:[])
+          guard let initialFeedsPlist = try PropertyListSerialization.propertyList(from: initialFeedsData, options:[], format:nil) as? NSDictionary else { return }
+
+          //println("\(NSLocale.availableLocaleIdentifiers())")
+
+          let defaultLanguage = "en"
+          let defaultRegionCode = "en_US"
+
+          var languageCode = defaultLanguage
+          let languages = Locale.preferredLanguages
+          if !languages.isEmpty
+          {
+            languageCode = languages[0] as String
+          }
+
+          let regionCode = Locale.current.identifier
+          var groups : NSArray? = nil
+
+          if let regions = initialFeedsPlist[languageCode] as? NSDictionary
+          {
+            groups = regions[regionCode] as? NSArray
+            if groups == nil
+            {
+              groups = regions.allValues[0] as? NSArray
+            }
+          }
+          else
+          {
+            if let defaultLanguageRegions = initialFeedsPlist[defaultLanguage] as? NSDictionary
+            {
+              groups = defaultLanguageRegions[defaultRegionCode] as? NSArray
+            }
+          }
+
+          if let groups_ = groups
+          {
+            for (groupIndex,group) in groups_.enumerated()
+            {
+              if let localizedFeeds = group as? [NSDictionary]
+              {
+                feeds.removeAll()
+                for feed in localizedFeeds
+                {
+                  if
+                    let feedName = feed["name"] as? String,
+                    let feedLocation = feed["location"] as? String
+                  {
+                    append(feedName, feedLocation)
+                  }
+                }
+                let fm = FeedManager.shared
+                fm.commitChanges(by: self) {
+                  fm.addFeedGroup(named:"Group\(groupIndex)", feeds:feeds)
+                }
+              }
+            }
+          }
+        }
+        catch
+        {
+          DebugLog(error.localizedDescription)
+        }
+      }
+    #endif
   }
 }
 

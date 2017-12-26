@@ -282,12 +282,12 @@ extension FeedEditorViewController : UIPickerViewDelegate, UIPickerViewDataSourc
 {
   func numberOfComponents(in pickerView: UIPickerView) -> Int
   {
-    return FeedManager.shared.feedGroups.count
+    return 1
   }
 
   func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
   {
-    return 1
+    return FeedManager.shared.feedGroups.count
   }
 
   func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
@@ -308,17 +308,12 @@ extension FeedEditorViewController : UIPickerViewDelegate, UIPickerViewDataSourc
 
   private func _moveFeedToGroupAtIndex(_ groupIndex:Int)
   {
-    for feedGroup in FeedManager.shared.feedGroups
+    if let feed_ = feed, groupIndex != FeedManager.shared.activeGroupIndex
     {
-      let feedIndex = (feedGroup.feeds as NSArray).index(of: feed!)
-      if feedIndex != NSNotFound
-      {
-        feedGroup.feeds.remove(at: feedIndex)
-        break
-      }
+      FeedManager.shared.removeFeed(feed_, fromGroup: FeedManager.shared.activeGroupIndex)
+      FeedManager.shared.feedGroups[groupIndex].feeds.append(feed_)
+      _updateViewsFromModel()
     }
-    FeedManager.shared.feedGroups[groupIndex].feeds.append(feed!)
-    _updateViewsFromModel()
   }
 
 }

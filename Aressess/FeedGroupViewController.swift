@@ -17,7 +17,7 @@ class FeedGroupViewController : UITableViewController
   deinit
   {
     NotificationCenter.default.removeObserver(self)
-    FeedManager.shared.removeExternalChangeObserver(self)
+    FeedManager.shared.removeChangeObserver(self)
   }
 
   override func viewDidLoad()
@@ -33,7 +33,7 @@ class FeedGroupViewController : UITableViewController
 
     _setUpTableViewHandler()
 
-    FeedManager.shared.addExternalChangeObserver(self)
+    FeedManager.shared.registerChangeObserver(self)
     _refreshContents()
 
     _updateColors()
@@ -137,11 +137,21 @@ extension FeedGroupViewController
         self.performSegue(withIdentifier: "showFeedEditor", sender:self.tableView.cellForRow(at: $0))
       }
     }
-    handler.removalCallback = {
-      FeedManager.shared.removeFeed(at:$0.row)
+    handler.removalCallback = { indexPath in
+      let fm = FeedManager.shared
+      fm.commitChanges(by: self) {
+        fm.removeFeed(at:indexPath.row)
+      }
     }
     handler.insertionCallback = { _ in
       self.insertNewFeed(self)
+    }
+    handler.reorderingCallback = { source, destination in
+      let (sourceRow, destinationRow) = (source.row, destination.row)
+      let fm = FeedManager.shared
+      fm.commitChanges(by: self) {
+        fm.moveFeedInActiveGroup(fromRow:sourceRow, toRow:destinationRow)
+      }
     }
     handler.editingCallback = {
       self.performSegue(withIdentifier: "showFeedEditor", sender:self.tableView.cellForRow(at: $0))
@@ -196,13 +206,15 @@ extension FeedGroupViewController
   {
     let locationString = location?.absoluteString ?? ""
     let fm = FeedManager.shared
-    if fm.activeFeeds.count > 0
-    {
-      fm.insertFeedAtIndex(0, name: name, location: locationString)
-    }
-    else
-    {
-      fm.addFeed(name: name, location: locationString)
+    fm.commitChanges(by: self) {
+      if fm.activeFeeds.count > 0
+      {
+        fm.insertFeedAtIndex(0, name: name, location: locationString)
+      }
+      else
+      {
+        fm.addFeed(name: name, location: locationString)
+      }
     }
     let indexPath = IndexPath(row: 0, section: 0)
     tableView.insertRows(at: [indexPath], with: .automatic)
@@ -213,9 +225,9 @@ extension FeedGroupViewController
 }
 
 
-extension FeedGroupViewController : FeedManagerExternalChangeObserver
+extension FeedGroupViewController : FeedGroupsChangeObserver
 {
-  func handleFeedGroupContentsChangedExternally()
+  func handleFeedGroupsChanged()
   {
     _refreshContents()
   }

@@ -21,6 +21,8 @@ class AressessTableViewHandler<Element:Codable&Nameable> : NSObject, UITableView
   var editingCallback : DataSourceCallback?
   var removalCallback : DataSourceCallback?
   var insertionCallback : DataSourceCallback?
+  typealias DataSourceCallback2 = (IndexPath, IndexPath)->()
+  var reorderingCallback : DataSourceCallback2?
 
   init(tableView : UITableView, cellIdentifier : String)
   {
@@ -91,7 +93,7 @@ class AressessTableViewHandler<Element:Codable&Nameable> : NSObject, UITableView
   {
     let sourceRowIndex = sourceIndexPath.row
     let destinationRowIndex = destinationIndexPath.row
-    FeedManager.shared.moveFeedInActiveGroup(fromRow:sourceRowIndex, toRow:destinationRowIndex)
+    reorderingCallback?(sourceIndexPath, destinationIndexPath)
 
     if _selectedRow == sourceRowIndex
     {
@@ -163,8 +165,6 @@ class AressessTableViewHandler<Element:Codable&Nameable> : NSObject, UITableView
   {
     
   }
-
-  // MARK: Private
 
 }
 
